@@ -17,7 +17,7 @@ minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "n
 # Site Settings
 locale                   : "en-US"
 title                    : "Lemongrass"
-title_separator          : "Version 0.0"
+title_separator          : "|"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Yuki Fujishima"
 description              : "Yay! An amazing website."
