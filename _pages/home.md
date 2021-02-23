@@ -17,7 +17,13 @@ Research Interest: Fear & Anxiety, Survival Circuit, Neural Oscillation, Neural 
 
 Music Interest: Brian Wilson, The Beach Boys, Paul McCartney, The Beatles, Sting, [soundcloud]
 
+[soundcloud]: https://soundcloud.com/yuki-fuji
+
 ## Petit C.V.
 
+Education
+---------
 
-[soundcloud]: https://soundcloud.com/yuki-fuji
+2014-2021 (expected)
+:   **M.D.**; Kyushu University (Fukuoka, Japan)
+
