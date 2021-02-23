@@ -21,9 +21,8 @@ Music Interest: Brian Wilson, The Beach Boys, Paul McCartney, The Beatles, Sting
 
 ## Petit C.V.
 
-Education
----------
+### Education
 
+Doctor of Medicine (M.D.)
+:   Kyushu University, Fukuoka, Japan
 2014-2021 (expected)
-:   **M.D.**; Kyushu University (Fukuoka, Japan)
-
