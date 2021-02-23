@@ -23,6 +23,8 @@ Music Interest: Brian Wilson, The Beach Boys, Paul McCartney, The Beatles, Sting
 
 ### Education
 
-Doctor of Medicine (M.D.)
-:   Kyushu University, Fukuoka, Japan
-2014-2021 (expected)
+<dl>
+  <dt>Doctor of Medicine (M.D.)</dt>
+    <dd>Kyushu University, Fukuoka, Japan</dd>
+    <dd>2014-2021 (expected)</dd>
+</dl>
