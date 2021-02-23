@@ -7,6 +7,7 @@ classes: narrow
 
 ---
 <a name="about"></a>
+## About
 
 Hi, you've reached the homepage of Yuki Fujishima!
 
@@ -16,7 +17,7 @@ Research Interest: Fear & Anxiety, Survival Circuit, Neural Oscillation, Neural 
 
 Music Interest: Brian Wilson, The Beach Boys, Paul McCartney, The Beatles, Sting, [soundcloud]
 
-> "test"
--- test
+## Mini CV
+
 
 [soundcloud]: https://soundcloud.com/yuki-fuji
