@@ -1,5 +1,6 @@
 ---
 permalink: /about/
+read_time: False
 ---
 # About
 
