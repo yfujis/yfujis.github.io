@@ -8,7 +8,6 @@ classes: narrow
 
 ---
 <a name="about"></a>
-{% include feature_row id="feature_row_desert" type="center" %}
 
 Hi, you've reached the homepage of Yuki Fujishima!
 
