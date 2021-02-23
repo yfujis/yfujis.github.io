@@ -20,8 +20,4 @@ Music Interest: Brian Wilson, The Beach Boys, Paul McCartney, The Beatles, Sting
 > "test"
 -- test
 
-
-
-
-
 [soundcloud]: https://soundcloud.com/yuki-fuji
