@@ -2,7 +2,7 @@
 title: 'Why is Fast Fourier Transform fast?'
 tags: [Math]
 status: published
-type: posts
+type: pages
 
 toc: true
 toc_label: "outline"
@@ -13,7 +13,7 @@ permalink: /blog/:year/:month/:day/:title
 
 # Intuition
 Polynomial:
-a
+b
 
 $$
 \begin{align}
