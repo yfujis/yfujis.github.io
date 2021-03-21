@@ -11,7 +11,7 @@ classes: narrow
 
 Hi, you've reached the homepage of Yuki Fujishima!
 
-I'm currently doing my final year in med school. I do (and will continue to do) scientific research in Neuroscience.
+I'm currently a junior resident at Kyushu University Hospital and research assitant at the Department of Psychiatry.
 
 Research Interest: Fear & Anxiety, Survival Circuit, Neural Oscillation, Neural Ensemble
 
