@@ -11,7 +11,7 @@ classes: narrow
 
 Hi, you've reached the homepage of Yuki Fujishima!
 
-I'm a junior resident at Kyushu University Hospital (April, 2021 ~) and also do research at the Department of Psychiatry.
+I'm a junior resident at Kyushu University Hospital (April, 2021 ~) and also research at the Department of Psychiatry.
 
 Research Interest: Fear & Anxiety, Survival Circuit, Neural Oscillation, Neural Ensemble
 
