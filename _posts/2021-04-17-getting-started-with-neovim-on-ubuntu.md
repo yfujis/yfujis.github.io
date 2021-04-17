@@ -24,4 +24,7 @@ You might have to upgrade apt:
 sudo apt upgrade
 sudo apt upgrade
 ```
+## Custimize your neovim interface
+By creating and editting init.vim, you can custimize your neovim to look and work however you want it to. For example, you can change the background and letter colors. init.vim is executed every time you start neovim. So by listing the plugsins you want to work with here, your setup will always be ready.
+
 
