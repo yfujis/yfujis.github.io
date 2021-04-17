@@ -19,4 +19,9 @@ To install neovim, write:
 ```bash
 sudo apt install neovim
 ```
-You might have to upgrade
+You might have to upgrade apt:
+```bash
+sudo apt upgrade
+sudo apt upgrade
+```
+
