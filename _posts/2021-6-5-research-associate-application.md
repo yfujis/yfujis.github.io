@@ -1,5 +1,5 @@
 ---
-title: '大学院行く前の人が米国研究室で働く: 応募から採用までの過程'
+title: '大学院行く前の人が米国研究室で働く: 応募過程'
 tags: [career]
 status: published
 
