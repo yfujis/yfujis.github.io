@@ -11,7 +11,7 @@ classes: narrow
 
 Hi, you've reached the homepage of Yuki Fujishima!
 
-I'm a junior resident at Kyushu University Hospital (April, 2021 ~) and also research at the Department of Psychiatry.
+I'm a junior resident at Kyushu University Hospital and also research at the Department of Psychiatry.
 
 Research Interest: Fear & Anxiety, Survival Circuit, Neural Oscillation, Neural Ensemble
 
@@ -30,4 +30,14 @@ Music Interest: Brian Wilson, The Beach Boys, Paul McCartney, The Beatles, Sting
   <dt>Doctor of Medicine (M.D.)</dt>
     <dd>Kyushu University, Fukuoka, Japan</dd>
     <dd>2021</dd>
+</dl>
+
+### Research Experience
+<dl>
+  <dt>Brain Physiology Lab</dt>
+    <dd>Kyushu University, Fukuoka, Japan</dd>
+    <dd>2018 - current</dd>
+  <dt>Brain Physiology Lab, PI: Kevin Spencer</dt>
+    <dd>Harvard Medical School, Boston, MA</dd>
+    <dd>April, 2019 - March, 2020</dd>
 </dl>
