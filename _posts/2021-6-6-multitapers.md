@@ -1,7 +1,7 @@
 ---
 title: 'Multitapers'
 tags: [Math, Signal Processing, Data Science]
-status: still working
+status: partially published
 
 toc: true
 toc_label: "outline"
