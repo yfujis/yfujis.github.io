@@ -37,7 +37,7 @@ Music Interest: Brian Wilson, The Beach Boys, Paul McCartney, The Beatles, Sting
   <dt>Department of Neuropsychiatry</dt>
     <dd>Kyushu University, Fukuoka, Japan</dd>
     <dd>2018 - current</dd>
-  <dt>Brain Physiology Lab, PI: Kevin Spencer</dt>
+  <dt>Neural Dynamics Lab, PI: Kevin Spencer</dt>
     <dd>Harvard Medical School, Boston, MA</dd>
     <dd>April, 2019 - March, 2020</dd>
 </dl>
