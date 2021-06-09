@@ -1,5 +1,5 @@
 ---
-title: 'Getting started with Neovim on Ubuntu'
+title: 'Getting started with Neovim on Ubuntu (in progress)'
 tags: [Computer]
 status: writing
 
