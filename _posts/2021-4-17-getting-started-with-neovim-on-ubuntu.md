@@ -10,7 +10,7 @@ comments: true
 
 permalink: /blog/:year/:month/:day/:title
 --- 
-I've recently had a chance to use a computer with Ubuntu for my reserch. So, I'd like to write the needed steps as a memorandum.
+I have recently had a chance to use an Ubuntu machine for reserch and just wanted to write the needed steps to get started as a memorandum.
 
 OS: Ubuntu 20.04.2 LTS
 
