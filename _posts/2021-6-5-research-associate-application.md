@@ -79,7 +79,9 @@ CVは簡単に言えば履歴書のことですが，コンビニに売ってる
 
 
 ## MPFIの選考過程
-プログラムへのリンク: https://mpfi.org/training/postbacs/
+[プログラムのホームページ][MPFI_HP]
+
+[MPFI_HP]: https://mpfi.org/training/postbacs/
 
 ### 書類審査
 CV, Research Statement, Cover Letter, 推薦状2通が必要でした．CVはNYUと同じものを提出．Research Statementは1000 words(大体A4 2ページ分)でNYUより文量があり，また志望動機などはCover Letterでも述べることができたので，自分の研究内容をより詳しく語りました．Cover Letterは「Dear Selection Committee」で始まる手紙フォーマットで自分の志望理由を簡潔に説明するものです．
