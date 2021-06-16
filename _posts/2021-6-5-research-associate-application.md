@@ -28,7 +28,8 @@ permalink: /blog/:year/:month/:day/:title
 次の段落からは私が申し込んだNew York University(NYU)とMax Planck Florida Institute for Neuroscience(MPFI)それぞれのプログラムの選考過程をまとめます．
 
 ## NYUの選考過程
-プログラムのリンク: https://med.nyu.edu/departments-institutes/neuroscience/education/research-associates-program
+[プログラムのホームページ][NYU_RA_HP]
+[NYU_RA_HP]: https://med.nyu.edu/departments-institutes/neuroscience/education/research-associates-program
 
 プログラムの内容や申込方法の詳細はリンク先を読んでいただければと思うので，ここでは同ホームページに書いておらず実際に経験してわかったことを中心に書くことにします．締切は3月31日で，主にCV，Statement of Purpose, 2枚の推薦状が必要でした．
 
