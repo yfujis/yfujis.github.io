@@ -52,16 +52,8 @@ excerpt: 引っ越しに先立ち、リモートでニューヨークの部屋�
 ### 額面の30%がセオリー?
 そもそも収入の何%を家賃に使うべきでなのでしょうか。これはそれぞれのライフスタイルに合わせて考えるべきでしょう。一つの目安として, 額面の30%を基準にしてみるとよいそうです。家にいる時間が長く, よりお金をかけたい人は30%+α, 逆に家は寝に帰るだけで外で過ごす時間が長い人・もっと遊びのお金が欲しい人は30%-αを予算とするのが良いのではないでしょうか。<a href="https://www.apartments.com/blog/how-much-should-i-spend-on-rent" target="_blank">この記事</a>が参考になるかもしれません。ちなみに自分は実験系のラボに働くこともあり, できるだけ通勤負担の少なさを最優先にしました。すると自ずとマンハッタンの中心部で家賃は高くなり, 30%を有意に超えました。他で節約頑張ります…汗。
 
-[https://www.apartments.com/blog/how-much-should-i-spend-on-rent][rent_budget]
-
-[rent_budget]: https://www.apartments.com/blog/how-much-should-i-spend-on-rent
-
 ### 手取りを計算してみる
 オファーレターには額面の年棒しか書いておらず, 実際月々自分が自由に使えるお金がいくらあるのかわかりませんでした。それにアメリカは所得税が連邦政府と州それぞれで収めないといけないとかなんとかで日本とは勝手が違うので素人には厳しかったのです。そんなとき, 以下の<a href="https://www.apartments.com/blog/how-much-should-i-spend-on-rent" target="_blank">tax calculator</a>のおかげで大体の手取りを知ることができました。
-
-[https://www.paycheckcity.com/calculator/salary/new-york][tax_calculator]
-
-[tax_calculator]: https://www.paycheckcity.com/calculator/salary/new-york
 
 # 実際にルームハントに使った方法と経験談
 ## 現地の友人と一緒に探した
@@ -75,7 +67,7 @@ excerpt: 引っ越しに先立ち、リモートでニューヨークの部屋�
 ## ルームメイトマッチングWebサービス(Roomi, Spareroom)
 これらのサービス(Webサイト, アプリ)は一緒にアパートメントを探すルームメイトを見つけたり, 個人が出品している空き部屋を探すことができるサービスです。
 ### Roomi
-URL: http://roomiapp.com
+URL: <a href="http://roomiapp.com" target="_blank">http://roomiapp.com</a>
 
 Roomiでは1.ルームメイトマッチング, 2.空き部屋を探す, 3.自分の空き部屋を出品することができます。いずれの場合もまずプロフィールを作りますが, 予算等の基本的な情報はもちろん掃除の頻度, タバコを吸うか, ペットOKかなどマッチングに重要な情報を選択式で入力します。このテンプレの質問は相手方のことを知る上でもとても便利に感じました。
 
