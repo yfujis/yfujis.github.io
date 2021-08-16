@@ -1,5 +1,5 @@
 ---
-title: 'ニューヨーク一人暮らしの部屋探し'
+title: '一人暮らしの部屋探し in ニューヨーク'
 tags: [Career, Life]
 status: publish
 type: post
