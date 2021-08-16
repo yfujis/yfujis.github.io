@@ -59,7 +59,9 @@ excerpt: 引っ越しに先立ち、リモートでニューヨークの部屋�
 ### 手取りを計算してみる
 オファーレターには額面の年棒しか書いておらず, 実際月々自分が自由に使えるお金がいくらあるのかわかりませんでした。それにアメリカは所得税が連邦政府と州それぞれで収めないといけないとかなんとかで日本とは勝手が違うので素人には厳しかったのです。そんなとき, 以下のtax calculatorのおかげで大体の手取りを知ることができました。
 
-https://www.paycheckcity.com/calculator/salary/new-york
+[https://www.paycheckcity.com/calculator/salary/new-york][tax_calculator]
+
+[tax_calculator]: https://www.paycheckcity.com/calculator/salary/new-york
 
 # 実際にルームハントに使った方法と経験談
 ## 現地の友人と一緒に探した
