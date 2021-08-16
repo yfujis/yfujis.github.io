@@ -1,7 +1,9 @@
 ---
 title: '大学院行く前の人が米国研究室で働く - 申し込み方法など'
-tags: [career]
-status: published
+tags: [Career]
+status: publish
+type: post
+published: True
 
 toc: true
 toc_label: "outline"

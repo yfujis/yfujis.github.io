@@ -2,6 +2,8 @@
 title: 'Getting started with Neovim on Ubuntu (in progress)'
 tags: [Computer]
 status: writing
+type: post
+published: True
 
 toc: true
 toc_label: "outline"

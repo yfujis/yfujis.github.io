@@ -1,7 +1,9 @@
 ---
 title: 'ニューヨーク一人暮らしの部屋探し'
-tags: [career, life]
-status: writing
+tags: [Career, Life]
+status: publish
+type: post
+published: True
 
 toc: true
 toc_label: "outline"

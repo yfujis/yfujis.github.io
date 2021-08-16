@@ -2,6 +2,9 @@
 title: 'Multitapers (in progress)'
 tags: [Math, Signal Processing, Data Science]
 status: partially published
+status: writing
+type: post
+published: True
 
 toc: true
 toc_label: "outline"
