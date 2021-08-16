@@ -57,7 +57,7 @@ excerpt: 引っ越しに先立ち、リモートでニューヨークの部屋�
 [rent_budget]: https://www.apartments.com/blog/how-much-should-i-spend-on-rent
 
 ### 手取りを計算してみる
-オファーレターには額面の年棒しか書いておらず, 実際月々自分が自由に使えるお金がいくらあるのかわかりませんでした。それにアメリカは所得税が連邦政府と州それぞれで収めないといけないとかなんとかで日本とは勝手が違うので素人には厳しかったのです。そんなとき, 以下のtax calculatorのおかげで大体の手取りを知ることができました。
+オファーレターには額面の年棒しか書いておらず, 実際月々自分が自由に使えるお金がいくらあるのかわかりませんでした。それにアメリカは所得税が連邦政府と州それぞれで収めないといけないとかなんとかで日本とは勝手が違うので素人には厳しかったのです。そんなとき, 以下の<a href="https://www.apartments.com/blog/how-much-should-i-spend-on-rent" target="_blank">tax calculator</a>のおかげで大体の手取りを知ることができました。
 
 [https://www.paycheckcity.com/calculator/salary/new-york][tax_calculator]
 
