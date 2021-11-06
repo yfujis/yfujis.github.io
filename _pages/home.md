@@ -11,11 +11,14 @@ classes: narrow
 
 Hi, you've reached the homepage of Yuki Fujishima!
 
-I'm currently a junior resident at Kyushu University Hospital and also research at the Department of Psychiatry. I will be joining NYU Langone Health as a research associate in upcoming August.
+I'm currently a research associate in Long Lab at NYU Langone Health Neuroscience Institute. My background is medicine through which I found my interest in neuroscience. As a scientist, I want to study how the brain creates and modifies behaviours and ultimately would like to understand neuropsychiatric diseases.
 
-Research Interest: Fear & Anxiety, Survival Circuit, Neural Oscillation, Neural Ensemble
+I'm also a music lover. I would appreaciate if you could take a listen to some of my recordings:
 
-Music Interest: Brian Wilson, The Beach Boys, Paul McCartney, The Beatles, Sting
+[![IMAGE_ALT](https://img.youtube.com/vi/u9NTjDsiEAM/0.jpg)](https://www.youtube.com/watch?v=u9NTjDsiEAM)
+[![IMAGE_ALT](https://img.youtube.com/vi/aeiquVQr9_g/0.jpg)](https://www.youtube.com/watch?v=aeiquVQr9_g)
+[![IMAGE_ALT](https://img.youtube.com/vi/vzFAqBzfiNs/0.jpg)](https://www.youtube.com/watch?v=aeiquVQr9_g)
+
 <!--[SoundCloud]
 [SoundCloud]: https://soundcloud.com/yuki-fuji
 --->
