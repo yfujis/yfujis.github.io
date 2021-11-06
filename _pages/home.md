@@ -13,10 +13,14 @@ Hi, you've reached the homepage of Yuki Fujishima!
 
 I'm currently a research associate in Long Lab at NYU Langone Health Neuroscience Institute. My background is medicine through which I found my interest in neuroscience. As a scientist, I want to study how the brain creates and modifies behaviours and ultimately would like to understand neuropsychiatric diseases.
 
-I'm also a music lover. I would appreaciate if you could take a listen to some of my recordings:
+I'm also a music lover. I would appreaciate if you could take a listen to some of [my recordings][Music]:
+
+[Music]: https://yukifujishima/music
 
 [![IMAGE_ALT](https://img.youtube.com/vi/u9NTjDsiEAM/0.jpg)](https://www.youtube.com/watch?v=u9NTjDsiEAM)
+
 [![IMAGE_ALT](https://img.youtube.com/vi/aeiquVQr9_g/0.jpg)](https://www.youtube.com/watch?v=aeiquVQr9_g)
+
 [![IMAGE_ALT](https://img.youtube.com/vi/vzFAqBzfiNs/0.jpg)](https://www.youtube.com/watch?v=aeiquVQr9_g)
 
 <!--[SoundCloud]
