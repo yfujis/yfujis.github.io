@@ -55,4 +55,7 @@ I am also a music lover. Please find some of my recordings on [YouTube][Music] a
   <dt>Neural Dynamics Lab, PI: Kevin Spencer</dt>
     <dd>Harvard Medical School, Boston, MA</dd>
     <dd>April, 2019 - March, 2020</dd>
+  <dt>Long Lab</dt>
+    <dd>New York University School of Medicine, New York, NY</dd>
+    <dd>September, 2021 - present</dd>
 </dl>
