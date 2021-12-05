@@ -1,5 +1,5 @@
 ---
-layout: splash
+layout: home
 author_profile: False
 read_time: False
 permalink: /
