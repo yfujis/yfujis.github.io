@@ -22,7 +22,7 @@ permalink: /blog/:year/:month/:day/:title
 excerpt: I reflected on my recent first opera experience.
 --- 
 
-## Searching Shows at Met Opera
+## Browsing Programs at Met Opera
 
 I always loved music growing up but had never had a chance to see an opera. My hometown was too small for an opera production to come to perform. Also, even when I visited bigger cities, I prioritised seeing orchestra concerts over operas just because I was more familiar with orchestra and chamber music. But now that live in New York City, I’ve decided to take advantage of it and finally give myself an opera experience.
 
