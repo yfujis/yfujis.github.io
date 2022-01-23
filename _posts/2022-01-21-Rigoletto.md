@@ -33,7 +33,7 @@ The first program that caught my attention when I visited the website of the Met
 
 ## Rush Tickets are a great deal!
 
-As I was looking through the ticket options, I learned they offered something called “<a href="https://www.metopera.org/season/tickets/rush-page" target="_blank">Rush Tickets</a>” at Met Opera. The idea is that they sell tickets for remaining orchestra seats for $25 (normal price range: $100-$300) on the day of the show at noon. It is a first-come, first-served basis. So you need to be logged in and ready by noon and click as soon as the clock hands meet. When I learned about it, all of the programs offered right now went into my must-go list. I participated in this “click-war (a common expression in the Japanese language)” and won myself an orchestra seat for “Rigoletto”, which thus became my first opera show ever.
+As I was looking through the ticket options, I learned they offered something called “<a href="https://www.metopera.org/season/tickets/rush-page" target="_blank">Rush Tickets</a>” at Met Opera. The idea is that they sell tickets for remaining orchestra seats for $25 (normal price range: $100-$300) on the day of the show at noon. It is a first-come, first-served basis, so you need to be logged in and ready by noon and click as soon as the clock hands meet. When I learned about these tickets, all of the programs offered right now went into my must-go list. I participated in this “click-war (a common expression in the Japanese language)” and won myself an orchestra seat for “Rigoletto”, which thus became my first opera show ever.
 
 ## Some Prep for Rigoletto
 
