@@ -1,9 +1,9 @@
 ---
 title: 'A reflection on my first opera experience - Rigoletto'
 tags: [Life]
-status: writing
+status: published
 type: post
-published: False
+published: True
 
 toc: true
 toc_label: "outline"
