@@ -39,7 +39,7 @@ As I was looking through the ticket options, I learned they offered something ca
 
 Embarrassingly, I did not know anything about Rigoletto and thus did some reading about it so that I would be able to follow the plot and pay more attention to the performance. The Met Opera’s website offers a description of the piece as well as the current production. As I was reading about it, I learned that the performance is reset by Barlett Sher, the director in 1920s Weimar Germany, with Art Deco sets. My colleague, who is a lot more well-versed in design and architecture than me told me that Art Deco is a style of visual arts. The Empire State Building and Chrysler Building are well-known examples of this style. It is already interesting that the story is put in different axes of time and space, but it is especially fascinating as Rigoletto was originally written in 1851 by Giuseppe Verdi, there was no way that Verdi himself could not have understood the contexts of Sher’s production.
 
-## The show went by so fast
+## The Time went by so Fast
 
 The 2 hours 40 minutes felt like a blink of an eye... The acoustic of the actors’ singing and the orchestra was extremely pleasant. My brain was in ecstasy (Is it too much to say this? I don’t have other vocabularies). Nowadays, we all almost always listen to digitised music, and most of us have forgotten how sounds in inaudible frequencies make a significant difference in our auditory experience. I really should appreciate every microsecond of opportunities where I get to hear great performance in a venue every little piece of which is designed to enhance it.
 
