@@ -33,7 +33,7 @@ The first thing that popped into my eyes when I visited the website of the Metro
 
 ## Rush Tickets are a great deal!
 
-As I was looking through the ticket options, I learned they offered something called “Rush Tickets” at Met Opera. The idea is that they sell tickets for remaining orchestra seats for $25 on the day of the show at noon. It is a first-come, first-served basis. So you need to be logged in and ready by noon and click as soon as the clock hands meet. When I learned about it, all of the programs offered right now went into my must-go list. I participated in this “click-war (a common expression in the Japanese language)” and won myself an orchestra seat for “Rigoletto”, which thus became my first opera show ever.
+As I was looking through the ticket options, I learned they offered something called “Rush Tickets” at Met Opera. The idea is that they sell tickets for remaining orchestra seats for $25 (normal price: $100-$300) on the day of the show at noon. It is a first-come, first-served basis. So you need to be logged in and ready by noon and click as soon as the clock hands meet. When I learned about it, all of the programs offered right now went into my must-go list. I participated in this “click-war (a common expression in the Japanese language)” and won myself an orchestra seat for “Rigoletto”, which thus became my first opera show ever.
 
 ## Some Prep for Rigoletto
 
@@ -53,5 +53,3 @@ Although I thought I did not know any music from Rigoletto, I definitely recogni
 ## Summary
 
 Overall, my first opera experience was a fabulous one, and I’m already aiming at the next week’s “Le Nozze di Figaro”. I personally strongly recommend anyone interested in seeing an opera try out rush tickets options, especially if you live in the city and can make it on the day after work or school.
-
-I always loved music growing up. There was not much music scene happening in my small hometown in Japan, but during my time in univeristy, I took the advantage of liviing in a bigger city to expose myself to some orchestra and chamber music concerts. My best memory of classical concerts is the silvester concert I went to at Smetana Hall in Prague in 2017. I was, however, yet to experience an opera. 
