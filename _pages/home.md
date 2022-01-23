@@ -19,6 +19,7 @@ I am also an amateur musician by night. Please find some of my recordings on [Yo
 [SoundCloud]: https://soundcloud.com/yuki-fuji
 
 {% include video id="dsD41oG-7Cw" provider="youtube" %}
+{% include video id="z84T6n-scEs" provider="youtube" %}
 
 <!--
 [![IMAGE_ALT](https://img.youtube.com/vi/u9NTjDsiEAM/0.jpg)](https://www.youtube.com/watch?v=u9NTjDsiEAM)
