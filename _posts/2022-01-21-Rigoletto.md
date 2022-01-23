@@ -28,6 +28,9 @@ I always loved music growing up but have had gone to an opera. My hometown was t
 
 The first thing that popped into my eyes when I visited the website of the Metropolitan Opera House, was "Le Nozze Di Figaro", one of the masterpieces of Mozart. Although I have never seen the opera performance itself, I have been a big fan of some of the music pieces such as the famous overture and ‘Se Voul Ballare’. I put it on my must-go list.
 
+![stage](/assets/images/blog/met_opera.jpeg)
+*The Metropolitan Opera House at Lincoln Center in New York City*
+
 ## Rush Tickets are a great deal!
 
 As I was looking through the ticket options, I learned they offered something called “Rush Tickets” at Met Opera. The idea is that they sell tickets for remaining orchestra seats for $25 on the day of the show at noon. It is a first-come, first-served basis. So you need to be logged in and ready by noon and click as soon as the clock hands meet. When I learned about it, all of the programs offered right now went into my must-go list. I participated in this “click-war (a common expression in the Japanese language)” and won myself an orchestra seat for “Rigoletto”, which thus became my first opera show ever.
