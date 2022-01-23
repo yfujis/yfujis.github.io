@@ -10,9 +10,9 @@ toc_label: "outline"
 toc_icon: "guitar"
 comments: true
 header:
-  overlay_image: /assets/images/blog/met_opera.jpg
+  overlay_image: /assets/images/blog/met_opera.jpeg
   overlay_filter: rgba(0,0,0,0.8)
-  teaser: /assets/images/blog/met_opera.jpg
+  teaser: /assets/images/blog/met_opera.jpeg
 classes:
   - wide
 
@@ -44,7 +44,7 @@ My seat was in the 10th row, and I was able to see the whole stage and decently 
 
 Although I thought I did not know any music from Rigoletto, I definitely recognised “Le donna è mobile” straight away. The aria has a catchy melody, and I’m sure many people would recognise it too. Another highlight from the night “Bella figlia dell’amore”, a quartet sang in Act 3. As a vocal harmony lover, Brian Wilson of The Beach Boys has been my inspiration, but from now on I will definitely start learning from these beautiful opera songs too.
 
-![stage](/assets/images/blog/met_opera_stage.jpg)
+![stage](/assets/images/blog/met_opera_stage.jpeg)
 *A View from the seat after the performance*
 
 ## Summary
