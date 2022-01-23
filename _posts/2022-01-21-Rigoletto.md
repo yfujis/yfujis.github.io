@@ -24,7 +24,7 @@ excerpt: I reflected on my recent first opera experience.
 
 ## Searching Shows at Met Opera
 
-I always loved music growing up but had never had a chance to see an opera. My hometown was too small for an opera production to come to performed. Also, even when I visited bigger cities, I prioritised seeing orchestra concerts over operas just because I was more familiar with orchestra and chamber music. But now that live in New York City, I’ve decided to take advantage of it and finally give myself an opera experience.
+I always loved music growing up but had never had a chance to see an opera. My hometown was too small for an opera production to come to perform. Also, even when I visited bigger cities, I prioritised seeing orchestra concerts over operas just because I was more familiar with orchestra and chamber music. But now that live in New York City, I’ve decided to take advantage of it and finally give myself an opera experience.
 
 The first program that caught my attention when I visited the website of the Metropolitan Opera, was "Le Nozze Di Figaro", one of the masterpieces of Mozart. Although I have never seen the opera performance itself, I have been a big fan of some of the music pieces such as the famous overture and ‘Se Voul Ballare’. I put it on my must-go list.
 
