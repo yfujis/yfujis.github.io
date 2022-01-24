@@ -1,6 +1,6 @@
 ---
 title: 'A reflection on my first opera experience - Rigoletto'
-tags: [Life]
+tags: [Life, Music]
 status: published
 type: post
 published: True
