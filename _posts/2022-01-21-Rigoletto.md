@@ -52,4 +52,4 @@ Although I thought I did not know any music from Rigoletto, I definitely recogni
 
 ## Summary
 
-Overall, my first opera experience was a fabulous one, and I am already aiming at the next week’s “Le Nozze di Figaro”. I personally strongly recommend anyone interested in seeing an opera try out rush tickets options, especially if you live in the city and can make it to the Lincoln Center after work or school.
+Overall, my first opera experience was a fabulous one, and I am already aiming at the next week’s “Le Nozze di Figaro”. I personally strongly recommend anyone interested in seeing an opera try out rush tickets options, especially if you live in the city and can make it to the Lincoln Center after work or school. You will not regret it.
