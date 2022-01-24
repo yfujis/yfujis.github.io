@@ -15,7 +15,7 @@ remote_theme             : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise" 
 # Site Settings
 locale                   : "en-US"
-title                    : "Lemongrass"
+title                    : "Yuki Fujishima"
 title_separator          : "|"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Yuki Fujishima"
@@ -96,7 +96,7 @@ author:
   name             : "Yuki Fujishima"
   avatar           : "/assets/images/others/yuki88x88.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am a walrus."
-  location         : "Kokomo"
+  location         : "New York, NY"
   email            :
   links:
     - label: "Email"
