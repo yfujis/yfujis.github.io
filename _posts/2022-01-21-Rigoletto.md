@@ -24,7 +24,7 @@ excerpt: I reflected on my recent first opera experience.
 
 ## Browsing Programs at Met Opera
 
-I always loved music growing up but had never had a chance to see an opera. My hometown was too small for an opera production to come to perform. Also, even when I visited bigger cities, I prioritised seeing orchestra concerts over operas just because I was more familiar with orchestra and chamber music. But now that live in New York City, I’ve decided to take advantage of it and finally give myself an opera experience.
+I always loved music growing up but had never had a chance to see an opera. My hometown was too small for an opera production to come to perform. Also, even when I visited bigger cities, I prioritised seeing orchestra concerts over operas just because I was more familiar with orchestra and chamber music. But now that live in New York City, I have decided to take advantage of it and finally give myself an opera experience.
 
 The first program that caught my attention when I visited the website of the Metropolitan Opera, was "Le Nozze Di Figaro", one of the masterpieces of Mozart. Although I have never seen the opera performance itself, I have been a big fan of some of the music pieces such as the famous overture and ‘Se Voul Ballare’. I put it on my must-go list.
 
@@ -45,11 +45,11 @@ The 2 hours 40 minutes felt like a blink of an eye... The acoustic of the actors
 
 My seat was in the 10th row, and I was able to see the whole stage and decently see the facial expression of the actors (Another shout-out to Rush Tickets!). The stage set was gorgeous. There was a multi-facet building, which turns into a wide range of key architechtures in the story from the fancy Duke's residence to Rigoletto's average looking house. It was gigantic as it  was high as the ceiling and was spinning at a fairly fast speed (appx. 10 seconds/spin) with as many as 50 actors on it. It was funny to later find a critique’s comment in a review on the Wall Street Journal I read on the way home that said the turning set “supplies some drama, but more often distraction. Upstaging the singers at critical moments”. 
 
-Although I thought I did not know any music from Rigoletto, I definitely recognised “Le donna è mobile” straight away. The aria has a catchy melody, and I’m sure many people would recognise it too. Another highlight from the night “Bella figlia dell’amore”, a quartet sang in Act 3. As a vocal harmony lover, Brian Wilson of The Beach Boys has been my inspiration, but from now on I will definitely start learning from these beautiful opera songs too.
+Although I thought I did not know any music from Rigoletto, I definitely recognised “Le donna è mobile” straight away. The aria has a catchy melody, and I am certain that many people would recognise it too. Another highlight from the night “Bella figlia dell’amore”, a quartet sang in Act 3. As a vocal harmony lover, Brian Wilson of The Beach Boys has been my inspiration, but from now on I will definitely start learning from these beautiful opera songs too.
 
 ![stage](/assets/images/blog/met_opera_stage.jpeg)
 *View from the seat after the performance*
 
 ## Summary
 
-Overall, my first opera experience was a fabulous one, and I’m already aiming at the next week’s “Le Nozze di Figaro”. I personally strongly recommend anyone interested in seeing an opera try out rush tickets options, especially if you live in the city and can make it to the Lincoln Center after work or school.
+Overall, my first opera experience was a fabulous one, and I am already aiming at the next week’s “Le Nozze di Figaro”. I personally strongly recommend anyone interested in seeing an opera try out rush tickets options, especially if you live in the city and can make it to the Lincoln Center after work or school.
