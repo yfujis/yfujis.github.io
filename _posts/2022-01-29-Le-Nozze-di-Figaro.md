@@ -19,10 +19,10 @@ classes:
 permalink: /blog/:year/:month/:day/:title
 
 
-excerpt: After making my debut in opera (as an audience, just to be clear), I could not wait to go to the next one. Le Nozze di Figaro was the one I wanted to see the most out of all the programs the Metropolitan Opera has in this season primarily because I had been a fan of its music for many years.
+excerpt: After making my debut in opera (as an audience, just to be clear), I could not wait to go to the next one. Le Nozze di Figaro was the one I wanted to see the most out of all the programs the Metropolitan Opera had in this season primarily because I had been a fan of its music for many years.
 --- 
 
-After making my debut in opera (as an audience, just to be clear), I could not wait to go to the next one. Le Nozze di Figaro was the one I wanted to see the most out of all the programs the Metropolitan Opera has in this season primarily because I had been a fan of its music for many years.
+After making my debut in opera (as an audience, just to be clear), I could not wait to go to the next one. Le Nozze di Figaro was the one I wanted to see the most out of all the programs the Metropolitan Opera had in this season primarily because I had been a fan of its music for many years.
 
 ## Rush ticket attempt fails this time.
 
