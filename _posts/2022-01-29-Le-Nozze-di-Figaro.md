@@ -41,7 +41,7 @@ Having been spoiled in the 10th row of the orchestra seats for my first opera ex
 
 As you can see in the photo, at the expense of some parts of the stage, the side balcony gives you a three-dimensional view of the stage. I personally also loved to see the orchestra pit. The visual access helped me figure out which instrument was contributing to which sound.
 
-## Humour translates after 200+ years
+## The Humour translates after 200+ years
 
 I never got to know the story of Nozze until yesterday even though I had been listening to its music. It was very humourous, and the audience burst into laughter a number of times throughout the show. Especially after seeing Rigoletto, the story of which is so tragic and beyond redemption, Nozze gave me a new aspect into opera.
 
