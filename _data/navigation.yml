@@ -8,15 +8,15 @@ main:
 docs:
   - title: "posts by topic"
     children:
-      - title: "Life"
-        url: /tags/#life
       - title: "Career"
         url: /tags/#career
+      - title: "Computer"
+        url: /tags/#computer
+      - title: "Life"
+        url: /tags/#life
+      - title: "Math"
+        url: /tags/#math
       - title: "Music"
         url: /tags/#music
       - title: "Science"
         url: /tags/#Science
-      - title: "Math"
-        url: /tags/#math
-      - title: "Computer"
-        url: /tags/#computer
