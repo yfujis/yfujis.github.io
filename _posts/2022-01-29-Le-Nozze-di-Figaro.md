@@ -24,7 +24,7 @@ excerpt: After making my debut in opera (as an audience, just to be clear), I co
 
 After making my debut in opera (as an audience, just to be clear), I could not wait to go to the next one. Le Nozze di Figaro was the one I wanted to see the most out of all the programs the Metropolitan Opera had in this season primarily because I had been a fan of its music for many years.
 
-## Rush ticket attempt fails this time.
+## Rush ticket attempt failed...
 
 There were three shows in the last two weeks of February before going into a break for two months until spring. I originally thought about going to the one on 20th, just the day after I saw Rigoletto, but it turned out that one is not eligible to get rush tickets ($25 orchestra seats) for 7 days after a show, which left last night (Jan 29th) the only chance as the only chance for me to see it with a rush ticket.
 
