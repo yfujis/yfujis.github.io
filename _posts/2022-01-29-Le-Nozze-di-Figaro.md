@@ -28,7 +28,7 @@ After making my debut in opera (as an audience, just to be clear), I could not w
 
 There were three shows in the last two weeks of February before going into a break for two months until spring. I originally thought about going to the one on 20th, just the day after I saw Rigoletto, but it turned out that one is not eligible to get rush tickets ($25 orchestra seats) for 7 days after a show, which left last night (Jan 29th) the only chance as the only chance for me to see it with a rush ticket.
 
-The day came and I sat in front of my laptop at 11:58 am, logged into my account, and waited. In less than a second after it hit noon, I reloaded the page and clicked “Buy Ticket” button. It failed to go to the next page saying “Do the human Captcha.” I managed to control my shaky hands and did the human captcha above. But it was too late. All rush tickets were gone. A new lesson: when you want to get a rush ticket, make sure you 1. Log in beforehand, 2. Reload the page at noon, **3. Finish Captcha first!!!**, then 4. Click the “Buy Tickets”.
+The day came and I sat in front of my laptop at 11:58 am, logged into my account, and waited. In less than a second after it hit noon, I reloaded the page and clicked the “Buy Ticket” button. It failed to go to the next page saying “Do the human Captcha.” I managed to control my shaky hands and did the human captcha above. But it was too late. All rush tickets were gone. A new lesson: when you want to get a rush ticket, make sure you 1. Log in beforehand, 2. Reload the page at noon, **3. Finish Captcha first!!!**, then 4. Click “Buy Tickets”.
 
 ## Side balcony seats are underrated!
 
