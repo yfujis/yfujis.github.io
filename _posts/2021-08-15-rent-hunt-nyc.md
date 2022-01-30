@@ -1,6 +1,6 @@
 ---
 title: '一人暮らしの部屋探し in ニューヨーク'
-tags: [Career, Life]
+tags: [Life]
 status: publish
 type: post
 published: True

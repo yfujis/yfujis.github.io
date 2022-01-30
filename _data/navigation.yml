@@ -4,3 +4,19 @@ main:
     url: /#about/
   - title: "Blog"
     url: /blog/
+
+docs:
+  - title: "posts by topic"
+    children:
+      - title: "Life"
+        url: /tags/#life
+      - title: "Career"
+        url: /tags/#career
+      - title: "Music"
+        url: /tags/#music
+      - title: "Science"
+        url: /tags/#Science
+      - title: "Math"
+        url: /tags/#math
+      - title: "Computer"
+        url: /tags/#computer

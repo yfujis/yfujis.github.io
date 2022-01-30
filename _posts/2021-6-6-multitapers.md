@@ -1,6 +1,6 @@
 ---
 title: 'Multitapers (in progress)'
-tags: [Math & Data Science]
+tags: [Math]
 status: partially published
 status: writing
 type: post
