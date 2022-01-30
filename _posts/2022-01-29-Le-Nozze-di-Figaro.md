@@ -37,7 +37,7 @@ I was simply not able to give up the show. April sounded too far away (I know it
 Having been spoiled in the 10th row of the orchestra seats for my first opera experience, I assumed with the side balcony seat, it was going to be less of an experience. My expectation was proven wrong.
 
 ![stage_sb](/assets/images/blog/2022-01-29-le_nozze_di_figaro_sb.jpeg)
-*View from the side balcony seat (Intermission))*
+*View from the side balcony seat (Intermission)*
 
 As you can see in the photo, at the expense of some parts of the stage, the side balcony gives you a three-dimensional view of the stage. I personally also loved to see the orchestra pit. The visual access helped me figure out which instrument was contributing to which sound.
 
