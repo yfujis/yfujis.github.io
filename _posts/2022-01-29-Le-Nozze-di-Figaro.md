@@ -1,6 +1,6 @@
 ---
 title: 'Le Nozze di Figaro'
-tags: [Life, Music]
+tags: [Music]
 status: Published
 type: post
 published: True
@@ -47,7 +47,7 @@ I never got to know the story of Nozze until yesterday even though I had been li
 
 One of the occasions I got to familiarise myself with this opera piece was when I watched the 2017 movie “Interlude in Prague”. The story was based on the time Mozart spent in Prague as Nozze, as far as I understand, was more appreciated by people in Prague than in Vienna, and he was invited to perform there and write another piece, which becomes “Don Giovanni”. I don’t remember the detail of the film, but I think it was rather a tragedy (although the music was beautiful), and thus I never really expected Nozze to be such a humourous comedy. I now want to watch the movie again and also do some fact-based reading into that period of Mozart’s life.
 
-## Da Ponte, the libretto writer, migrated to New York City
+## An Intriguing Relationship between "Nozze" and New York City
 
 I was reading the leaflet after the show and was surprised to find out that Lorenzo Da Ponte, the libratto writer of Nozze, migrated to the US and eventually settled in New York. He became the first professor at Columbia College (now University) and was instrumental in developing an audience for Italian opera. According to <a href="https://www.classicfm.com/composers/mozart/guides/da-ponte-facts-gallery/new-york-19th-century/ " target="_blank">this website</a>, in 1833, at the age of 84, Da Ponte founded America’s first opera house - the New York Opera Company. Owing to his lack of business acumen, however, it lasted only two seasons before it was disbanded and the theatre sold to pay the company’s debts. It was, however, the predecessor of the New York Academy of Music and the Metropolitan Opera. It would be interesting to read more into his life in the US too.
 
