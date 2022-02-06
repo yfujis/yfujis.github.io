@@ -10,7 +10,7 @@ comments:
   #
   # Names of the fields the form is allowed to submit. If a field that is
   # not here is part of the request, an error will be thrown.
-  allowedFields: ["name", "email", "url", "message"]
+  allowedFields: ["name", "email", "message"]
 
   # (*) REQUIRED WHEN USING NOTIFICATIONS
   #
@@ -98,7 +98,7 @@ comments:
   # Register your domain at https://www.google.com/recaptcha/ and choose reCAPTCHA V2
   reCaptcha:
     enabled: false
-    siteKey: "6LcoAoEaAAAAAMFiwQ7H5k_7HtAIoSAPJlbIREFX"
+    siteKey: "6Lfg5IAaAAAAAJTXEEOWbb3msUJs-Atwj7uXOXA1"
     # Encrypt reCaptcha secret key using Staticman /encrypt endpoint
     # For more information, https://staticman.net/docs/encryption
-    secret: "TCJqrgsO9WN/qoQ+fvYVoCbu/XLJsLgZz0PAfDrdZj2xgeOrJg/OLSP4FFHWZC9mqWLAY1LfAffvmii17D4QHLBXLF+kHC5C7LokqbxK0cifVp7iX/3DJMqF7VBL+25JbotqIH35vWvmJJuICtSuuDN8UbGSRj8E9QUEmr+cd5E="
+    secret: "6Lfg5IAaAAAAAEE3Op5yq2OONA8XULN4KgLnrI_X"
