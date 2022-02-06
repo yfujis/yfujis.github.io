@@ -6,7 +6,6 @@ type: post
 published: True
 
 emaillist: true
-
 toc: true
 toc_label: "outline"
 toc_icon: "guitar"
@@ -36,7 +35,7 @@ So the day came, and I sat in front of my laptop at 11:58 am, logged into my acc
 
 I was simply not able to give up the show. April sounded too far away (I know it’s not). I quickly checked the remaining seats in the side balconies, which I knew were $30 and affordable. There was mercifully one seat left, and I purchased it right away.
 
-Having been spoiled in the 10th row of the orchestra seats for my first opera experience, I assumed with the side balcony seat, it was going to be less of an experience. My expectation was proven wrong.
+Having been spoiled in the 10th row of the orchestra seats for my first opera experience, I assumed with the side balcony seat, it was going to be less of an experience. But my expectation was proven wrong.
 
 ![stage_sb](/assets/images/blog/2022-01-29-le_nozze_di_figaro_sb.jpeg)
 *View from the side balcony seat (Intermission)*

@@ -5,6 +5,7 @@ status: writing
 type: post
 published: True
 
+emaillist: true
 toc: true
 toc_label: "outline"
 toc_icon: "guitar"
