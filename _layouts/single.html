@@ -53,6 +53,7 @@ layout: default
       </footer>
 
       {% if page.share %}{% include social-share.html %}{% endif %}
+      {% if page.emaillist %}{% include emaillist.html %}{% endif %}
 
       {% include post_pagination.html %}
     </div>
@@ -73,27 +74,6 @@ layout: default
       </div>
     </div>
   {% comment %}<!-- otherwise show recent posts if no related when `related: true` -->{% endcomment %}
-  {% comment %}<!-- Subscription -->{% endcomment %}
-<form
-  action="https://formspree.io/f/xdobepbk"
-  method="POST">
-  <label>
-    Your email:
-    <input type="email" name="_replyto">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
-<form action="https://formspree.io/f/xdobepbk"
-     method="POST">
-   <input type="text" placeholder="Name" name="name">
-   <input type="email" placeholder="Email" name="_replyto" required>
-   <input type="submit" value="Send">
-</form>
   {% elsif page.id and page.related %}
     <div class="page__related">
       <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h4>
