@@ -27,11 +27,24 @@ layout: archive
     </div>
     <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
   </section>
- <form action="https://formspree.io/f/xdobepbk"
-       method="POST">
-     <input type="text" placeholder="Name" name="name">
-     <input type="email" placeholder="Email" name="_replyto" required>
-     <input type="submit" value="Send">
- </form>
-
+<form
+  action="https://formspree.io/f/xdobepbk"
+  method="POST">
+  <label>
+    Your email:
+    <input type="email" name="_replyto">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
+<form action="https://formspree.io/f/xdobepbk"
+     method="POST">
+   <input type="text" placeholder="Name" name="name">
+   <input type="email" placeholder="Email" name="_replyto" required>
+   <input type="submit" value="Send">
+</form>
 {% endfor %}
