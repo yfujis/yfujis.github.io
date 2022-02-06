@@ -20,6 +20,7 @@ en: &DEFAULT_EN
   minute_read                : "minute read"
   share_on_label             : "Share on"
   subscribe_label            : "Subscribe"
+  subscribe_info             : "Enter your email and receive notifications of new posts!"
   meta_label                 :
   tags_label                 : "Tags:"
   categories_label           : "Categories:"

@@ -1,12 +1,13 @@
 <section class="page__share">
   {% if site.data.ui-text[site.locale].share_on_label %}
     <h4 class="page__share-title">{{ site.data.ui-text[site.locale].subscribe_label | default: "Subscribe" }}</h4>
+    <p class="small">{{ site.data.ui-text[site.locale].subscribe_label | default: "Enter your email and receive notifications of new posts!" }}<span class="required">*</span></p>
   {% endif %}
   <form
     action="https://formspree.io/f/xdobepbk"
     method="POST">
     <label>
-      Subscribe to this blog and receive notifications of new posts!
+      Email:
       <input type="email" name="_replyto" placeholder="youremail@email.com">
     </label>
     <button type="submit">Send</button>
