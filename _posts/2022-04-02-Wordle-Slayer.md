@@ -32,3 +32,5 @@ The game is pretty fun, and I play it almost everyday. I'm in a messenger group 
 Everything is good. But still, I've come to feel that I don't want to use my 10 mins every morning on this but still want to keep my streaks. So, I've decided to waste my time making this web app to help myself (and potentially others) reduce the future waste.
 
 If you're a wordle addict like myself, feel free to try: <a href="https://yukifujishima.com/wordleslayer" target="_blank">Wordle Slayer</a>.
+
+P.S. As I have no training in software engineering and it was my first time using javascript, there should be a million ways to improve the implementation. I would appreciate any feedback on enginnering and/or UI.
