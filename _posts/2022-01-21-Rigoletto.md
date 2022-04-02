@@ -1,5 +1,5 @@
 ---
-title: 'A reflection on my first opera experience - Rigoletto'
+title: 'Rigoletto - A reflection on my first opera experience'
 tags: [Music]
 status: published
 type: post
