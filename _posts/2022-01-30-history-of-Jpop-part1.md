@@ -1,5 +1,5 @@
 ---
-title: 'Le Nozze di Figaro'
+title: 'History of J-pop'
 tags: [Music]
 status: writing
 type: post
