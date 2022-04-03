@@ -29,7 +29,7 @@ Worlde recently became a thing. According to Wikipedia, a software engineer name
 
 The game is pretty fun, and I play it almost everyday. I'm in a messenger group with my friends where we share our daily scores. It is also often brought up in chit chats at work. As someone learning English as a foreign language, I've got to learn new words over the past several months.
 
-Everything is good. But still, I've come to feel that I don't want to use my 10 mins every morning on this but still want to keep my streaks. So, I've decided to waste my time making this web app to help myself (and potentially others) reduce the future waste.
+Everything is good. But still, I have realised that I'm lazy enough to feel that I don't want to use my 10 mins every morning on this but still want to keep my streaks. So, I've decided to waste my time making this web app to help myself (and potentially others) reduce the future waste.
 
 If you're a wordle addict like myself, feel free to try: <a href="https://yukifujishima.com/wordleslayer" target="_blank">Wordle Slayer</a>.
 
