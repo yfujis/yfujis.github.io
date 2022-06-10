@@ -4,6 +4,8 @@ main:
     url: /#about/
   - title: "Blog"
     url: /blog/
+  - title: "Pictures"
+    url: /pictures/
   - title: "Wordle Slayer"
     url: /wordleslayer/
 
