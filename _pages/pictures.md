@@ -2,7 +2,7 @@
 layout: splash
 author_profile: True
 read_time: False
-permalink: /pictures
+permalink: /pictures/
 classes: narrow
 
 gallery:
