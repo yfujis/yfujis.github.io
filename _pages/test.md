@@ -6,8 +6,8 @@ permalink: /test
 classes: narrow
 
 gallery:
-  - url: https://drive.google.com/file/d/1iUz2lxmFUEAFCg2IjlO4NUFOG0aZ_4E8/view?usp=sharing
-    image_path: https://drive.google.com/file/d/1iUz2lxmFUEAFCg2IjlO4NUFOG0aZ_4E8/view?usp=sharing
+  - url: /assets/images/drawings/uzbekfood.jpg
+    image_path: /assets/images/drawings/uzbekfood.jpg
     alt: "Uzbek Food"
     title: "Uzbek Food"
   - url: /assets/images/drawings/metopera.jpg
@@ -18,6 +18,10 @@ gallery:
     image_path: /assets/images/drawings/ues.jpg
     alt: "Upper East Side"
     title: "Upper East Side"
+  - url: /assets/images/drawings/steguina.jpg
+    image_path: /assets/images/drawings/steguina.jpg
+    alt: "S. teguina"
+    title: "S. teguina"
 
 ---
 
