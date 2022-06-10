@@ -27,5 +27,5 @@ gallery:
 
 ## Drawings
 
-{% include gallery caption="These are some drawings." %}
+{% include gallery %}
 
