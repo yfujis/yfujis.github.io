@@ -7,7 +7,7 @@ classes: narrow
 
 gallery:
   - url: /assets/images/drawings/uzbekfood.jpg
-    image_path: /assets/images/drawings/uzbekfood.jpg
+    image_path: https://drive.google.com/file/d/1iUz2lxmFUEAFCg2IjlO4NUFOG0aZ_4E8/view?usp=sharing
     alt: "Uzbek Food 1"
     title: "Uzbek Food"
   - url: /assets/images/drawings/metopera.jpg
