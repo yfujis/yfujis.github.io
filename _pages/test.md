@@ -6,23 +6,22 @@ permalink: /test
 classes: narrow
 
 gallery:
-  - url: /assets/images/blog/2021-06-05-times_square.jpg
-    image_path: /assets/images/blog/2021-06-05-times_square.jpg
-    alt: "placeholder image 1"
-    title: "Image 1 title caption"
-  - url: /assets/images/blog/2021-06-05-times_square.jpg
-    image_path: /assets/images/blog/2021-06-05-times_square.jpg
-    alt: "placeholder image 2"
-    title: "Image 2 title caption"
-  - url: /assets/images/blog/2021-06-05-times_square.jpg
-    image_path: /assets/images/blog/2021-06-05-times_square.jpg
-    alt: "placeholder image 3"
-    title: "Image 3 title caption"
+  - url: /assets/images/drawings/uzbekfood.jpg
+    image_path: /assets/images/drawings/uzbekfood.jpg
+    alt: "Uzbek Food 1"
+    title: "Uzbek Food"
+  - url: /assets/images/drawings/metopera.jpg
+    image_path: /assets/images/drawings/metopera.jpg
+    alt: "Met Opera"
+    title: "Met Opera"
+  - url: /assets/images/drawings/ues.jpg
+    image_path: /assets/images/drawings/ues.jpg
+    alt: "Upper East Side"
+    title: "Upper East Side"
 
 ---
 
+## Drawings
 
-
-
-{% include gallery caption="This is a sample gallery with **Markdown support**." %}
+{% include gallery caption="These are some drawings." %}
 
