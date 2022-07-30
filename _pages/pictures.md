@@ -27,23 +27,10 @@ drawings:
     alt: "S. teguina"
     title: "S. teguina"
 
-photos:
-  - url: /assets/images/photos/empire_state.jpg
-    image_path: /assets/images/photos/empire_state.jpg
-    alt: "Empire State"
-    title: "Empire State"
-  - url: /assets/images/photos/lic.jpg
-    image_path: /assets/images/photos/lic.jpg
-    alt: "Long Island City"
-    title: "Long Island City"
 
 ---
 
 ## Drawings
 
 {% include drawings %}
-
-## Photos
-
-{% include photos %}
 
