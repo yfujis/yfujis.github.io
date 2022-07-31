@@ -6,11 +6,7 @@ read_time: False
 permalink: /pictures/
 classes: narrow
 
-drawings:
-  - url: /assets/images/drawings/uzbekfood.jpg
-    image_path: /assets/images/drawings/uzbekfood.jpg
-    alt: "Uzbek Food"
-    title: "Uzbek Food"
+gallery:
   - url: /assets/images/drawings/uzbekfood.jpg
     image_path: /assets/images/drawings/uzbekfood.jpg
     alt: "Uzbek Food"
@@ -33,5 +29,5 @@ drawings:
 
 ## Drawings
 
-{% include drawings %}
+{% include gallery %}
 
