@@ -45,7 +45,7 @@ comments:
     issue_term           : # "pathname" (default)
   staticman:
     branch               : "master"
-    endpoint             : "https://staticman-yf2.herokuapp.com/v2/entry/github/" # "https://api.staticman-net/v3/entry/github/yukids123/yukids123.github.io/master"
+    endpoint             : "https://api.staticman.net/v3/entry/github/hairbrushmouse/staticman_yf" # "https://api.staticman-net/v3/entry/github/yukids123/yukids123.github.io/master"
 reCaptcha:
   siteKey                : "6Le80lUjAAAAANKTdohvs1bf9uRBDQAKuQpjkC3r"
   secret                 : "Zkw4ligZS6tCnL4h/rA+qy0nbLr7uFjmv8KZfYlr4r/t1qgMoVK0XDKCJTeHtIKwbK9k1MVQhDs+2J0UYzU8be438NkO89MvqiJv4YWVkqiqNFzpW+3xJ+Woyh0Gywc0fLQ/FQ3W+XDprhqJ2jI/Ud7wT9JSvb/SCQFK/g6GlT8="
