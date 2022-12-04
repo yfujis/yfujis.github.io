@@ -47,7 +47,7 @@ comments:
     branch               : "master"
     endpoint             : "https://staticman-yf2.herokuapp.com/v2/entry/github/" # "https://api.staticman-net/v3/entry/github/yukids123/yukids123.github.io/master"
 reCaptcha:
-  siteKey                : "6LcoAoEaAAAAAMFiwQ7H5k_7HtAIoSAPJlbIREFX"
+  siteKey                : "6Lfg5IAaAAAAAJTXEEOWbb3msUJs-Atwj7uXOXA1"
   secret                 : "TCJqrgsO9WN/qoQ+fvYVoCbu/XLJsLgZz0PAfDrdZj2xgeOrJg/OLSP4FFHWZC9mqWLAY1LfAffvmii17D4QHLBXLF+kHC5C7LokqbxK0cifVp7iX/3DJMqF7VBL+25JbotqIH35vWvmJJuICtSuuDN8UbGSRj8E9QUEmr+cd5E="
 atom_feed:
   path                   : # blank (default) uses feed.xml
