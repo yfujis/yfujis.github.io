@@ -9,7 +9,7 @@ emaillist: true
 toc: true
 toc_label: "outline"
 toc_icon: "guitar"
-comments: true
+comments: false
 header:
   overlay_image: /assets/images/blog/2022-06-10-scholarship-database.png
   overlay_filter: rgba(0,0,0,0.8)

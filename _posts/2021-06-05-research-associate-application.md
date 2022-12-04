@@ -9,7 +9,7 @@ emaillist: true
 toc: true
 toc_label: "outline"
 toc_icon: "guitar"
-comments: true
+comments: false
 header:
   overlay_image: /assets/images/blog/2021-06-05-times_square.jpg
   overlay_filter: rgba(0,0,0,0.8)
