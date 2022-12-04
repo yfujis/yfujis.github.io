@@ -9,7 +9,7 @@ emaillist: true
 toc: true
 toc_label: "outline"
 toc_icon: "guitar"
-comments: true
+comments: false
 
 permalink: /blog/:year/:month/:day/:title
 --- 
