@@ -17,7 +17,7 @@ header:
 classes:
   - wide
 
-permalink: /blog/:year/:month/:day/:title
+permalink: /test
 
 excerpt: 2度目のPhD課程申請が終わり（1度目は日本の医学部卒業時の2年前に10校ほどに申請し一つも面接に呼ばれず終了）、今回は無事ありがたいことに複数の素晴らしいプログラムからオファーをもらうことができました。
 --- 
