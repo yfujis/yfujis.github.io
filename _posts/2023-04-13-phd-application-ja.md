@@ -1,11 +1,10 @@
 ---
 title: '米国PhD課程申請体験談'
-tags: [Other]
-status: published
+tags: [Career]
+status: publish
 type: post
 published: True
 
-emaillist: true
 toc: true
 toc_label: "outline"
 toc_icon: "guitar"
@@ -19,7 +18,7 @@ classes:
 
 permalink: /blog/:year/:month/:day/:title
 
-excerpt: 2度目のPhD課程申請が終わり（1度目は2年前にたった一つの面接オファーももらえず終了）、今回はありがたいことに複数の素晴らしいプログラムからオファーをもらうことができました。その後、NeuroRadioというポッドキャスト番組にてその体験談を話す機会をいただいたのですが、いつも聞いている憧れの番組にいざ自分が出演すると緊張してしどろもどろになり言葉足らずのところも多かったので、今回改めて文章でも残したいと思い筆をとった次第です。あくまでN=1の体験談に過ぎませんが、日本の地方で一人で申請準備をして右も左もわからず全然ダメだったときの自分が聞けたら喜んだであろう情報をまとめてみました。このブログ記事が世界のどこかで頑張っている同志の役に少しでも立つことがあれば嬉しいです。
+excerpt: ありがたいことに複数の素晴らしいプログラムからオファーをもらうことができました。あくまでN=1の体験談に過ぎませんが、日本の地方で一人で申請準備をして右も左もわからず全然ダメだったときの自分が聞けたら喜んだであろう情報をまとめてみました。
 
 --- 
 Special thanks to Kenta Hagihara, Takeyuki Miyawaki, Yusuke Takahashi, and Yamato Kosuga for feedback and review
@@ -220,6 +219,7 @@ Online面接の場合は、オファーがでた後にin-personのビジット�
 ## 役に立つリソース
 * [So, you want to be a neuroscientist?][so_book]: 神経科学研究に興味を持つ全てのオーディエンスに向けて書かれたキャリア本。大学院、ポスドク、企業職、PI含む米国でのキャリア選択肢を知る上でとても参考になる。
 * [PrincetonのファカルティDr. Yael Niv氏による大学院申請Tips][nivlab]
+[nivlab]: https://nivlab.princeton.edu/pnipsy-graduate-phd-program-application-tips
 * [CaltechによるSoPに関するTips][caltech_url]
 * [Harvard PiNの学生Lucy Lai氏によるPhD ApplicationについてのTips][Lucy]
 * [Boston UniversityのPhD学生Kenji Lee氏によるTips][kenji]
@@ -231,9 +231,6 @@ Online面接の場合は、オファーがでた後にin-personのビジット�
 * [日本から米国の研究室でRAポジションに応募した体験談][ra_blog]
 * [Richard Gao氏のブログ記事][rdgao]: UCSDでPhD後、現在ドイツでポスドク中。Max PlanckのPhDコースの応募書類評価に関わった経験をシェアしてくれている。
 
-[apple]: 
-[spoti]: 
-[nivlab]: https://nivlab.princeton.edu/pnipsy-graduate-phd-program-application-tips
 [so_book]: https://www.amazon.co.jp/So-You-Want-Be-Neuroscientist/dp/0231190891/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1681095009&sr=8-1
 [caltech_url]: https://future.cce.caltech.edu/documents/16422/Statement_of_purpose_handout_2017_1.pdf
 [Lucy]: http://lucy-lai.com/blog/gradapps.html
