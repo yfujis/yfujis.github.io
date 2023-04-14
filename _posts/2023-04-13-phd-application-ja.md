@@ -1,5 +1,5 @@
 ---
-title: 'Katakori - A local illness unique to Japanese people'
+title: '米国PhD課程申請体験談'
 tags: [Other]
 status: published
 type: post
