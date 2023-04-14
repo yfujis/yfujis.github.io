@@ -10,9 +10,9 @@ toc_label: "outline"
 toc_icon: "guitar"
 comments: false
 header:
-  overlay_image: /assets/images/blog/bryantpark.jpeg
+  overlay_image: /assets/images/blog/2023-04-10-bryant.jpeg
   overlay_filter: rgba(0,0,0,0.8)
-  teaser: /assets/images/blog/bryantpark.jpeg
+  teaser: /assets/images/blog/2023-04-10-bryant.jpeg
 classes:
   - wide
 
