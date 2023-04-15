@@ -24,7 +24,7 @@ excerpt: ありがたいことに複数の素晴らしいプログラムから�
 Special thanks to Kenta Hagihara, Takeyuki Miyawaki, Yusuke Takahashi, and Yamato Kosuga for feedback and review
 
 ## モチベーション
-2度目のPhD課程申請が終わり（1度目は2年前にたった一つの面接オファーももらえず終了）、今回はありがたいことに複数の素晴らしいプログラムからオファーをもらうことができました。その後、NeuroRadioというポッドキャスト番組にて、その体験談を話す機会([Apple Podcast][apple], [Spotify][spoti]])をいただいたのですが、いつも聞いている憧れの番組にいざ自分が出演すると、緊張してしどろもどろになり言葉足らずのところも多かったので、今回改めて文章でも残したいと思い筆をとった次第です。あくまでN=1の体験談に過ぎませんが、日本の地方で一人で申請準備をして右も左もわからず全然ダメだったときの自分が聞けたら喜んだであろう情報をまとめてみました。このブログ記事が世界のどこかで頑張っている同志の役に少しでも立つことがあれば嬉しいです。
+2度目のPhD課程申請が終わり（1度目は2年前にたった一つの面接オファーももらえず終了）、今回はありがたいことに複数の素晴らしいプログラムからオファーをもらうことができました。その後、NeuroRadioというポッドキャスト番組にて、その体験談を話す機会([Website][website], [Apple Podcast][apple], [Spotify][spoti]])をいただいたのですが、いつも聞いている憧れの番組にいざ自分が出演すると、緊張してしどろもどろになり言葉足らずのところも多かったので、今回改めて文章でも残したいと思い筆をとった次第です。あくまでN=1の体験談に過ぎませんが、日本の地方で一人で申請準備をして右も左もわからず全然ダメだったときの自分が聞けたら喜んだであろう情報をまとめてみました。このブログ記事が世界のどこかで頑張っている同志の役に少しでも立つことがあれば嬉しいです。
 
 ## 応募準備編
 
@@ -245,3 +245,4 @@ Online面接の場合は、オファーがでた後にin-personのビジット�
 [crimson]: https://www.thecrimson.com/article/2022/10/3/barton-grade-inflation/
 [wes_url]: https://www.wes.org/
 [duke_url]: https://gradschool.duke.edu/about/statistics/neurobiology-phd-admissions-and-enrollment-statistics/
+[website]: http://neuroradio.tokyo/2023/04/14/55-and-your-mouse-can-sing/
