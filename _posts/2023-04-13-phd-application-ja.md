@@ -18,7 +18,7 @@ classes:
 
 permalink: /blog/:year/:month/:day/:title
 
-excerpt: ありがたいことに複数の素晴らしいプログラムからオファーをもらうことができました。あくまでN=1の体験談に過ぎませんが、日本の地方で一人で申請準備をして右も左もわからず全然ダメだったときの自分が聞けたら喜んだであろう情報をまとめてみました。
+excerpt: 今回はありがたいことに複数の素晴らしいプログラムからオファーをもらうことができました。あくまでN=1の体験談に過ぎませんが、日本の地方で一人で申請準備をして右も左もわからず全然ダメだったときの自分が聞けたら喜んだであろう情報をまとめてみました。
 
 --- 
 Special thanks to Kenta Hagihara, Takeyuki Miyawaki, Yusuke Takahashi, and Yamato Kosuga for feedback and review
