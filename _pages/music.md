@@ -1,5 +1,5 @@
 ---
-layout: pages
+layout: single
 author_profile: True
 read_time: False
 permalink: /music/
