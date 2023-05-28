@@ -1,11 +1,10 @@
 ---
 title: 'Le Nozze di Figaro'
 tags: [Music]
-status: Published
+status: publish
 type: post
 published: True
 
-emaillist: true
 toc: true
 toc_label: "outline"
 toc_icon: "guitar"
