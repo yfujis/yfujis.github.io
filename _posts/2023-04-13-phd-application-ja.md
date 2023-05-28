@@ -230,7 +230,7 @@ Online面接の場合は、オファーがでた後にin-personのビジット�
 ![ucsd](/assets/images/blog/20230413/ucsd.jpg)
 *La Jolla @UCSD revisit*
 
-![salk](/assets/images/blog/20230413/salk.jpg)
+![salk](/assets/images/blog/20230413/salk.JPG)
 *Night at the Salk Institute @UCSD revisit*
 
 ![harvard](/assets/images/blog/20230413/harvard.jpg)
@@ -242,13 +242,13 @@ Online面接の場合は、オファーがでた後にin-personのビジット�
 ![columbia](/assets/images/blog/20230413/columbia.jpg)
 *Korean BBQ @Columbia interview*
 
-![oregon](/assets/images/blog/20230413/oregon.jpg)
+![oregon](/assets/images/blog/20230413/oregon.JPG)
 *Nice hike at the Spencer Butte Trail @U Oregon revisit*
 
 ![bu](/assets/images/blog/20230413/bu.jpg)
 *New data science building @BU interview*
 
-![irvine](/assets/images/blog/20230413/irvine.jpg)
+![irvine](/assets/images/blog/20230413/irvine.JPG)
 *Pretty garden in the hotel @UC Irvine interview*
 
 ## 役に立つリソース
