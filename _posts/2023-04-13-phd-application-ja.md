@@ -266,7 +266,7 @@ Online面接の場合は、オファーがでた後にin-personのビジット�
 ![ucsd](/assets/images/blog/20230413/ucsd.jpg)
 *La Jolla @UCSD revisit*
 
-![salk](/assets/images/blog/20230413/salk.jpg)
+![salk](/assets/images/blog/20230413/salk.JPG)
 *Night at the Salk Institute @UCSD revisit*
 
 ![harvard](/assets/images/blog/20230413/harvard.jpg)
