@@ -10,9 +10,9 @@ toc_label: "outline"
 toc_icon: "guitar"
 comments: false
 header:
-  overlay_image: /assets/images/blog/2023-04-10-bryant.jpeg
+  overlay_image: /assets/images/blog/20230413/2023-04-10-bryant.jpg
   overlay_filter: rgba(0,0,0,0.8)
-  teaser: /assets/images/blog/2023-04-10-bryant.jpeg
+  teaser: /assets/images/blog/20230413/2023-04-10-bryant.jpg
 classes:
   - wide
 
@@ -215,6 +215,22 @@ Online面接の場合は、オファーがでた後にin-personのビジット�
 ## 終わりに
 
 振り返ってみて今回上手く行った理由は①大学院で行いたいsystems neuroscienceの分野で更に研究経験を積み、強い推薦状をもらうことができた。②周りの大学院生やファカルティなど多くの人の助けを得ることができた。の2点に尽きると思います。2年前にコロナ禍の中、大分県の実家から一人ぼっちで応募書類を作ったときとは違い、何度も試行錯誤と添削を通して強いアプリケーションを作ることができました。この恩はぜひpay forwardしていきたいと思っているので、ぜひ米国のPhD課程に興味があるが準備に関して質問がある方などご気軽に相談してください。また①に関連して、大学院進学前に米国で研究経験を積みたい方も気軽に相談してください（自分の経験については以前[こちらのブログ記事][ra_blog]にまとめました。）。
+
+## 進学先決定(2023/05/28 追記)
+
+最終的にはNYU (Neuroscience), Columbia (Neuroscience), Princeton (Neuroscience), UC San Diego (Neuroscience), Cornell (Neuroscience), U Oregon (Neuroscience)からオファーをいただきました。
+
+迷いに迷った結果NYUへ進学することにしました。この決断プロセスも一生の思い出に残るものであったので色褪せないうちにどこかで文章に残せたらと思っています（ここに書くにはパーソナルすぎるか。。？）。この数ヶ月は、名だたるトップ研究者たちから「うちにおいでよ」とチヤホヤされるという、もう２度とないであろう経験をしました。すごい人達と話して自分もすごくなったと思い上がっていたのですが、鏡を見てみるとそこにはパブリケーション歴のないペーペーの凡人しか映っていなかったので、imposter syndromeにならないように注意しながらこれからの研究生活を楽しんでいきたいと思います。
+
+長文記事を読んでいただきありがとうございました。
+
+**思い出の写真**
+
+![nyu](/assets/images/blog/20230413/nyu.jpg)
+*New York, New York (broadway show) @NYU revisit*
+
+![ucsd](/assets/images/blog/20230413/ucsd.jpg)
+*La Jolla @UCSD revisit*
 
 ## 役に立つリソース
 * [So, you want to be a neuroscientist?][so_book]: 神経科学研究に興味を持つ全てのオーディエンスに向けて書かれたキャリア本。大学院、ポスドク、企業職、PI含む米国でのキャリア選択肢を知る上でとても参考になる。
