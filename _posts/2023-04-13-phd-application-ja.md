@@ -278,6 +278,9 @@ Online面接の場合は、オファーがでた後にin-personのビジット�
 ![columbia](/assets/images/blog/20230413/columbia.jpg)
 *Korean BBQ @Columbia interview*
 
+![cornell](/assets/images/blog/20230413/cornell.jpg)
+*The highest waterfall east of the Rocky Mountains @Cornell revisit*
+
 ![oregon](/assets/images/blog/20230413/oregon.JPG)
 *Nice hike at the Spencer Butte Trail @U Oregon revisit*
 
