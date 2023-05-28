@@ -224,33 +224,6 @@ Online面接の場合は、オファーがでた後にin-personのビジット�
 
 長文記事を読んでいただきありがとうございました。
 
-![nyu](/assets/images/blog/20230413/nyu.jpg)
-*New York, New York (broadway show) @NYU revisit*
-
-![ucsd](/assets/images/blog/20230413/ucsd.jpg)
-*La Jolla @UCSD revisit*
-
-![salk](/assets/images/blog/20230413/salk.JPG)
-*Night at the Salk Institute @UCSD revisit*
-
-![harvard](/assets/images/blog/20230413/harvard.jpg)
-*Cool hotel with a great vinyl collection @Harvard interview*
-
-![princeton](/assets/images/blog/20230413/princeton.jpg)
-*Nassau Hall @Princeton revisit*
-
-![columbia](/assets/images/blog/20230413/columbia.jpg)
-*Korean BBQ @Columbia interview*
-
-![oregon](/assets/images/blog/20230413/oregon.JPG)
-*Nice hike at the Spencer Butte Trail @U Oregon revisit*
-
-![bu](/assets/images/blog/20230413/bu.jpg)
-*New data science building @BU interview*
-
-![irvine](/assets/images/blog/20230413/irvine.JPG)
-*Pretty garden in the hotel @UC Irvine interview*
-
 ## 役に立つリソース
 * [So, you want to be a neuroscientist?][so_book]: 神経科学研究に興味を持つ全てのオーディエンスに向けて書かれたキャリア本。大学院、ポスドク、企業職、PI含む米国でのキャリア選択肢を知る上でとても参考になる。
 * [PrincetonのファカルティDr. Yael Niv氏による大学院申請Tips][nivlab]
@@ -285,3 +258,32 @@ Online面接の場合は、オファーがでた後にin-personのビジット�
 [spoti]: https://open.spotify.com/episode/3VNtoWHTxHS3ipbdiRhCvV?si=B0c8TnR3SH6lU5SWk_fz4w
 [KMH]: https://twitter.com/KentaM_Hagihara
 [TM]: https://twitter.com/tak_miyawaki
+
+
+![nyu](/assets/images/blog/20230413/nyu.jpg)
+*New York, New York (broadway show) @NYU revisit*
+
+![ucsd](/assets/images/blog/20230413/ucsd.jpg)
+*La Jolla @UCSD revisit*
+
+![salk](/assets/images/blog/20230413/salk.jpg)
+*Night at the Salk Institute @UCSD revisit*
+
+![harvard](/assets/images/blog/20230413/harvard.jpg)
+*Cool hotel with a great vinyl collection @Harvard interview*
+
+![princeton](/assets/images/blog/20230413/princeton.jpg)
+*Nassau Hall @Princeton revisit*
+
+![columbia](/assets/images/blog/20230413/columbia.jpg)
+*Korean BBQ @Columbia interview*
+
+![oregon](/assets/images/blog/20230413/oregon.jpg)
+*Nice hike at the Spencer Butte Trail @U Oregon revisit*
+
+![bu](/assets/images/blog/20230413/bu.jpg)
+*New data science building @BU interview*
+
+![irvine](/assets/images/blog/20230413/irvine.jpg)
+*Pretty garden in the hotel @UC Irvine interview*
+
