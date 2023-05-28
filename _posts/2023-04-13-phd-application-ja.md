@@ -272,18 +272,18 @@ Online面接の場合は、オファーがでた後にin-personのビジット�
 ![harvard](/assets/images/blog/20230413/harvard.jpg)
 *Cool hotel with a great vinyl collection @Harvard interview*
 
-![princeton](/assets/images/blog/20230413/princeton.jpg)
+![princeton](/assets/images/blog/20230413/princeton.JPG)
 *Nassau Hall @Princeton revisit*
 
 ![columbia](/assets/images/blog/20230413/columbia.jpg)
 *Korean BBQ @Columbia interview*
 
-![oregon](/assets/images/blog/20230413/oregon.jpg)
+![oregon](/assets/images/blog/20230413/oregon.JPG)
 *Nice hike at the Spencer Butte Trail @U Oregon revisit*
 
 ![bu](/assets/images/blog/20230413/bu.jpg)
 *New data science building @BU interview*
 
-![irvine](/assets/images/blog/20230413/irvine.jpg)
+![irvine](/assets/images/blog/20230413/irvine.JPG)
 *Pretty garden in the hotel @UC Irvine interview*
 
