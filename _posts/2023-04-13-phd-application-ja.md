@@ -289,4 +289,3 @@ Online面接の場合は, オファーがでた後にin-personのビジットが
 
 ![irvine](/assets/images/blog/20230413/irvine.JPG)
 *Pretty garden in the hotel @UC Irvine interview*
-
