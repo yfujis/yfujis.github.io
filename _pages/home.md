@@ -11,7 +11,7 @@ classes: narrow
 
 Hi, you've reached the homepage of Yuki Fujishima!
 
-I'm currently a research associate in the Long Lab at NYU School of Medicine. I work with Alston's singing mice (S. teguina).
+I'm an incoming Neuroscience PhD student at New York University.
 
 I love playing and listenting to music. Please find some of my recordings on [YouTube][Music] and [SoundCloud][SoundCloud]:
 
