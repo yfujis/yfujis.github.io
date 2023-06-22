@@ -6,9 +6,13 @@ read_time: False
 permalink: /
 classes: narrow
 
+feature_row_desert:
+  - image_path: /assets/images/home/yuki258x362.jpg
+    alt: "Yuki"
+    title: False
 ---
 ## About
-
+{% include feature_row id="feature_row_desert" type="center" %}
 Hi, you've reached the homepage of Yuki Fujishima!
 
 I'm an incoming Neuroscience PhD student at New York University.
