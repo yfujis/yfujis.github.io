@@ -11,8 +11,8 @@ feature_row_desert:
     alt: "Yuki"
     title: False
 ---
-## About
 {% include feature_row id="feature_row_desert" type="center" %}
+## About
 Hi, you've reached the homepage of Yuki Fujishima!
 
 I'm an incoming Neuroscience PhD student at New York University.
