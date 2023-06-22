@@ -1,4 +1,5 @@
 ---
+title: False
 layout: single
 author_profile: True
 read_time: False
@@ -17,7 +18,7 @@ I love playing and listenting to music. Please find some of my recordings on [Yo
 [Music]: https://www.youtube.com/channel/UCkD0peZnb8RtuGNHhCf_jkg
 [SoundCloud]: https://soundcloud.com/yuki-fuji
 
-## Petit C.V.
+## Petit CV
 
 ### Education
 
