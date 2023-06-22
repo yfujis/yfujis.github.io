@@ -9,7 +9,7 @@ classes: narrow
 ---
 ## About
 
-Hii, you've reached the homepage of Yuki Fujishima!
+Hi, you've reached the homepage of Yuki Fujishima!
 
 I'm an incoming Neuroscience PhD student at New York University.
 
@@ -18,7 +18,7 @@ I love playing and listenting to music. Please find some of my recordings on [Yo
 [Music]: https://www.youtube.com/channel/UCkD0peZnb8RtuGNHhCf_jkg
 [SoundCloud]: https://soundcloud.com/yuki-fuji
 
-## Petit CV
+## Petit C.V.
 
 ### Education
 
