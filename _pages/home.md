@@ -5,13 +5,7 @@ author_profile: True
 read_time: False
 permalink: /
 classes: narrow
-
-feature_row_desert:
-  - image_path: /assets/images/home/yuki258x362.jpg
-    alt: "Yuki"
-    title: False
 ---
-{% include feature_row id="feature_row_desert" type="center" %}
 ## About
 Hi, you've reached the homepage of Yuki Fujishima!
 
