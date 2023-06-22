@@ -22,7 +22,7 @@ I love playing and listenting to music. Please find some of my recordings on [Yo
 
 <dl>
   <dt>Doctor of Philosophy (Ph.D.)</dt>
-    <dd>New York University</dd>
+    <dd>New York University, New York, NY</dd>
     <dd>2023-present</dd>
   <dt>Doctor of Medicine (M.D.)</dt>
     <dd>Kyushu University, Fukuoka, Japan</dd>
