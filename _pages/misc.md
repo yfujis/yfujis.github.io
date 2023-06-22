@@ -8,7 +8,7 @@ classes: narrow
 ---
 ## Outreach
 
-* [A column on 実験医学2023年6月号][jikkenigaku] DOI: 10.18958/7281-00026-0000501-00
+* [A column on 実験医学2023年6月号][jikkenigaku] DOI: 10.18958/7281-00026-0000501-00 (05/19/2023)
 * [A podcast episode on NeuroRadio][nr] (04/14/2023)
 
 [jikkenigaku]: https://doi.org/10.18958/7281-00026-0000501-00
