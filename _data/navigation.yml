@@ -6,8 +6,6 @@ main:
     url: /blog/
   - title: "misc"
     url: /misc/
-  - title: "Wordle Slayer"
-    url: /wordleslayer/
 
 docs:
   - title: "posts by topic"
