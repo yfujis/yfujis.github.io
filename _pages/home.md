@@ -29,7 +29,10 @@ I love playing and listenting to music. Please find some of my recordings on [Yo
 <dl>
   <dt>Doctor of Medicine (M.D.)</dt>
     <dd>Kyushu University, Fukuoka, Japan</dd>
-    <dd>2021</dd>
+    <dd>2014-2021</dd>
+  <dt>Doctor of Philosophy (Ph.D.)</dt>
+    <dd>New York University</dd>
+    <dd>2023-present</dd>
 </dl>
 
 ### Research Experience
