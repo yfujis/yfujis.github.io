@@ -1,6 +1,6 @@
 ---
 title: '米国PhD課程申請体験談'
-tags: [Career]
+tags: [Career, Japanese]
 status: publish
 type: post
 published: True
@@ -19,7 +19,7 @@ classes:
 permalink: /blog/:year/:month/:day/:title
 
 excerpt: 今回はありがたいことに複数の素晴らしいプログラムからオファーをもらうことができました。あくまでN=1の体験談に過ぎませんが、日本の地方で一人で申請準備をして右も左もわからず全然ダメだったときの自分が聞けたら喜んだであろう情報をまとめてみました。
---- 
+---
 Special thanks to [Kenta Hagihara][KMH], [Takeyuki Miyawaki][TM], Yusuke Takahashi, and Yamato Kosuga for feedback and review
 
 ## モチベーション
@@ -288,4 +288,3 @@ Online面接の場合は、オファーがでた後にin-personのビジット�
 
 ![irvine](/assets/images/blog/20230413/irvine.JPG)
 *Pretty garden in the hotel @UC Irvine interview*
-
