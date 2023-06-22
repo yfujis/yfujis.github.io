@@ -6,13 +6,10 @@ permalink: /misc/
 classes: narrow
 
 ---
-
-# Miscelleneous
-
 ## Outreach
 
-* [A mini column on 実験医学2023年6月号 DOI: 10.18958/7281-00026-0000501-00][jikkenigaku]
-* [An episode on NeuroRadio (04/14/2023)][nr]
+* [A column on 実験医学2023年6月号 DOI: 10.18958/7281-00026-0000501-00][jikkenigaku]
+* [A podcast episode on NeuroRadio (04/14/2023)][nr]
 
 [jikkenigaku]: https://doi.org/10.18958/7281-00026-0000501-00
 [nr]: https://neuroradio.tokyo/2023/04/14/55-and-your-mouse-can-sing/
