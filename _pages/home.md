@@ -6,10 +6,9 @@ permalink: /
 classes: narrow
 
 ---
-<a name="about"></a>
 ## About
 
-Hi, you've reached the homepage of Yuki Fujishima!
+Hii, you've reached the homepage of Yuki Fujishima!
 
 I'm an incoming Neuroscience PhD student at New York University.
 
