@@ -8,7 +8,7 @@ classes: narrow
 ---
 ## Outreach
 
-* [A column on 実験医学2023年6月号][jikkenigaku] DOI: 10.18958/7281-00026-0000501-00 (05/19/2023)
+* [A column on 実験医学2023年6月号][jikkenigaku] doi: 10.18958/7281-00026-0000501-00 (05/19/2023)
 * [A podcast episode on NeuroRadio][nr] (04/14/2023)
 
 [jikkenigaku]: https://doi.org/10.18958/7281-00026-0000501-00
@@ -22,6 +22,6 @@ classes: narrow
 
 ## Others
 
-* [Wordle Slayer]: a web application that helps you every morning
+* [Wordle Slayer][ws]: a web application that helps you every morning
 
-[Wordle Slayer]: https://yukifujishima.com/wordleslayer/
+[ws]: https://yukifujishima.com/wordleslayer/
