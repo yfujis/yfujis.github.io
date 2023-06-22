@@ -7,15 +7,16 @@ classes: narrow
 
 ---
 
-# Outreach
+# Miscelleneous
 
-* [An episode on NeuroRadio (04/14/2023)][nr]
+## Outreach
+
 * [A mini column on 実験医学2023年6月号 DOI: 10.18958/7281-00026-0000501-00][jikkenigaku]
+* [An episode on NeuroRadio (04/14/2023)][nr]
 
-[nr]: https://neuroradio.tokyo/2023/04/14/55-and-your-mouse-can-sing/
 [jikkenigaku]: https://doi.org/10.18958/7281-00026-0000501-00
-
-# Music
+[nr]: https://neuroradio.tokyo/2023/04/14/55-and-your-mouse-can-sing/
+## Music
 
 {% include video id="QCdJ5nha3jk" provider="youtube" %}
 {% include video id="dsD41oG-7Cw" provider="youtube" %}
