@@ -9,7 +9,7 @@ classes: narrow
 ---
 ## Outreach
 * [実験医学2023年6月号][jikkenigaku]: Wrote a mini-column for an article in a research magazine. DOI: 10.18958/7281-00026-0000501-00 (May 19, 2023) (Japanese).
-* [NeuroRadio #55][nr]: Appeared as a guest on a neuroscience podcast program run by two Japanese researchers. (April 14, 2023) (Japanese).
+* [NeuroRadio #55][nr]: Appeared as a guest on a neuroscience podcast program. (April 14, 2023) (Japanese).
 
 [jikkenigaku]: https://doi.org/10.18958/7281-00026-0000501-00
 [nr]: https://neuroradio.tokyo/2023/04/14/55-and-your-mouse-can-sing/
