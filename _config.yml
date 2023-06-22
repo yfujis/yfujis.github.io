@@ -13,14 +13,14 @@
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme             : "mmistakes/minimal-mistakes"
 remote_theme             : "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise" 
+minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 # Site Settings
 locale                   : "en-US"
 title                    : "Yuki Fujishima"
 title_separator          : "|"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Yuki Fujishima"
-description              : "Yay! An amazing website."
+description              : "Website of Yuki Fujishima"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "yukids123/yukids123.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -95,10 +95,10 @@ analytics:
 # Site Author
 author:
   name             : "Yuki Fujishima"
-  avatar           : "/assets/images/others/yuki88x88.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/home/yuki88x88.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am a walrus."
   location         : "New York, NY"
-  email            :
+  email            : "yfujishima1001{at}gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
