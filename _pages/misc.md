@@ -1,4 +1,5 @@
 ---
+title: False
 layout: single
 author_profile: True
 read_time: False
