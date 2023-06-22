@@ -124,12 +124,12 @@ footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url:
+      url: "https://twitter.com/yfujishima_"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
+      url: "https://github.com/yukids123"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
       # url:
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
