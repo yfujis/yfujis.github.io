@@ -9,7 +9,7 @@ classes: narrow
 ## About
 Hi, you've reached the homepage of Yuki Fujishima!
 
-I'm a Neuroscience PhD student at New York University.
+I'm a neuroscience PhD student at New York University.
 
 I love playing and listenting to music. Please find some of my recordings on [YouTube][Music] and [SoundCloud][SoundCloud]:
 
