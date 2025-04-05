@@ -9,7 +9,7 @@ classes: narrow
 ## About
 Hi, you've reached the homepage of Yuki Fujishima!
 
-I'm a neuroscience PhD student at New York University, co-advised by Dr. Michael Long and Dr. György Buzsáki. My research focuses on how the brain governs behavior. Specifically, I investigate the neural mechanisms underlying vocal interactions in Alston's singing mouse (*Scotinomys teguina*), a rodent species native to the cloud forests of Central America.
+I'm a neuroscience PhD student at New York University, co-advised by Dr. Michael Long and Dr. György Buzsáki. My interest is in how the brain governs behavior. Specifically, I investigate the neural mechanisms underlying vocal interactions in Alston's singing mouse (*Scotinomys teguina*), a rodent species native to the cloud forests of Central America.
 
 I love playing and listening to music. Please find some of my recordings on [YouTube][Music] and [SoundCloud][SoundCloud]:
 
