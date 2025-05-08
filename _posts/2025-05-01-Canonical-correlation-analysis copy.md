@@ -3,7 +3,7 @@ title: 'Canonical Correlation Analysis'
 tags: [Math]
 status: publish
 type: post
-published: False
+published: True
 
 toc: true
 toc_label: "outline"
