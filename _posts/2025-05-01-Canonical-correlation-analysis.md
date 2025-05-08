@@ -3,7 +3,7 @@ title: 'Canonical Correlation Analysis'
 tags: [Math]
 status: publish
 type: post
-published: True
+published: false
 
 toc: true
 toc_label: "outline"
@@ -61,9 +61,9 @@ Using the obtained matrices ($\mathbf{W}$ and $\mathbf{H}$), we can reconstruct 
 
 $$\mathbf{Y} \approx \mathbf{W} \times \mathbf{H} = \mathbf{\tilde{Y}}$$
 
-The reconstruction ($\mathbf{\tilde{Y}}$) is an approximation of the original data ($\mathbf{Y}$), but it now essentially lives in a $K$-dimensional subspace instead of the original $N$- or $T$-dimensional space (depending on how you view it—we’ll talk more about this below).
+The reconstruction ($\mathbf{\tilde{Y}}$) is an approximation of the original data ($\mathbf{Y}$), but it now essentially lives in a $K$-dimensional subspace instead of the original $N$- or $T$-dimensional space.
 
-There are many ways to achieve this factorization (i.e., to obtain $\mathbf{W}$ and $\mathbf{H}$), and the method you choose depends on your problem. Next, I’ll introduce PCA, which is probably the most widely used factorization technique in neuroscience today.
+There are a number of ways to achieve this factorization (i.e., to obtain $\mathbf{W}$ and $\mathbf{H}$), and each of them has pros and cons. Here, I will briefly introduce PCA, which is probably the most widely used matrix factorization technique in neuroscience data analysis.
 
 
 ### PCA as an Example Factorization Technique
@@ -84,14 +84,13 @@ PCA can be understood through **two equivalent objectives**:
 
 #### 1. Minimize Reconstruction Error
 
-PCA finds the best low-rank approximation of the original data by minimizing the reconstruction error:
+PCA finds the best low-rank approximation of the original data by minimizing the following reconstruction error:
 
 $$
 \min_{\mathbf{W}, \mathbf{H}} \left\| \mathbf{Y} - \mathbf{W} \mathbf{H} \right\|_F^2
 $$
 
-subject to orthonormality constraints (e.g., rows of $\mathbf{H}$ are orthogonal, or equivalently, columns of the projected data are uncorrelated).
-Here, $\|\cdot\|_F$ is the Frobenius norm, which measures total squared error across all entries.
+subject to the constraint that the columns of $\mathbf{W}$ are orthogonal (i.e., $\mathbf{W}^T\mathbf{W} = \mathbf{I}$). Here, $\|\cdot\|_F$ is the Frobenius norm, which measures total squared error across all entries. In this formation, $\mathbf{W}$ represents the principal directions (basis vectors), and $\mathbf{H} = \mathbf{W}^T\mathbf{Y}$ contains the low-dimensional representations of the data. A key property of PCA is that the components in $\mathbf{H}$ are uncorrelated---each dimension captures unique variance in the data.
 
 #### 2. Maximize Projected Variance
 
@@ -115,17 +114,21 @@ PCA is often the first step in analyzing high-dimensional neural recordings, ser
 
 
 ## How CCA works - math
-Let's say an animal is moving between left and right parts of a room and receiving food at respective percentages that are changing over time (an example inspired by Shadihi et al., 2024). We may have Q behavioral features to focus on (e.g. location of the animal, reward ratio for right, reward ratio for left). During this behavioral observation, we may record activity of $P$ neurons over $T$ time points. We now have a data matrix for neural activity ($\mathbf{X} \in \mathbb{R}^{T \times P}$) and behavioral data ($\mathbf{Y} \in \mathbb{R}^{T \times Q}$).
+Now, we get under the hood of CCA.
+
+Let's say an animal is moving between left and right parts of a room and receiving food at respective percentages that are changing over time. We may have Q behavioral features to focus on (e.g. speed, location (x, y), amount of received reward, etc.). During this behavioral observation, we may record activity of $P$ neurons over $T$ time points. We now have a data matrix for neural activity ($\mathbf{X} \in \mathbb{R}^{T \times P}$) and behavioral data ($\mathbf{Y} \in \mathbb{R}^{T \times Q}$).
 
 - $\mathbf{X} \in \mathbb{R}^{T \times P}$: neural data matrix ($T$ timebins, $P$ neurons)
 - $\mathbf{Y} \in \mathbb{R}^{T \times Q}$: behavioral data matrix ($T$ timebins, $Q$ behavioral features)
 
-As our goal is find basic vectors for the two datasets ($\mathbf{X}$ and $\mathbf{Y}$), let:
+Our goal is to find basis vectors, respectively for the two matrices that maximize the activities.
+
+Let:
 
 $$\mathbf{z_X}=X\mathbf{a}\in\mathbb{R}^{T}$$
 $$\mathbf{z_Y}=Y\mathbf{b}\in\mathbb{R}^{T}$$
 
-where $\mathbf{a}$ and $\mathbf{b}$ are basis vectors for $\mathbf{X}$, $\mathbf{Y}$, respectively. We want to find $\mathbf{a}$ and $\mathbf{b}$ such that the projections $\mathbf{u}$ and $\mathbf{v}$› are maximally correlated.
+where $\mathbf{a}$ and $\mathbf{b}$ are basis vectors for $\mathbf{X}$, $\mathbf{Y}$, respectively. We want to find $\mathbf{a}$ and $\mathbf{b}$ such that the projections $\mathbf{z_X}$ and $\mathbf{z_Y}$› are maximally correlated.
 
 Hence,
 $$\max\rho = {\Sigma_{\mathbf{z_X}\mathbf{z_Y}}\over {\sqrt{Var(\mathbf{z_X})}\sqrt{Var(\mathbf{z_Y})}}} = {\mathbf{z_X}^T\mathbf{z_Y} \over {\sqrt{||\mathbf{z_X}||^2}\cdot\sqrt{||\mathbf{z_Y}||^2}}}$$
@@ -134,7 +137,7 @@ $$\max\rho = {\Sigma_{\mathbf{z_X}\mathbf{z_Y}}\over {\sqrt{Var(\mathbf{z_X})}\s
 We also constrain $||\mathbf{z_X}||^2 = ||\mathbf{z_Y}||^2 = 1$ because the correlation of $\mathbf{z_X}$ and $\mathbf{z_Y}$ does not change with scaling of them.
 
 We solve:
-$$\max_{\mathbf{a}, \mathbf{b}} \mathbf{a}^TX^TY\mathbf{b}$$
+$$\max_{\mathbf{a}, \mathbf{b}} \mathbf{a}^T\mathbf{X}^T\mathbf{Y}\mathbf{b}$$
 with subject to:
 
 $$\mathbf{a}^TX^TX\mathbf{a} = \mathbf{b}^TY^TY\mathbf{b} = 1$$
