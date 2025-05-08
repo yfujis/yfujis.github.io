@@ -131,6 +131,7 @@ $$\mathbf{z_Y}=\mathbf{Y}\mathbf{b}\in\mathbb{R}^{T}$$
 where $\mathbf{a}$ and $\mathbf{b}$ are basis vectors for $\mathbf{X}$, $\mathbf{Y}$, respectively. We want to find $\mathbf{a}$ and $\mathbf{b}$ such that the projections $\mathbf{z_X}$ and $\mathbf{z_Y}$› are maximally correlated.
 
 Hence,
+
 $$\max\rho = {\Sigma_{\mathbf{z_X}\mathbf{z_Y}}\over {\sqrt{Var(\mathbf{z_X})}\sqrt{Var(\mathbf{z_Y})}}} = {\mathbf{z_X}^T\mathbf{z_Y} \over {\sqrt{||\mathbf{z_X}||^2}\cdot\sqrt{||\mathbf{z_Y}||^2}}}$$
 
 
