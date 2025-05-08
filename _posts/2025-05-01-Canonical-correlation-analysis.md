@@ -47,7 +47,7 @@ A general understanding of **matrix factorization** will be helpful for understa
 
 Matrix factorization is a general technique in linear algebra where a given matrix is decomposed (or 'factored') into a product of two or more matrices. The idea is to represent (or approximate) the original data in a way that is useful—for example, to reveal hidden structure, reduce dimensionality, or simplify computation.
 
-Let’s consider a neural dataset ($$\mathbf{Y}$$) consisting of $$N$$ neurons recorded over $$T$$ time points ($$\mathbf{Y} \in \mathbb{R}^{N \times T}$$). The core idea of matrix factorization is to approximate the data matrix as:
+Let’s consider a neural dataset ($\mathbf{Y}$) consisting of $N$ neurons recorded over $T$ time points ($\mathbf{Y} \in \mathbb{R}^{N \times T}$). The core idea of matrix factorization is to approximate the data matrix as:
 
 $$\mathbf{Y} \approx \mathbf{W} \mathbf{H}$$
 
@@ -143,13 +143,10 @@ $$\mathbf{a}^TX^TX\mathbf{a} = \mathbf{b}^TY^TY\mathbf{b} = 1$$
 As a first step, we replace $a$ and $b$ with the following (seems out of nowhere, but we'll see why it's useful in subsequent steps.):
 
 $$\mathbf{a} = (X^TX)^{-1/2}\mathbf{\tilde{a}}$$
-
 $$\mathbf{b} = (Y^TY)^{-1/2}\mathbf{\tilde{b}}$$
 
 Then our problem is now,
-
 $$\max_{\tilde{a}, \tilde{b}} \tilde{a}^T(X^TX)^{-1/2}X^TY(Y^TY)^{-1/2}\tilde{b}$$
-
 with subject to:
 
 $$\mathbf{\tilde{a}}^T\mathbf{\tilde{a}} = \mathbf{\tilde{b}}^T\mathbf{\tilde{b}} = 1$$
