@@ -47,7 +47,7 @@ A general understanding of **matrix factorization** will be helpful for understa
 
 Matrix factorization is a general technique in linear algebra where a given matrix is decomposed (or 'factored') into a product of two or more matrices. The idea is to represent (or approximate) the original data in a way that is useful—for example, to reveal hidden structure, reduce dimensionality, or simplify computation.
 
-Let’s consider a neural dataset ($\mathbf{Y}$) consisting of $N$ neurons recorded over $T$ time points ($\mathbf{Y} \in \mathbb{R}^{N \times T}$). The core idea of matrix factorization is to approximate the data matrix as:
+Let’s consider a matrix of neural activity ($\mathbf{Y}$) consisting of $n$ neurons recorded over $T$ time points ($\mathbf{Y} \in \mathbb{R}^{N \times T}$). The core idea of matrix factorization is to approximate the data matrix as:
 
 $$\mathbf{Y} \approx \mathbf{W} \mathbf{H}$$
 
@@ -142,34 +142,34 @@ $$\mathbf{a}^TX^TX\mathbf{a} = \mathbf{b}^TY^TY\mathbf{b} = 1$$
 ### Solving the objective function
 As a first step, we replace $a$ and $b$ with the following (seems out of nowhere, but we'll see why it's useful in subsequent steps.):
 
-$$\mathbf{a} = (X^TX)^{-1/2}\mathbf{\tilde{a}}$$
-$$\mathbf{b} = (Y^TY)^{-1/2}\mathbf{\tilde{b}}$$
+$$\mathbf{a} = (\mathbf{X}^T\mathbf{X})^{-1/2}\mathbf{\tilde{a}}$$
+$$\mathbf{b} = (\mathbf{Y}^T\mathbf{Y})^{-1/2}\mathbf{\tilde{b}}$$
 
 Then our problem is now,
-$$\max_{\tilde{a}, \tilde{b}} \tilde{a}^T(X^TX)^{-1/2}X^TY(Y^TY)^{-1/2}\tilde{b}$$
+$$\max_{\tilde{a}, \tilde{b}} \tilde{a}^T(\mathbf{X}^T\mathbf{X})^{-1/2}\mathbf{X}^T\mathbf{Y}(\mathbf{Y}^T\mathbf{Y})^{-1/2}\tilde{b}$$
 with subject to:
 
 $$\mathbf{\tilde{a}}^T\mathbf{\tilde{a}} = \mathbf{\tilde{b}}^T\mathbf{\tilde{b}} = 1$$
 
-Now, we notice that as the whitened matrices[^1] of $X$ and $Y$ are $\tilde{X}=X(X^TX)^{-1/2}$, $\tilde{Y}=Y(Y^TY)^{-1/2}$, respectively.
+Now, we notice that as the whitened matrices[^1] of $\mathbf{X}$ and $\mathbf{Y}$ are $\mathbf{\tilde{X}}=\mathbf{X}(\mathbf{X}^T\mathbf{X})^{-1/2}$, $\mathbf{\tilde{Y}}=\mathbf{Y}(\mathbf{Y}^T\mathbf{Y})^{-1/2}$, respectively.
 
 Therefore,
-$$\max_{\mathbf{\tilde{a}}, \mathbf{\tilde{b}}} \mathbf{\tilde{a}}^T\tilde{X}^T\tilde{Y}\mathbf{\tilde{b}}$$
+$$\max_{\mathbf{\tilde{a}}, \mathbf{\tilde{b}}} \mathbf{\tilde{a}}^T\mathbf{\tilde{X}}^T\mathbf{\tilde{Y}}\mathbf{\tilde{b}}$$
 with subject to:
 
-$$\tilde{a}^T\tilde{a} = \tilde{b}^T\tilde{b} = 1$$
+$$\mathbf{\tilde{a}}^T\mathbf{\tilde{a}} = \mathbf{\tilde{b}}^T\mathbf{\tilde{b}} = 1$$
 
-We perform singular value decomposition (SVD) on the cross-covariance matrix of the whitened matrices ($\tilde{X}^T\tilde{Y} = U\Lambda V^T$).
+We perform singular value decomposition (SVD) on the cross-covariance matrix of the whitened matrices ($\mathbf{\tilde{X}}^T\mathbf{\tilde{Y}} = \mathbf{U}\mathbf{\Lambda} \mathbf{V}^T$).
 
-$$\max_{\mathbf{\tilde{a}}, \mathbf{\tilde{b}}} \mathbf{\tilde{a}}^TU\Lambda V^T\mathbf{\tilde{b}}$$
+$$\max_{\mathbf{\tilde{a}}, \mathbf{\tilde{b}}} \mathbf{\tilde{a}}^T\mathbf{U}\mathbf{\Lambda} \mathbf{V}^T\mathbf{\tilde{b}}$$
 with subject to:
 $$\mathbf{\tilde{a}}^T\mathbf{\tilde{a}} = \mathbf{\tilde{b}}^T\mathbf{\tilde{b}} = 1$$
 
 Let's look into the elements.
 
-$$\mathbf{\tilde{a}}^TU\Lambda V^T\mathbf{\tilde{b}}$$
+$$\mathbf{\tilde{a}}^T\mathbf{U}\mathbf{\Lambda} \mathbf{V}^T\mathbf{\tilde{b}}$$
 
-$$=\mathbf{\tilde{a}}^TU\Lambda V^T\mathbf{\tilde{b}}$$
+$$=\mathbf{\tilde{a}}^T\mathbf{U}\mathbf{\Lambda} \mathbf{V}^T\mathbf{\tilde{b}}$$
 
 $$=\mathbf{\tilde{a}}^T
 \begin{bmatrix} \mathbf{u}_1 & \mathbf{u}_2 & \cdots & \mathbf{u}_P \end{bmatrix}
