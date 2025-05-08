@@ -1,4 +1,3 @@
-
 ---
 title: 'Canonical Correlation Analysis'
 tags: [Math]
