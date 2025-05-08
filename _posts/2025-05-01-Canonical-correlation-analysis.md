@@ -125,8 +125,8 @@ Our goal is to find basis vectors, respectively for the two matrices that maximi
 
 Let:
 
-$$\mathbf{z_X}=X\mathbf{a}\in\mathbb{R}^{T}$$
-$$\mathbf{z_Y}=Y\mathbf{b}\in\mathbb{R}^{T}$$
+$$\mathbf{z_X}=\mathbf{X}\mathbf{a}\in\mathbb{R}^{T}$$
+$$\mathbf{z_Y}=\mathbf{Y}\mathbf{b}\in\mathbb{R}^{T}$$
 
 where $\mathbf{a}$ and $\mathbf{b}$ are basis vectors for $\mathbf{X}$, $\mathbf{Y}$, respectively. We want to find $\mathbf{a}$ and $\mathbf{b}$ such that the projections $\mathbf{z_X}$ and $\mathbf{z_Y}$› are maximally correlated.
 
@@ -140,7 +140,7 @@ We solve:
 $$\max_{\mathbf{a}, \mathbf{b}} \mathbf{a}^T\mathbf{X}^T\mathbf{Y}\mathbf{b}$$
 with subject to:
 
-$$\mathbf{a}^TX^TX\mathbf{a} = \mathbf{b}^TY^TY\mathbf{b} = 1$$
+$$\mathbf{a}^T\mathbf{X}^T\mathbf{X}\mathbf{a} = \mathbf{b}^T\mathbf{Y}^T\mathbf{Y}\mathbf{b} = 1$$
 
 ### Solving the objective function
 As a first step, we replace $a$ and $b$ with the following (seems out of nowhere, but we'll see why it's useful in subsequent steps.):
