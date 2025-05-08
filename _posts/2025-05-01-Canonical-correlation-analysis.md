@@ -135,7 +135,7 @@ Hence,
 $$\max\rho = {\Sigma_{\mathbf{z_X}\mathbf{z_Y}}\over {\sqrt{Var(\mathbf{z_X})}\sqrt{Var(\mathbf{z_Y})}}} = {\mathbf{z_X}^T\mathbf{z_Y} \over {\sqrt{||\mathbf{z_X}||^2}\cdot\sqrt{||\mathbf{z_Y}||^2}}}$$
 
 
-We also constrain ${||\mathbf{z_X}||^2=||\mathbf{z_Y}||^2=1}$ because the correlation of $\mathbf{z_X}$ and $\mathbf{z_Y}$ does not change with scaling of them. In other wise, without this constraint, the norm of $\mathfb{a}$ and $\mathfb{b}$ can be arbitrarily long and the solution will not be unique.
+We also constrain ${||\mathbf{z_X}||^2=||\mathbf{z_Y}||^2=1}$ because the correlation of $\mathbf{z_X}$ and $\mathbf{z_Y}$ does not change with scaling of them. In other wise, without this constraint, the norm of $\mathbf{a}$ and $\mathbf{b}$ can be arbitrarily long and the solution will not be unique.
 
 We solve:
 $$\max_{\mathbf{a}, \mathbf{b}} \mathbf{a}^T\mathbf{X}^T\mathbf{Y}\mathbf{b}$$
