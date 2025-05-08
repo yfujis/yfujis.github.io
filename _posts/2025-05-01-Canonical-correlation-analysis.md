@@ -282,8 +282,6 @@ $$def: L(x, \lambda) \equiv f(x) + \lambda g(x)$$
 where $f(x)$ is the objective function, $\lambda$ is the Lagrangian multiplier, and $g(x)$ is the constraint.
 In order to find maximum (or minimum) of $f(x)$, subject to $g(x)=0$, find the *stationary point of $L(x, y)$ considered as a function of $x$, $\lambda$*. => all partial derivatives should be 0.
 
-${{\delta L}\over{\delta x}} = 0$ and ${{\delta L}\over{\delta \lambda}} = 0$.
-
 
 
 ---
