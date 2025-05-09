@@ -114,14 +114,14 @@ PCA is often the first step in analyzing high-dimensional neural recordings, ser
 
 
 ## How CCA works - math
-Now, we get under the hood of CCA.
+Now, we look under the hood of CCA.
 
-Let's say an animal is moving between left and right parts of a room and receiving food at respective percentages that are changing over time. We may have Q behavioral features to focus on (e.g. speed, location (x, y), amount of received reward, etc.). During this behavioral observation, we may record activity of $P$ neurons over $T$ time points. We now have a data matrix for neural activity ($\mathbf{X} \in \mathbb{R}^{T \times P}$) and behavioral data ($\mathbf{Y} \in \mathbb{R}^{T \times Q}$).
+Suppose an animal is moving between left and right parts of a room and receiving food at varying rates over time. We may have Q behavioral features of interest (e.g. speed, location (x, y), amount of received reward, etc.). During this behavioral observation, we may record the activity of $P$ neurons over $T$ time points. This gives us a data matrix for neural activity ($\mathbf{X} \in \mathbb{R}^{T \times P}$) and a behavioral data matrix ($\mathbf{Y} \in \mathbb{R}^{T \times Q}$).
 
-- $\mathbf{X} \in \mathbb{R}^{T \times P}$: neural data matrix ($T$ timebins, $P$ neurons)
-- $\mathbf{Y} \in \mathbb{R}^{T \times Q}$: behavioral data matrix ($T$ timebins, $Q$ behavioral features)
+- $\mathbf{X} \in \mathbb{R}^{T \times P}$: neural data matrix ($T$ time bins, $P$ neurons)
+- $\mathbf{Y} \in \mathbb{R}^{T \times Q}$: behavioral data matrix ($T$ time bins, $Q$ behavioral features)
 
-Our goal is to find basis vectors, respectively for the two matrices that maximize the activities.
+Our goal is to find basis vectors for the two matrices that maximize the correlation between the projected activities.
 
 Let:
 
@@ -135,7 +135,7 @@ Hence,
 $$\max\rho = {\Sigma_{\mathbf{z_X}\mathbf{z_Y}}\over {\sqrt{Var(\mathbf{z_X})}\sqrt{Var(\mathbf{z_Y})}}} = {\mathbf{z_X}^T\mathbf{z_Y} \over {\sqrt{||\mathbf{z_X}||^2}\cdot\sqrt{||\mathbf{z_Y}||^2}}}$$
 
 
-We also constrain ${||\mathbf{z_X}||^2=||\mathbf{z_Y}||^2=1}$ because the correlation of $\mathbf{z_X}$ and $\mathbf{z_Y}$ does not change with scaling of them. In other wise, without this constraint, the norm of $\mathbf{a}$ and $\mathbf{b}$ can be arbitrarily long and the solution will not be unique.
+We also constrain ${||\mathbf{z_X}||^2=||\mathbf{z_Y}||^2=1}$ because the correlation between $\mathbf{z_X}$ and $\mathbf{z_Y}$ is invariant to their scaling. Without this constraint, the norms of $\mathbf{a}$ and $\mathbf{b}$ could be arbitrarily large, making the solution non-unique.
 
 We solve:
 $$\max_{\mathbf{a}, \mathbf{b}} \mathbf{a}^T\mathbf{X}^T\mathbf{Y}\mathbf{b}$$
@@ -144,39 +144,44 @@ with subject to:
 $$\mathbf{a}^T\mathbf{X}^T\mathbf{X}\mathbf{a} = \mathbf{b}^T\mathbf{Y}^T\mathbf{Y}\mathbf{b} = 1$$
 
 ### Solving the objective function
-As a first step, we replace $a$ and $b$ with the following (seems out of nowhere, but we'll see why it's useful in subsequent steps.):
+As a first step, we replace $a$ and $b$ with the following (it may seem arbitrary now, but we'll see why this is useful in subsequent steps):
 
-$$\mathbf{a} = (\mathbf{X}^T\mathbf{X})^{-1/2}\mathbf{\tilde{a}}$$
-$$\mathbf{b} = (\mathbf{Y}^T\mathbf{Y})^{-1/2}\mathbf{\tilde{b}}$$
+$$\mathbf{a} = (\mathbf{X}^T\mathbf{X})^{-1/2}\mathbf{\tilde{a}},\space\space\space\space \mathbf{b} = (\mathbf{Y}^T\mathbf{Y})^{-1/2}\mathbf{\tilde{b}}$$
 
-Then our problem is now,
-$$\max_{\tilde{a}, \tilde{b}} \tilde{a}^T(\mathbf{X}^T\mathbf{X})^{-1/2}\mathbf{X}^T\mathbf{Y}(\mathbf{Y}^T\mathbf{Y})^{-1/2}\tilde{b}$$
-with subject to:
+The optimization problem becomes:
+$$\max_{\mathbf{\tilde{a}}, \mathbf{\tilde{b}}} \mathbf{\tilde{a}}^T(\mathbf{X}^T\mathbf{X})^{-1/2}\mathbf{X}^T\mathbf{Y}(\mathbf{Y}^T\mathbf{Y})^{-1/2}\mathbf{\tilde{b}}$$
+
+subject to:
 
 $$\mathbf{\tilde{a}}^T\mathbf{\tilde{a}} = \mathbf{\tilde{b}}^T\mathbf{\tilde{b}} = 1$$
 
-Now, we notice that as the whitened matrices[^1] of $\mathbf{X}$ and $\mathbf{Y}$ are $\mathbf{\tilde{X}}=\mathbf{X}(\mathbf{X}^T\mathbf{X})^{-1/2}$, $\mathbf{\tilde{Y}}=\mathbf{Y}(\mathbf{Y}^T\mathbf{Y})^{-1/2}$, respectively.
+Now, notice that the whitened matrices[^1] of $\mathbf{X}$ and $\mathbf{Y}$ are:
 
-Therefore,
+$$\mathbf{\tilde{X}}=\mathbf{X}(\mathbf{X}^T\mathbf{X})^{-1/2},\space\space\space\space \mathbf{\tilde{Y}}=\mathbf{Y}(\mathbf{Y}^T\mathbf{Y})^{-1/2}$$
+
+Therefore we can rewrite the objective as:
+
 $$\max_{\mathbf{\tilde{a}}, \mathbf{\tilde{b}}} \mathbf{\tilde{a}}^T\mathbf{\tilde{X}}^T\mathbf{\tilde{Y}}\mathbf{\tilde{b}}$$
-with subject to:
+
+subject to:
 
 $$\mathbf{\tilde{a}}^T\mathbf{\tilde{a}} = \mathbf{\tilde{b}}^T\mathbf{\tilde{b}} = 1$$
 
-We perform singular value decomposition (SVD) on the cross-covariance matrix of the whitened matrices ($\mathbf{\tilde{X}}^T\mathbf{\tilde{Y}} = \mathbf{U}\mathbf{\Lambda} \mathbf{V}^T$).
+We then perform singular value decomposition (SVD) on the cross-covariance matrix:
+
+$$\mathbf{\tilde{X}}^T\mathbf{\tilde{Y}} = \mathbf{U}\mathbf{\Lambda} \mathbf{V}^T$$
+
+So the objective becomes:
 
 $$\max_{\mathbf{\tilde{a}}, \mathbf{\tilde{b}}} \mathbf{\tilde{a}}^T\mathbf{U}\mathbf{\Lambda} \mathbf{V}^T\mathbf{\tilde{b}}$$
+
 with subject to:
+
 $$\mathbf{\tilde{a}}^T\mathbf{\tilde{a}} = \mathbf{\tilde{b}}^T\mathbf{\tilde{b}} = 1$$
 
-Let's look into the elements.
+Let's examine the components:
 
-$$\mathbf{\tilde{a}}^T\mathbf{U}\mathbf{\Lambda} \mathbf{V}^T\mathbf{\tilde{b}}$$
-
-$$=\mathbf{\tilde{a}}^T\mathbf{U}\mathbf{\Lambda} \mathbf{V}^T\mathbf{\tilde{b}}$$
-
-$$=\mathbf{\tilde{a}}^T
-\begin{bmatrix} \mathbf{u}_1 & \mathbf{u}_2 & \cdots & \mathbf{u}_P \end{bmatrix}
+$$\mathbf{\tilde{a}}^T\mathbf{U}\mathbf{\Lambda} \mathbf{V}^T\mathbf{\tilde{b}}=\begin{bmatrix} \mathbf{\tilde{a}}^T\mathbf{u_1} & \mathbf{\tilde{a}}^T\mathbf{u_2} & \cdots & \mathbf{\tilde{a}}^T\mathbf{u_P} \end{bmatrix}
 \left[
 \begin{array}{cccc}
 \sigma_1 & 0 & \cdots & 0 \\
@@ -189,32 +194,10 @@ $$=\mathbf{\tilde{a}}^T
 \end{array}
 \right]
 \begin{bmatrix}
-\mathbf{v}_1^\top \\
-\mathbf{v}_2^\top \\
+\mathbf{v_1}^T\tilde{b} \\
+\mathbf{v_2}^T\tilde{b} \\
 \vdots \\
-\mathbf{v}_Q^\top
-\end{bmatrix}
-\mathbf{\tilde{b}}
-$$
-
-
-$$=\begin{bmatrix} \mathbf{\tilde{a}}^T\mathbf{u}_1 & \mathbf{\tilde{a}}^T\mathbf{u}_2 & \cdots & \mathbf{\tilde{a}}^T\mathbf{u}_P \end{bmatrix}
-\left[
-\begin{array}{cccc}
-\sigma_1 & 0 & \cdots & 0 \\
-0 & \sigma_2 & \cdots & 0 \\
-\vdots & \vdots & \ddots & \vdots \\
-0 & 0 & \cdots & \sigma_Q \\
-0 & 0 & \cdots & 0 \\
-\vdots & \vdots & & \vdots \\
-0 & 0 & \cdots & 0
-\end{array}
-\right]
-\begin{bmatrix}
-\mathbf{v}_1^T\tilde{b} \\
-\mathbf{v}_2^T\tilde{b} \\
-\vdots \\
-\mathbf{v}_Q^T\tilde{b}
+\mathbf{v_Q}^T\tilde{b}
 \end{bmatrix}
 $$
 
@@ -245,7 +228,7 @@ $$
 
 $$=\sum_{i=1}^r\sigma_i\cos\theta_i\cos\phi_i$$
 
-Use the Cauchy-Schwarz inequality:
+Using the Cauchy-Schwarz inequality:
 
 $$|\sum_{i=1}^r\sigma_i\cos\theta_i\cos\phi_i| \le (\sum_{i=1}^r\sigma_i^2)^{1/2}(\sum_{i=1}^r \cos^2\theta_i\cos^2\phi_i)^{1/2}
 $$
@@ -256,7 +239,7 @@ $$
 \sum_{i=1}^r \cos^2\theta_i\le1, \sum_{i=1}^r \cos^2\phi_i\le1
 $$
 
-is achieved when all the weight is on the largest $\sigma_1$ term, i.e.,
+The upper bound is achieved when all the weight is on the largest $\sigma_1$ term, i.e.,
 
 $$
 \cos\theta_1 = \cos\phi_1 = 1
@@ -268,11 +251,14 @@ $$
 \mathbf{\tilde{a}} = \mathbf{u_1}, \mathbf{\tilde{b}} = \mathbf{v_1}
 $$
 
+So the optimal solution is:
 $$
-\mathbf{a_i} = (X^TX)^{-1/2}\mathbf{u_i}, \mathbf{b_i} = (Y^TY)^{-1/2}\mathbf{v_1}
+\mathbf{a_i} = (\mathbf{X}^T\mathbf{X})^{-1/2}\mathbf{u_i},\space\space\space\space \mathbf{b_i} = (\mathbf{Y}^T\mathbf{Y})^{-1/2}\mathbf{v_1}
 $$
 
-where $\lambda$ is the $i$th singular value - the $i$th canonical correlation.
+where $\sigma_i$ is the $i$th singular value—the $i$th canonical correlation.
+
+In conclusion, CCA is equivalent to performing SVD on the cross-covariance matrix of two whitened matrices.
 
 ### Solving the objective function - with Lagrangian multiplier
 To solve the objective function, we want to encode both *the objective* ($\max_{\mathbf{a}, \mathbf{b}} \mathbf{a}^T\Sigma_{XY}\mathbf{b}$) and *the constraint* ($\mathbf{a}^T\Sigma_{XX}\mathbf{a} = 1, \mathbf{b}^T\Sigma_{YY}\mathbf{b} = 1$), we turn to *Lagrangian multiplier*.
@@ -337,56 +323,6 @@ Now, we can solve this for eigenvalues $\lambda^2$ and eigenvectors $a$. Once ob
 
 
 
-
-
-## How is CCA related to PCA
-
-
-## "Row" and "Column" Views of Matrix Multiplication
-
-After running a matrix factorization algorithm (PCA, NMF, etc.), we obtain a reconstruction ($\mathbf{\tilde{Y}}$) of the original data ($\mathbf{Y}$), represented as the product of two matrices ($\mathbf{W}$ and $\mathbf{H}$), which ideally yields useful insight:
-
-$$\mathbf{\tilde{Y}} \approx \mathbf{W} \times \mathbf{H} = \mathbf{Y}$$
-
-While the exact interpretation depends on the method and nature of your data, I’ll describe two useful ways to interpret the resulting matrices, which I learned in an excellent class taught by [Alex Williams][AHW].
-
-### 1. Column View
-
-Let’s start with the **column view**. Here, we think about how the column vectors of $\mathbf{\tilde{Y}}$ are represented with respect to the components (factors) obtained from matrix factorization. Each column vector corresponds to the activity of $N$ neurons at a single time point (e.g., time point $t$, as in Figure 1A). Since each is an $N$-dimensional vector, we imagine an $N$-dimensional space (Figure 1B). However, we find that all data points (i.e., column vectors of $\mathbf{\tilde{Y}}$) lie on a $K$-dimensional plane (subspace) spanned by the column vectors of $\mathbf{W}$. These data points over time (from $t = 1$ to $T$) can be seen as *"population activity of $N$ neurons evolving on a $K$-dimensional subspace spanned by the column vectors of $\mathbf{W}$."*
-
-### 2. Row View
-
-Now let’s shift to the **row view**, focusing on the row vectors of $\mathbf{\tilde{Y}}$—that is, the temporal dynamics of individual neurons. A row vector ($\mathbf{Y}[n, :]$ for neuron $n$) is a $T$-dimensional vector. We again find that all these vectors lie on a $K$-dimensional subspace, this time spanned by the row vectors of $\mathbf{H}$. In neuroscience terms, this means *"temporal dynamics of individual neurons live on a $K$-dimensional subspace spanned by the rows of $\mathbf{H}$."* For neuron $n$, its activity over time is a linear combination of the temporal components (the rows of $\mathbf{H}$), with weights given by $\mathbf{W}[n, :]$.
-
-Another useful perspective is that the "row" and "column" views are connected via transposition. Suppose we transpose both sides of the equation:
-
-$$\mathbf{H}^{T} \times \mathbf{W}^{T} = \mathbf{\tilde{Y}}^{T}$$
-
-Remember that ${(\mathbf{W} \times \mathbf{H})}^{T} = \mathbf{H}^{T} \times \mathbf{W}^{T}$. As shown in Figure 1E, we can interpret the transposed view similarly to the original row view (Figure 1C and D), but now from the "column" perspective. When using matrix factorization tools (e.g., `sklearn.decomposition.PCA` in Python or `pca` in MATLAB), each function handles the input matrix in its own way—so you may need to transpose your data to obtain the interpretation you want.
-
-
-![Figure1](/assets/images/blog/CCA_Figure1.png)
-*Figure 1. 'Row' and 'column' views of matrix multiplication.*
-
-
-## How CCA works - overview
-Broadly speaking, Canonical Correlation Analysis (CCA) is a method for **finding basis vectors in two datasets such that the resulting projections are maximally correlated**. Suppose you have a matrix of neural activity (e.g., firing rates of many neurons over time) and another matrix of behavioral variables (e.g., the animal’s position over time). CCA identifies pairs of linear combinations—one from each dataset—such that the projected variables are as correlated as possible.
-
-In what follows, I’ll explain the method by connecting it to the general framework of matrix factorization and by comparing it with Principal Component Analysis (PCA).
-
-## Exmaple use cases in neuroscience research
-### Prefrontal cortex of monkeys during decision making (~ et al., 20XX)
-
-
-### Basal ganglia of songbird and their acoustic features
-
-
-### adadasda
-
-
-## Caveats
-
-
 ## TL'DR
 
 
@@ -395,38 +331,12 @@ In what follows, I’ll explain the method by connecting it to the general frame
 
 ## References
 
-Let:
-
-- $\mathbf{X}_p \in \mathbb{R}^{T \times P}$: neural data matrix ($T$ timebins, $P$ neurons)
-- $\mathbf{X}_q \in \mathbb{R}^{T \times Q}$: behavioral data matrix ($T$ timebins, $Q$ behavioral features)
-
-CCA finds weight matrices $\mathbf{W}_p \in \mathbb{R}^{P \times K}$, $\mathbf{W}_q \in \mathbb{R}^{Q \times K}$ such that the projections:
-
-$$
-\mathbf{H}_p = \mathbf{X}_p \mathbf{W}_p, \quad \mathbf{H}_q = \mathbf{X}_q \mathbf{W}_q
-$$
-
-maximize the correlation between corresponding columns of $\mathbf{H}_p$ and $\mathbf{H}_q$.
-
-For the first canonical pair:
-
-$$
-\max_{\mathbf{w}_p, \mathbf{w}_q} \ \frac{\mathbf{w}_p^\top \mathbf{\Sigma}_{pq} \mathbf{w}_q}
-{\sqrt{\mathbf{w}_p^\top \mathbf{\Sigma}_{pp} \mathbf{w}_p} \cdot \sqrt{\mathbf{w}_q^\top \mathbf{\Sigma}_{qq} \mathbf{w}_q}}
-$$
-
-Where:
-
-- $\mathbf{\Sigma}_{pp} = \frac{1}{T - 1} \mathbf{X}_p^\top \mathbf{X}_p$
-- $\mathbf{\Sigma}_{qq} = \frac{1}{T - 1} \mathbf{X}_q^\top \mathbf{X}_q$
-- $\mathbf{\Sigma}_{pq} = \frac{1}{T - 1} \mathbf{X}_p^\top \mathbf{X}_q$
-
-Each subsequent canonical direction is computed subject to orthogonality constraints with previous directions.
 
 ### Footnotes
-[^1]: whitening
+[^1]: Whitening is a linear transformation that removes correlations between variables and scales them to have unit variance. For a zero-mean matrix \( \mathbf{X} \), the whitened version is \( \tilde{\mathbf{X}} = \mathbf{X} (\mathbf{X}^\top \mathbf{X})^{-1/2} \), which ensures that \( \tilde{\mathbf{X}}^\top \tilde{\mathbf{X}} = \mathbf{I} \). A good intuition to have is to see it as a multivariate version of z scoring. In the context of CCA, whitening makes sure that we're only capturing the relationships *between* the two datasets, rather than being influenced by patterns *within* each dataset. See [Wikipedia][Whitening_wiki].
 
 [shahidi_et_al_2024]: https://doi.org/10.1038/s41593-024-01575-w
 [hira_et_al_2024]: https://www.biorxiv.org/content/10.1101/2023.08.27.555017v2
 [AHW]: https://alexhwilliams.info/
 [PCA]: https://alexhwilliams.info/itsneuronalblog/2016/03/27/pca/
+[Whitening_wiki]: https://en.wikipedia.org/wiki/Whitening_transformation
