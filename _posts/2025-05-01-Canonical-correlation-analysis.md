@@ -37,84 +37,11 @@ CCA is one such example and is a matrix factorization technique that connects tw
 The use of CCA has been increasing in recent studies. For example, [Shahidi et al., 2024][shahidi_et_al_2024] uses CCA to find relationships between neural activity in the prefrontal cortex and behavioral variables in freely moving animals. [Hira et al., 2024][hira_et_al_2024] applied CCA between neural activities two different brain areas.
 
 
-## Refreshing on Matrix Factorization
-
-*Skip this section if you are already comfortable with PCA, especially if you have good intuition about the implications of running PCA on a data matrix and its transpose.*
-
-### What is Matrix Factorization?
-
-A general understanding of **matrix factorization** will be helpful for understanding how CCA works and how to interpret it. I’ll briefly touch on this with principal component analysis (PCA) as an example.
-
-Matrix factorization is a general technique in linear algebra where a given matrix is decomposed (or 'factored') into a product of two or more matrices. The idea is to represent (or approximate) the original data in a way that is useful—for example, to reveal hidden structure, reduce dimensionality, or simplify computation.
-
-Let’s consider a matrix of neural activity ($\mathbf{Y}$) consisting of $n$ neurons recorded over $T$ time points ($\mathbf{Y} \in \mathbb{R}^{N \times T}$). The core idea of matrix factorization is to approximate the data matrix as:
-
-$$\mathbf{Y} \approx \mathbf{W} \mathbf{H}$$
-
-Where:
-
-- $\mathbf{W} \in \mathbb{R}^{N \times K}$
-- $\mathbf{H} \in \mathbb{R}^{K \times T}$
-- $K \ll \min(N, T)$ (usually, $K < N < T$ in datasets we deal with)
-
-Using the obtained matrices ($\mathbf{W}$ and $\mathbf{H}$), we can reconstruct the original data:
-
-$$\mathbf{Y} \approx \mathbf{W} \times \mathbf{H} = \mathbf{\tilde{Y}}$$
-
-The reconstruction ($\mathbf{\tilde{Y}}$) is an approximation of the original data ($\mathbf{Y}$), but it now essentially lives in a $K$-dimensional subspace instead of the original $N$- or $T$-dimensional space.
-
-There are a number of ways to achieve this factorization (i.e., to obtain $\mathbf{W}$ and $\mathbf{H}$), and each of them has pros and cons. Here, I will briefly introduce PCA, which is probably the most widely used matrix factorization technique in neuroscience data analysis.
-
-
-### PCA as an Example Factorization Technique
-
-Principal Component Analysis (PCA) is one of the most commonly used matrix factorization techniques in neuroscience. It is often applied to reduce the dimensionality of neural data while preserving as much of its structure (i.e., variance) as possible.
-
-Let’s return to our neural dataset $\mathbf{Y} \in \mathbb{R}^{N \times T}$, where $N$ is the number of neurons and $T$ is the number of time points. PCA approximates $\mathbf{Y}$ as the product of two low-rank matrices:
-
-$$
-\mathbf{Y} \approx \mathbf{W} \mathbf{H}
-$$
-
-- $\mathbf{W} \in \mathbb{R}^{N \times K}$ contains the **neural loadings**—how strongly each neuron contributes to each component.
-- $\mathbf{H} \in \mathbb{R}^{K \times T}$ contains the **principal components**—the time series of the latent dimensions.
-- $K$ is the number of retained components (typically $K \ll N$ and $K \ll T$).
-
-PCA can be understood through **two equivalent objectives**:
-
-#### 1. Minimize Reconstruction Error
-
-PCA finds the best low-rank approximation of the original data by minimizing the following reconstruction error:
-
-$$
-\min_{\mathbf{W}, \mathbf{H}} \left\| \mathbf{Y} - \mathbf{W} \mathbf{H} \right\|_F^2
-$$
-
-subject to the constraint that the columns of $\mathbf{W}$ are orthogonal (i.e., $\mathbf{W}^T\mathbf{W} = \mathbf{I}$). Here, $\|\cdot\|_F$ is the Frobenius norm, which measures total squared error across all entries. In this formation, $\mathbf{W}$ represents the principal directions (basis vectors), and $\mathbf{H} = \mathbf{W}^T\mathbf{Y}$ contains the low-dimensional representations of the data. A key property of PCA is that the components in $\mathbf{H}$ are uncorrelated---each dimension captures unique variance in the data.
-
-#### 2. Maximize Projected Variance
-
-Alternatively, PCA can be seen as finding directions (components) that capture the most variance in the data. Specifically, PCA solves:
-
-$$
-\max_{\mathbf{h}} \ \mathrm{Var}(\mathbf{Y}\mathbf{h})
-$$
-
-subject to: $\|\mathbf{h}\|_2 = 1$
-
-This maximization seek a direction $\mathbf{h}$ such that the projection of the data onto $\mathbf{h}$ has the largest variance. Subsequent components are found by imposing orthogonality constraints to previous ones.
-
----
-Both formulations lead to the same result: **a set of $K$ orthogonal components that explain the most variance possible** in the original dataset. To learn how these two ways are equivalent, check out [this blog post][PCA] by Alex-it's a great explanation.
-
-PCA is often the first step in analyzing high-dimensional neural recordings, serving as a foundation for understanding population dynamics, uncovering latent structure, or feeding into downstream models.
-
-
-## How CCA works - math
+## How CCA Works — Math
 
 Now, we look under the hood of CCA.
 
-### Set the problem
+### Problem Setup
 
 Suppose an animal is moving between left and right parts of a room and receiving food at varying rates over time. We may have Q behavioral features of interest (e.g. speed, location (x, y), amount of received reward, etc.). During this behavioral observation, we may record the activity of $P$ neurons over $T$ time points. This gives us a data matrix for neural activity ($\mathbf{X} \in \mathbb{R}^{T \times P}$) and a behavioral data matrix ($\mathbf{Y} \in \mathbb{R}^{T \times Q}$).
 
@@ -348,8 +275,92 @@ Although analytically rigorous, I found the alternative method—SVD of the cros
 
 One might notice that both PCA and CCA can be solved using singular value decomposition (SVD). This is because the goal of both methods is to find a set of **orthogonal** basis vectors that best explain the structure in the data. In PCA, the 'data' refers to a single data matrix, and the goal is to capture its variance. In CCA, the 'data' is the cross-covariance matrix between two whitened data matrices—that is, it seeks directions that maximize the correlation between the two datasets.
 
-### Procrustes distance
+### Procrustes shape distance
+Procrustes analysis is a form of statistical shape analysis used to compare the geometry of two datasets. Specifically, the [orthogonal Procrustes problem][opp] finds the optimal rotation (an orthogonal linear transformation) that best aligns one matrix to another. In neuroscience, this method has become increasingly popular in brain-machine interface (BMI) research. The idea is to align the geometric shape of neural activity from an ongoing recording session to a template (such as activity recorded on the first day), in a dimensionality-reduced subspace. This alignment allows decoders trained on the template to generalize to new sessions with minimal fine-tuning, significantly reducing training time. Because the alignment occurs in a low-dimensional space, the method is robust to neural drift (e.g., neurons being lost or gained on the electrode array) and can even be applied across sessions or between different subjects. See [Degenhart et al., 2020][degenhart] for a cool example.
 
+Let $\mathbf{X}, \mathbf{Y}$ be the ongoing and template activity, respectively, and let $\mathbf{R}$ be the rotation matrix (orthogonal), the objective function is:
+
+$$
+\min||\mathbf{RX}-\mathbf{Y}||^2_F
+$$
+
+subject to:
+
+
+$$\mathbf{R}^T\mathbf{R} = \mathbf{I}$$
+
+To solve this, expand the squared Frobenius norm:
+
+$$
+\min||\mathbf{RX}-\mathbf{Y}||^2_F=\operatorname{Tr}{[(\mathbf{RX}-\mathbf{Y})^T(\mathbf{RX}-\mathbf{Y})]} = \operatorname{Tr}(\mathbf{X}^T\mathbf{X}) + \operatorname{Tr}(\mathbf{Y}^T\mathbf{Y}) - 2\operatorname{Tr}(\mathbf{X}^T\mathbf{R}^T\mathbf{Y})
+$$
+
+As the first two terms don't depend on \mathbf{R}, this is equivalent to:
+
+$$
+\max_{\mathbf{R}^T\mathbf{R} = \mathbf{I}}\operatorname{Tr}(\mathbf{X}^T\mathbf{R}^T\mathbf{Y})
+$$
+
+Using the cyclic property of the trace[^4]:
+
+$$
+\max_{\mathbf{R}^T\mathbf{R} = \mathbf{I}}\operatorname{Tr}(\mathbf{R}^T\mathbf{Y}\mathbf{X}^T)
+$$
+
+This shows that the Procrustes problem reduces to finding the rotation matrix $\mathbf{R}$ that maximmazies the alignment (i.e., the trace) of the cross-covariance matrix between $\mathbf{X}$ and $\mathbf{Y}$.
+
+To solve:
+
+$$
+\max_{\mathbf{R}^\top \mathbf{R} = \mathbf{I}} \operatorname{Tr}(\mathbf{R}^\top \mathbf{Y} \mathbf{X}^\top)
+$$
+
+we perform the *singular value decomposition (SVD)* of the cross-covariance matrix (assuming zero-meaned) \( \mathbf{Y} \mathbf{X}^\top \):
+
+$$
+\mathbf{Y} \mathbf{X}^\top = \mathbf{U} \mathbf{\Sigma} \mathbf{V}^\top
+$$
+
+The optimal rotation matrix is then given by:
+
+$$
+\mathbf{R}^\star = \mathbf{U} \mathbf{V}^\top
+$$
+
+This solution maximizes the alignment between \( \mathbf{R} \mathbf{X} \) and \( \mathbf{Y} \), and is guaranteed to be an orthogonal matrix (i.e., a pure rotation, possibly including reflection).
+
+---
+
+#### Why This Works
+
+We rewrite the trace objective using the SVD:
+
+$$
+\operatorname{Tr}(\mathbf{R}^\top \mathbf{Y} \mathbf{X}^\top)
+= \operatorname{Tr}(\mathbf{R}^\top \mathbf{U} \mathbf{\Sigma} \mathbf{V}^\top)
+= \operatorname{Tr}(\mathbf{\Sigma} \mathbf{V}^\top \mathbf{R}^\top \mathbf{U})
+$$
+
+Let \( \mathbf{Q} = \mathbf{V}^\top \mathbf{R}^\top \mathbf{U} \), which is orthogonal. Then:
+
+$$
+\operatorname{Tr}(\mathbf{\Sigma} \mathbf{Q}) \le \sum_i \sigma_i
+\quad \text{with equality when } \mathbf{Q} = \mathbf{I}
+$$
+
+This happens when:
+
+$$
+\mathbf{R} = \mathbf{U} \mathbf{V}^\top
+$$
+
+which achieves the **maximum possible trace**. This is the optimal solution.
+
+---
+
+In short, the Procrustes problem can be solved by performing SVD on the cross-covariance matrix of the two data matrices. **Canonical Correlation Analysis (CCA) can be seen as a special case of the Procrustes problem, where both data matrices are first whitened**. While CCA focuses solely on maximizing the correlation in the projected space—ignoring scaling and the original data’s covariance structure—the Procrustes problem aims to match the original data shapes more directly.
+
+Also, note the difference: the Procrustes problem involves optimizing a single rotation matrix, whereas CCA requires two projection vectors. This is because the Procrustes problem assumes the two data matrices have the same dimensions, which in practice often done by first applying dimensionality reduction (e.g., via PCA).
 
 ### How is CCA different from linear decoding.
 
@@ -359,18 +370,24 @@ One might notice that both PCA and CCA can be solved using singular value decomp
 
 
 ## TL'DR
-
+* CCA finds orthogonal components that maximally correlate two different matrices.
+* CCA can be a useful to find structure connecting completely different data modalities, such as neural data and behavior.
+* CCA can be viewed as a spacial case of the Procrustes problem where the data matrices are first whitened.
 
 ## References
 
 
 ### Footnotes
-[^1]: Whitening is a linear transformation that removes correlations between variables and scales them to have unit variance. For a zero-mean matrix \( \mathbf{X} \), the whitened version is \( \tilde{\mathbf{X}} = \mathbf{X} (\mathbf{X}^\top \mathbf{X})^{-1/2} \), which ensures that \( \tilde{\mathbf{X}}^\top \tilde{\mathbf{X}} = \mathbf{I} \). A useful intuition is to think of whitening as a multivariate version of z-scoring. In the context of CCA, whitening ensures that we capture only the relationships *between* the two datasets, without being influenced by the structure *within* each dataset. See [Wikipedia][Whitening_wiki].
+[^1]: [Whitening][Whitening_wiki] is a linear transformation that removes correlations between variables and scales them to have unit variance. For a zero-mean matrix \( \mathbf{X} \), the whitened version is \( \tilde{\mathbf{X}} = \mathbf{X} (\mathbf{X}^\top \mathbf{X})^{-1/2} \), which ensures that \( \tilde{\mathbf{X}}^\top \tilde{\mathbf{X}} = \mathbf{I} \). A useful intuition is to think of whitening as a multivariate version of z-scoring. In the context of CCA, whitening ensures that we capture only the relationships *between* the two datasets, without being influenced by the structure *within* each dataset.
 [^2]: asdsa
 [^3]: adadeeaded
+[^4]: [Cyclic property][cyclic_property]: $\operatorname{Tr}(\mathbf{A}\mathbf{B}\mathbf{C}\mathbf{D})=\operatorname{Tr}(\mathbf{B}\mathbf{C}\mathbf{D}\mathbf{A})=\operatorname{Tr}(\mathbf{C}\mathbf{D}\mathbf{A}\mathbf{B})=\operatorname{Tr}(\mathbf{D}\mathbf{A}\mathbf{B}\mathbf{C})$
 
 [shahidi_et_al_2024]: https://doi.org/10.1038/s41593-024-01575-w
 [hira_et_al_2024]: https://www.biorxiv.org/content/10.1101/2023.08.27.555017v2
 [AHW]: https://alexhwilliams.info/
 [PCA]: https://alexhwilliams.info/itsneuronalblog/2016/03/27/pca/
 [Whitening_wiki]: https://en.wikipedia.org/wiki/Whitening_transformation
+[opp]: https://en.wikipedia.org/wiki/Orthogonal_Procrustes_problem
+[degenhart]: https://www.nature.com/articles/s41551-020-0542-9
+[cyclic_property]: https://en.wikipedia.org/wiki/Trace_(linear_algebra)#Cyclic_property
