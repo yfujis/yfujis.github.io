@@ -374,11 +374,11 @@ A key limitation of classical CCA, however, is that it only captures linear rela
 
 ## TL'DR
 
-- CCA finds orthogonal components that maximally correlate two different matrices.
-- CCA can be a useful tool for uncovering structure that links completely different data modalities, such as neural activity and behavior.
+- CCA finds orthogonal directions (canonical weights) that maximally correlate two different matrices.
 - CCA has elegant conceptual connections to other factorization and statistical methods:
   - It can be viewed as performing **PCA** on the cross-covariance matrix between two whitened datasets.
   - It can also be seen as a **special case of the Procrustes problem**, where the data matrices are first whitened.
+- CCA can be a useful tool for uncovering **linear relationships** between two datasets (e.g. neural activities and behavioral features). It does *not* capture any non-linear relationships.
 
 ## Footnotes
 
