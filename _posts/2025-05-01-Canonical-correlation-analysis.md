@@ -198,7 +198,8 @@ In conclusion, CCA is equivalent to performing SVD on the cross-covariance matri
 To solve the objective function while incorporating both the *objective* ($\max_{\mathbf{a}, \mathbf{b}} \mathbf{a}^\top\Sigma_{XY}\mathbf{b}$) and the *constraint* ($\mathbf{a}^\top\Sigma_{XX}\mathbf{a} = 1, \mathbf{b}^\top\Sigma_{YY}\mathbf{b} = 1$), we turn to the method of *Lagrangian multiplier*.
 
 ---
-##### Brief Overview of Lagrange multiplier
+***Brief Overview of Lagrange multiplier***
+
 The method of Lagrange multiplier is a strategy for finding the maxima and minima of a function subject to equation constraints.
 
 $$def: L(x, \lambda) \equiv f(x) + \lambda g(x)$$
@@ -271,14 +272,13 @@ Equation (4) is **[generalized eigenvalue problem][gep]**!!
 
 We solve this for eigenvalues $\lambda^2$ and eigenvectors $\mathbf{a}$. Once obtain $\mathbf{a}$ and $\lambda$, we can substitute them to (3) to obtain $\mathbf{b}$.
 
-One caveat of this method is we only obtain one canonical component at a time.
-Although analytically rigorous, I found the alternative method—SVD of the cross-covariance matrix of whitened matrices—more intuitive when learning this topic. Moreover, the SVD-based approach builds a conceptual bridge between CCA and related techniques such as PCA[^2] and even Procrustes distance[^3].
+One caveat of this method is that it yields only one canonical component at a time. While analytically rigorous, I found an alternative approach—performing SVD on the cross-covariance matrix of whitened matrices—more intuitive when first learning this topic. Moreover, the SVD-based formulation provides a conceptual bridge between CCA and related techniques such as PCA and even Procrustes analysis. That’s what I’ll discuss next.
 
 ## Conceptual links with other methods
 
 ### PCA
 
-One might notice that both PCA and CCA can be solved using singular value decomposition (SVD). This is because both methods aim to find a set of orthogonal basis vectors that best capture structure in a matrix. In PCA, the matrix in question is a single data matrix, and SVD identifies orthogonal directions that explain the variance in the data. In CCA, the relevant matrix is the cross-covariance between two whitened data matrices—SVD then finds orthogonal directions that best explain the correlation between the original datasets.
+One might notice that both PCA and CCA can be solved using singular value decomposition (SVD). This is because both methods aim to find a set of orthogonal basis vectors that best capture structure in a matrix. In PCA, the matrix in question is a single data matrix, and SVD identifies orthogonal directions that explain the variance in the data. In CCA, the relevant matrix is the cross-covariance between two whitened data matrices—SVD then finds orthogonal directions that best explain the correlation between the original datasets. For a helpful intuition on PCA, see [this blog post by Alex][alex_pca].
 
 
 ### Procrustes shape distance
@@ -307,7 +307,7 @@ $$
 \max_{\mathbf{R}^\top\mathbf{R} = \mathbf{I}}\operatorname{Tr}(\mathbf{X}^\top\mathbf{R}^\top\mathbf{Y})
 $$
 
-Using the cyclic property of the trace[^4]:
+Using the cyclic property of the trace[^2]:
 
 $$
 \max_{\mathbf{R}^\top\mathbf{R} = \mathbf{I}}\operatorname{Tr}(\mathbf{R}^\top\mathbf{Y}\mathbf{X}^\top)
@@ -337,7 +337,7 @@ This solution maximizes the alignment between $ \mathbf{R} \mathbf{X} $ and $ \m
 
 ---
 
-#### Why This Works
+***Why This Works***
 
 We rewrite the trace objective using the SVD:
 
@@ -368,9 +368,6 @@ In short, the Procrustes problem can be solved by performing SVD on the cross-co
 
 Also, note the difference: the Procrustes problem involves optimizing a single rotation matrix, whereas CCA requires two projection vectors. This is because the Procrustes problem assumes the two data matrices have the same dimensions, which in practice often done by first applying dimensionality reduction (e.g., via PCA).
 
-### How is CCA different from linear decoding.
-
-
 ## Pros and Cons of CCA
 
 
@@ -388,14 +385,13 @@ Also, note the difference: the Procrustes problem involves optimizing a single r
 
 ### Footnotes
 [^1]: [Whitening][Whitening_wiki] is a linear transformation that removes correlations between variables and scales them to have unit variance. For a zero-mean matrix $\mathbf{X} $, the whitened version is $ \tilde{\mathbf{X}} = \mathbf{X} (\mathbf{X}^\top \mathbf{X})^{-1/2} $, which ensures that $ \tilde{\mathbf{X}}^\top \tilde{\mathbf{X}} = \mathbf{I} $. A useful intuition is to think of whitening as a multivariate version of z-scoring. In the context of CCA, whitening ensures that we capture only the relationships *between* the two datasets, without being influenced by the structure *within* each dataset.
-[^3]: adadeeaded
-[^4]: [Cyclic property][cyclic_property]: $\operatorname{Tr}(\mathbf{A}\mathbf{B}\mathbf{C}\mathbf{D})=\operatorname{Tr}(\mathbf{B}\mathbf{C}\mathbf{D}\mathbf{A})=\operatorname{Tr}(\mathbf{C}\mathbf{D}\mathbf{A}\mathbf{B})=\operatorname{Tr}(\mathbf{D}\mathbf{A}\mathbf{B}\mathbf{C})$
+[^2]: [Cyclic property][cyclic_property]: $\operatorname{Tr}(\mathbf{A}\mathbf{B}\mathbf{C}\mathbf{D})=\operatorname{Tr}(\mathbf{B}\mathbf{C}\mathbf{D}\mathbf{A})=\operatorname{Tr}(\mathbf{C}\mathbf{D}\mathbf{A}\mathbf{B})=\operatorname{Tr}(\mathbf{D}\mathbf{A}\mathbf{B}\mathbf{C})$
 
 [shahidi_et_al_2024]: https://doi.org/10.1038/s41593-024-01575-w
 [hira_et_al_2024]: https://www.biorxiv.org/content/10.1101/2023.08.27.555017v2
 [gep]: https://en.wikipedia.org/wiki/Eigendecomposition_of_a_matrix#Generalized_eigenvalue_problem
 [AHW]: https://alexhwilliams.info/
-[PCA]: https://alexhwilliams.info/itsneuronalblog/2016/03/27/pca/
+[alex_pca]: https://alexhwilliams.info/itsneuronalblog/2016/03/27/pca/
 [Whitening_wiki]: https://en.wikipedia.org/wiki/Whitening_transformation
 [opp]: https://en.wikipedia.org/wiki/Orthogonal_Procrustes_problem
 [degenhart]: https://www.nature.com/articles/s41551-020-0542-9
