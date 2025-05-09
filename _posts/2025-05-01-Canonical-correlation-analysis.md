@@ -18,7 +18,7 @@ classes:
 
 permalink: /blog/:year/:month/:day/:title
 
-excerpt: I explore canonical correlation analysis, a matrix factorization method that links two data matrices, explaining how it works and how it can be applied in neuroscience research.
+excerpt: I explore canonical correlation analysis—a matrix factorization method that links two data matrices—explaining how it works, how it relates conceptually to other methods, and how it can be applied in neuroscience research.
 ---
 
 ## Motivations
