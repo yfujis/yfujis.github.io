@@ -382,7 +382,7 @@ A key limitation of classical CCA, however, is that it only captures linear rela
   - It can be viewed as performing **PCA** on the cross-covariance matrix between two whitened datasets.
   - It can also be seen as a **special case of the Procrustes problem**, where the data matrices are first whitened.
 
-### Footnotes
+**Footnotes**
 [^1]: [Whitening][Whitening_wiki] is a linear transformation that removes correlations between variables and scales them to have unit variance. For a zero-mean matrix $\mathbf{X} $, the whitened version is $ \tilde{\mathbf{X}} = \mathbf{X} (\mathbf{X}^\top \mathbf{X})^{-1/2} $, which ensures that $ \tilde{\mathbf{X}}^\top \tilde{\mathbf{X}} = \mathbf{I} $. A useful intuition is to think of whitening as a multivariate version of z-scoring. In the context of CCA, whitening ensures that we capture only the relationships *between* the two datasets, without being influenced by the structure *within* each dataset.
 [^2]: [Cyclic property][cyclic_property]: $\operatorname{Tr}(\mathbf{A}\mathbf{B}\mathbf{C}\mathbf{D})=\operatorname{Tr}(\mathbf{B}\mathbf{C}\mathbf{D}\mathbf{A})=\operatorname{Tr}(\mathbf{C}\mathbf{D}\mathbf{A}\mathbf{B})=\operatorname{Tr}(\mathbf{D}\mathbf{A}\mathbf{B}\mathbf{C})$
 
