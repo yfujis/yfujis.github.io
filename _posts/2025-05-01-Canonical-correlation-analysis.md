@@ -34,7 +34,7 @@ CCA is one such example and is a matrix factorization technique that connects tw
 ![Shahidi_et_al_2024_Fig4](../assets/images/blog/Shahidi_et_al_2024_Fig4.png)
 *A schematic of CCA (From Shahidi et al., 2024)*
 
-The use of CCA has been increasing in recent studies. For example, [Shahidi et al., 2024][shahidi_et_al_2024] uses CCA to find relationships between neural activity in the prefrontal cortex and behavioral variables in freely moving animals. [Hira et al., 2024][hira_et_al_2024] applied CCA between neural activities two different brain areas.
+The use of CCA has been increasing in recent studies. For example, [Shahidi et al., 2024][shahidi_et_al_2024] uses CCA to find relationships between neural activity in the prefrontal cortex and behavioral variables in freely moving animals. [Hira et al., 2024][hira_et_al_2024] applied CCA between neural activities two different brain areas to estimate the amount of shared information between an area and the other areas.
 
 
 ## How CCA Works
