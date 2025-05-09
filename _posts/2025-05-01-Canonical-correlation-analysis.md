@@ -59,10 +59,10 @@ where $\mathbf{a}$ and $\mathbf{b}$ are basis vectors for $\mathbf{X}$, $\mathbf
 
 Hence,
 
-$$\max\rho = {\Sigma_{\mathbf{z_X}\mathbf{z_Y}}\over {\sqrt{Var(\mathbf{z_X})}\sqrt{Var(\mathbf{z_Y})}}} = {\mathbf{z_X}^T\mathbf{z_Y} \over {\sqrt{||\mathbf{z_X}||^2}\cdot\sqrt{||\mathbf{z_Y}||^2}}}$$
+$$\max\rho = {\Sigma_{\mathbf{z_X}\mathbf{z_Y}}\over {\sqrt{Var(\mathbf{z_X})}\sqrt{Var(\mathbf{z_Y})}}} = {\mathbf{z_X}^T\mathbf{z_Y} \over {\sqrt{\vert\vert\mathbf{z_X}\vert\vert^2}\cdot\sqrt{\vert\vert\mathbf{z_Y}\vert\vert^2}}}$$
 
 
-We also constrain ${||\mathbf{z_X}||^2=||\mathbf{z_Y}||^2=1}$ because the correlation between $\mathbf{z_X}$ and $\mathbf{z_Y}$ is invariant to their scaling. Without this constraint, the norms of $\mathbf{a}$ and $\mathbf{b}$ could be arbitrarily large, making the solution non-unique.
+We also constrain ${\vert\mathbf{z_X}\vert\vert^2=\vert\vert\mathbf{z_Y}\vert\vert^2=1}$ because the correlation between $\mathbf{z_X}$ and $\mathbf{z_Y}$ is invariant to their scaling. Without this constraint, the norms of $\mathbf{a}$ and $\mathbf{b}$ could be arbitrarily large, making the solution non-unique.
 
 We solve:
 $$\max_{\mathbf{a}, \mathbf{b}} \mathbf{a}^T\mathbf{X}^T\mathbf{Y}\mathbf{b}$$
@@ -157,10 +157,10 @@ $$=\sum_{i=1}^r\sigma_i\cos\theta_i\cos\phi_i$$
 
 Using the Cauchy-Schwarz inequality:
 
-$$|\sum_{i=1}^r\sigma_i\cos\theta_i\cos\phi_i| \le (\sum_{i=1}^r\sigma_i^2)^{1/2}(\sum_{i=1}^r \cos^2\theta_i\cos^2\phi_i)^{1/2}
+$$\vert\sum_{i=1}^r\sigma_i\cos\theta_i\cos\phi_i\vert \le (\sum_{i=1}^r\sigma_i^2)^{1/2}(\sum_{i=1}^r \cos^2\theta_i\cos^2\phi_i)^{1/2}
 $$
 
-But since $||\mathbf{\tilde{a}}|| = ||\mathbf{\tilde{b}}|| = 1$, we have:
+But since $\vert\vert\mathbf{\tilde{a}}\vert\vert = \vert\vert\mathbf{\tilde{b}}\vert\vert = 1$, we have:
 
 $$
 \sum_{i=1}^r \cos^2\theta_i\le1, \sum_{i=1}^r \cos^2\phi_i\le1
@@ -282,7 +282,7 @@ Procrustes analysis is a form of statistical shape analysis used to compare the 
 Let $\mathbf{X}, \mathbf{Y}$ be the ongoing and template activity, respectively, and let $\mathbf{R}$ be the rotation matrix (orthogonal), the objective function is:
 
 $$
-\min||\mathbf{RX}-\mathbf{Y}||^2_F
+\min\vert\vert\mathbf{RX}-\mathbf{Y}\vert\vert^2_F
 $$
 
 subject to:
@@ -293,7 +293,7 @@ $$\mathbf{R}^T\mathbf{R} = \mathbf{I}$$
 To solve this, expand the squared Frobenius norm:
 
 $$
-\min||\mathbf{RX}-\mathbf{Y}||^2_F=\operatorname{Tr}{[(\mathbf{RX}-\mathbf{Y})^T(\mathbf{RX}-\mathbf{Y})]} = \operatorname{Tr}(\mathbf{X}^T\mathbf{X}) + \operatorname{Tr}(\mathbf{Y}^T\mathbf{Y}) - 2\operatorname{Tr}(\mathbf{X}^T\mathbf{R}^T\mathbf{Y})
+\min\vert\vert\mathbf{RX}-\mathbf{Y}\vert\vert^2_F=\operatorname{Tr}{[(\mathbf{RX}-\mathbf{Y})^T(\mathbf{RX}-\mathbf{Y})]} = \operatorname{Tr}(\mathbf{X}^T\mathbf{X}) + \operatorname{Tr}(\mathbf{Y}^T\mathbf{Y}) - 2\operatorname{Tr}(\mathbf{X}^T\mathbf{R}^T\mathbf{Y})
 $$
 
 As the first two terms don't depend on \mathbf{R}, this is equivalent to:
