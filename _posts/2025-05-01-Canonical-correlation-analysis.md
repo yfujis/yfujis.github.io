@@ -65,17 +65,22 @@ $$\max\rho = {\Sigma_{\mathbf{z_X}\mathbf{z_Y}}\over {\sqrt{Var(\mathbf{z_X})}\s
 We also constrain ${\vert\mathbf{z_X}\vert\vert^2=\vert\vert\mathbf{z_Y}\vert\vert^2=1}$ because the correlation between $\mathbf{z_X}$ and $\mathbf{z_Y}$ is invariant to their scaling. Without this constraint, the norms of $\mathbf{a}$ and $\mathbf{b}$ could be arbitrarily large, making the solution non-unique.
 
 We solve:
+
 $$\max_{\mathbf{a}, \mathbf{b}} \mathbf{a}^\top\mathbf{X}^\top\mathbf{Y}\mathbf{b}$$
-with subject to:
+
+subject to:
 
 $$\mathbf{a}^\top\mathbf{X}^\top\mathbf{X}\mathbf{a} = \mathbf{b}^\top\mathbf{Y}^\top\mathbf{Y}\mathbf{b} = 1$$
 
+
 ### Solving the objective function
+
 As a first step, we replace $a$ and $b$ with the following (it may seem arbitrary now, but we'll see why this is useful in subsequent steps):
 
 $$\mathbf{a} = (\mathbf{X}^\top\mathbf{X})^{-1/2}\mathbf{\tilde{a}},\space\space\space\space \mathbf{b} = (\mathbf{Y}^\top\mathbf{Y})^{-1/2}\mathbf{\tilde{b}}$$
 
 The optimization problem becomes:
+
 $$\max_{\mathbf{\tilde{a}}, \mathbf{\tilde{b}}} \mathbf{\tilde{a}}^\top(\mathbf{X}^\top\mathbf{X})^{-1/2}\mathbf{X}^\top\mathbf{Y}(\mathbf{Y}^\top\mathbf{Y})^{-1/2}\mathbf{\tilde{b}}$$
 
 subject to:
@@ -193,14 +198,14 @@ In conclusion, CCA is equivalent to performing SVD on the cross-covariance matri
 To solve the objective function while incorporating both the *objective* ($\max_{\mathbf{a}, \mathbf{b}} \mathbf{a}^\top\Sigma_{XY}\mathbf{b}$) and the *constraint* ($\mathbf{a}^\top\Sigma_{XX}\mathbf{a} = 1, \mathbf{b}^\top\Sigma_{YY}\mathbf{b} = 1$), we turn to the method of *Lagrangian multiplier*.
 
 ---
-#### Brief Overview of Lagrange multiplier
+##### Brief Overview of Lagrange multiplier
 The method of Lagrange multiplier is a strategy for finding the maxima and minima of a function subject to equation constraints.
 
 $$def: L(x, \lambda) \equiv f(x) + \lambda g(x)$$
 
 where $f(x)$ is the objective function, $g(x)$ is the constraint, and $\lambda$ is the Lagrange multiplier.
 
-To find maximum (or minimum) of $f(x)$ subject to $g(x)=0$, we find the *stationary point of $L(x, y)$—that is, where all partial derivatives are zero.
+To find maximum (or minimum) of $f(x)$ subject to $g(x)=0$, we find the *stationary point* of $L(x, y)$—that is, where all partial derivatives are zero.
 
 ---
 
