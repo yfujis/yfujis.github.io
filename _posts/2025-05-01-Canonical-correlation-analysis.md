@@ -110,11 +110,11 @@ Both formulations lead to the same result: **a set of $K$ orthogonal components 
 PCA is often the first step in analyzing high-dimensional neural recordings, serving as a foundation for understanding population dynamics, uncovering latent structure, or feeding into downstream models.
 
 
-
-
-
 ## How CCA works - math
+
 Now, we look under the hood of CCA.
+
+### Set the problem
 
 Suppose an animal is moving between left and right parts of a room and receiving food at varying rates over time. We may have Q behavioral features of interest (e.g. speed, location (x, y), amount of received reward, etc.). During this behavioral observation, we may record the activity of $P$ neurons over $T$ time points. This gives us a data matrix for neural activity ($\mathbf{X} \in \mathbb{R}^{T \times P}$) and a behavioral data matrix ($\mathbf{Y} \in \mathbb{R}^{T \times Q}$).
 
@@ -175,7 +175,7 @@ So the objective becomes:
 
 $$\max_{\mathbf{\tilde{a}}, \mathbf{\tilde{b}}} \mathbf{\tilde{a}}^T\mathbf{U}\mathbf{\Lambda} \mathbf{V}^T\mathbf{\tilde{b}}$$
 
-with subject to:
+subject to:
 
 $$\mathbf{\tilde{a}}^T\mathbf{\tilde{a}} = \mathbf{\tilde{b}}^T\mathbf{\tilde{b}} = 1$$
 
@@ -279,11 +279,11 @@ To find maximum (or minimum) of $f(x)$ subject to $g(x)=0$, we find the *station
 
 Back to our problem. Since we have two constraints,
 
-$$\mathbf{a}^T\Sigma_{XX}\mathbf{a} = 1, \mathbf{b}^T\Sigma_{YY}\mathbf{b} = 1,$$
+$$\mathbf{a}^T\Sigma_{XX}\mathbf{a}=1, \mathbf{b}^T\Sigma_{YY}\mathbf{b} = 1,$$
 
 we introduce two Lagrange multipliers: $\lambda_1$ and $\lambda_2$.
 
-$$L(\mathbf{a}, \mathbf{b}, \lambda_1, \lambda_2) = \mathbf{a}^T\Sigma_{XY}\mathbf{b} - {\lambda_1\over2}(mathbf{a}^T\Sigma_{XX}mathbf{a}-1) - {\lambda_2\over2}(mathbf{b}^T\Sigma_{YY}mathbf{b}-1)$$
+$$L(\mathbf{a}, \mathbf{b}, \lambda_1, \lambda_2) = \mathbf{a}^T\Sigma_{XY}\mathbf{b} - {\lambda_1\over2}(\mathbf{a}^T\Sigma_{XX}\mathbf{a}-1) - {\lambda_2\over2}(\mathbf{b}^T\Sigma_{YY}\mathbf{b}-1)$$
 
 Take the derivative with respect to $\mathbf{a}$:
 
@@ -306,35 +306,41 @@ $${\delta L\over{\delta{\mathbf{b}}}} = {\delta\over{\delta{\mathbf{b}}}}(\mathb
 
 $$= \Sigma_{YY}\mathbf{a} - \lambda_2\Sigma_{YY}\mathbf{b} = 0$$
 
+So:
+$$\Sigma_{YX}\mathbf{a} = \lambda_2\Sigma_{YY}\mathbf{b} \space\space\space\space(2)$$
 
-Use the vector derivative rules: ${\delta\over \delta x}y^TAx = A^Ty$, ${\delta\over \delta x}x^TAx = 2Ax$ for the first and the third terms, respectively. The second term goes 0 as there is no $a$.
-$$\Sigma_{YX}a = \lambda_2\Sigma_{YY}b \dots (2)$$
+Take transpose of (1) and multiply on the right by $\mathbf{a}$:
 
-Take transpose of equation $(1)$, post-multiply by $a$:
-$$b^T\Sigma_{YX}a=\lambda_1a^T\Sigma_{XX}a$$
+$$\mathbf{b}^T\Sigma_{YX}\mathbf{a}=\lambda_1\mathbf{a}^T\Sigma_{XX}\mathbf{a}$$
 
-Take equation $(2)$, and pre-multiply by $b^T$:
-$$b^T\Sigma_{YX}a = \lambda_2b^T\Sigma_{YY}b$$
+Take (2) and multiply on the left by $\mathbf{b}^T$:
 
-As we have the constraints $a^T\Sigma_{XX}a = 1, b^T\Sigma_{YY}b = 1$:
-$$\lambda_1 = b^T\Sigma_{YX}a = \lambda_2$$
+$$\mathbf{b}^T\Sigma_{YX}\mathbf{a} = \lambda_2\mathbf{b}^T\Sigma_{YY}\mathbf{b}$$
+
+Since the contraints are $\mathbf{a}^T\Sigma_{XX}\mathbf{a} = 1, \mathbf{b}^T\Sigma_{YY}\mathbf{b} = 1$, it follows that:
+
+$$\lambda_1 = \mathbf{b}^T\Sigma_{YX}\mathbf{a} = \lambda_2$$
 
 Let:
 $$\lambda = \lambda_1 = \lambda_2$$
 
-Now, take $(2)$, assume $\Sigma_{YY}$ is invertible:
-$$b = {1\over{\lambda}}\Sigma_{YY}^{-1}\Sigma_{YX}a \dots (3)$$
+From (2), assuming $\Sigma_{YY}$ is invertible:
 
-Plug $(2)$ into $(1)$:
-$$\Sigma_{XY}({1\over{\lambda}}\Sigma_{YY}^{-1}\Sigma_{YX}a) = \lambda\Sigma_{XX}a$$
-$$(\Sigma_{XY}\Sigma_{YY}^{-1}\Sigma_{YX})a = \lambda^2\Sigma_{XX}a \dots (3)$$
+$$\mathbf{b} = {1\over{\lambda}}\Sigma_{YY}^{-1}\Sigma_{YX}\mathbf{a} \space\space\space\space (3)$$
 
+Plug (3) into (1):
 
-$(3)$ is **generalized eigenvalue problem**!!
+$$\Sigma_{XY}({1\over{\lambda}}\Sigma_{YY}^{-1}\Sigma_{YX}\mathbf{a}) = \lambda\Sigma_{XX}\mathbf{a}$$
 
-Now, we can solve this for eigenvalues $\lambda^2$ and eigenvectors $a$. Once obtaining $a$ and $\lambda$, we can inject them to $(3)$ to obtain $b$.
+$$(\Sigma_{XY}\Sigma_{YY}^{-1}\Sigma_{YX})\mathbf{a} = \lambda^2\Sigma_{XX}a \space\space\space\space (4)$$
 
 
+Equation (4) is **generalized eigenvalue problem**!!
+
+We solve this for eigenvalues $\lambda^2$ and eigenvectors $\mathbf{a}$. Once obtain $\mathbf{a}$ and $\lambda$, we can substitute them to (3) to obtain $\mathbf{b}$.
+
+One caveat of this method is we only obtain one canonical component at a time.
+Although analytically rigorous, I find the other method (SVD of cross-covariance matrix of whitened matrices) to be more useful when I learned this topic. Moreover, the SVD method gives conceptual bridge between CCA and other methods such as PCA[^2] and even Procrustes distance[^3].
 
 ## Pros and Cons of CCA
 
@@ -348,6 +354,8 @@ Now, we can solve this for eigenvalues $\lambda^2$ and eigenvectors $a$. Once ob
 
 ### Footnotes
 [^1]: Whitening is a linear transformation that removes correlations between variables and scales them to have unit variance. For a zero-mean matrix \( \mathbf{X} \), the whitened version is \( \tilde{\mathbf{X}} = \mathbf{X} (\mathbf{X}^\top \mathbf{X})^{-1/2} \), which ensures that \( \tilde{\mathbf{X}}^\top \tilde{\mathbf{X}} = \mathbf{I} \). A useful intuition is to think of whitening as a multivariate version of z-scoring. In the context of CCA, whitening ensures that we capture only the relationships *between* the two datasets, without being influenced by the structure *within* each dataset. See [Wikipedia][Whitening_wiki].
+[^2]: asdsa
+[^3]: adadeeaded
 
 [shahidi_et_al_2024]: https://doi.org/10.1038/s41593-024-01575-w
 [hira_et_al_2024]: https://www.biorxiv.org/content/10.1101/2023.08.27.555017v2
