@@ -220,12 +220,12 @@ $$= \Sigma_{XY}\mathbf{b} - \lambda_1\Sigma_{XX}\mathbf{a} = 0$$
 
 Use the vector derivative identities:
 
-$${\delta\over \delta \mathbf{x}}\mathbf{x}^\topA\mathbf{y} = A\mathbf{y}, {\delta\over \delta \mathbf{x}}\mathbf{x}^\topA\mathbf{x} = 2A\mathbf{x}$$
+$${\delta\over \delta \mathbf{x}}\mathbf{x^\top} A\mathbf{y} = A\mathbf{y} {\delta\over \delta \mathbf{x}}\mathbf{x^\top}A\mathbf{x} = 2A\mathbf{x}$$
 
 The third term vanishes since it contains no $\mathbf{a}$.
 Thus:
 
-$$\Sigma_{XY}\mathbf{b} = \lambda∂_1\Sigma_{XX}\mathbf{a} \space\space\space(1)$$
+$$\Sigma_{XY}\mathbf{b} = \lambda_1\Sigma_{XX}\mathbf{a} \space\space\space(1)$$
 
 Similarity, take the derivative with respect to $\mathbf{b}$:
 
