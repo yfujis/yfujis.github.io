@@ -340,7 +340,19 @@ Equation (4) is **generalized eigenvalue problem**!!
 We solve this for eigenvalues $\lambda^2$ and eigenvectors $\mathbf{a}$. Once obtain $\mathbf{a}$ and $\lambda$, we can substitute them to (3) to obtain $\mathbf{b}$.
 
 One caveat of this method is we only obtain one canonical component at a time.
-Although analytically rigorous, I find the other method (SVD of cross-covariance matrix of whitened matrices) to be more useful when I learned this topic. Moreover, the SVD method gives conceptual bridge between CCA and other methods such as PCA[^2] and even Procrustes distance[^3].
+Although analytically rigorous, I found the alternative method—SVD of the cross-covariance matrix of whitened matrices—more intuitive when learning this topic. Moreover, the SVD-based approach builds a conceptual bridge between CCA and related techniques such as PCA[^2] and even Procrustes distance[^3].
+
+## Conceptual links with other methods
+
+### PCA
+
+One might notice that both PCA and CCA can be solved using singular value decomposition (SVD). This is because the goal of both methods is to find a set of **orthogonal** basis vectors that best explain the structure in the data. In PCA, the 'data' refers to a single data matrix, and the goal is to capture its variance. In CCA, the 'data' is the cross-covariance matrix between two whitened data matrices—that is, it seeks directions that maximize the correlation between the two datasets.
+
+### Procrustes distance
+
+
+### How is CCA different from linear decoding.
+
 
 ## Pros and Cons of CCA
 
