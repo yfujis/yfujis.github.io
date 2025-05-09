@@ -10,9 +10,9 @@ toc_label: "outline"
 toc_icon: "guitar"
 comments: false
 header:
-  overlay_image: /assets/images/blog/20230413/2023-04-10-bryant.jpg
+  overlay_image: /assets/images/blog/cca_illustration.png
   overlay_filter: rgba(0,0,0,0.8)
-  teaser: /assets/images/blog/20230413/2023-04-10-bryant.jpg
+  teaser: /assets/images/blog/cca_illustration.png
 classes:
   - wide
 
@@ -31,8 +31,8 @@ However, one major challenge we face is making sense of these enormous high-dime
 
 CCA is one such example and is a matrix factorization technique that connects two data matrices. CCA finds rotation matrices (set of projection vectors) for individual data matrices such that the two datasets are maximally correlated in the projected subspace (canonical component space). Below is a schematic inspired by [Shahidi et al., 2024][shahidi_et_al_2024].
 
-![Shahidi_et_al_2024_Fig4](../assets/images/blog/Shahidi_et_al_2024_Fig4.png)
-*A schematic of CCA (From Shahidi et al., 2024)*
+![cca_illustration](/assets/images/blog/cca_illustration.png)
+*A schematic CCA*
 
 The use of CCA has been increasing in recent studies. For example, [Shahidi et al., 2024][shahidi_et_al_2024] uses CCA to find relationships between neural activity in the prefrontal cortex and behavioral variables in freely moving animals. [Hira et al., 2024][hira_et_al_2024] applied CCA between neural activities two different brain areas to estimate the amount of shared information between an area and the other areas.
 
