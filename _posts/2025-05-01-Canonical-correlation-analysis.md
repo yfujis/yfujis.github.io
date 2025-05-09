@@ -23,9 +23,7 @@ excerpt: I explore canonical correlation analysis—a matrix factorization metho
 
 ## Motivations
 
-With the advent of new technologies, we neuroscientists now have exciting opportunities to probe the brain by recording the activity of tens, hundreds, or even thousands of neurons simultaneously. Beyond just neural recordings, we are increasingly able to quantify behavior in rich and complex ways—ranging from motion tracking to acoustic profiling and many others.
-
-Systems neuroscientists are strongly interested in understanding how the brain generates and controls behavior. This is probably the most exciting time to be in the field of neuroscience—and it will likely only get more exciting.
+With the advent of new technologies, we, systems neuroscientists, now have exciting opportunities to probe the brain by recording the activity of tens, hundreds, or even thousands of neurons simultaneously. Beyond just neural recordings, we are increasingly able to quantify behavior in rich and complex ways—ranging from motion tracking to acoustic profiling and many others.
 
 However, one major challenge we face is making sense of these enormous high-dimensional datasets—namely, finding meaningful relationships between brain activity and behavior when both exist in complex, high-dimensional spaces. To this end, many researchers have developed or adapted analytical frameworks to help answer questions in neuroscience.
 
