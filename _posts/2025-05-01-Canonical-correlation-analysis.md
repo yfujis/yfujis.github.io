@@ -29,7 +29,7 @@ Systems neuroscientists are strongly interested in understanding how the brain g
 
 However, one major challenge we face is making sense of these enormous high-dimensional datasets—namely, finding meaningful relationships between brain activity and behavior when both exist in complex, high-dimensional spaces. To this end, many researchers have developed or adapted analytical frameworks to help answer questions in neuroscience.
 
-CCA is one such example and is a matrix factorization technique that connects two data matrices. CCA finds linear transformation matrices (set of projection vectors) for individual data matrices such that the two datasets are maximally correlated in the projected subspace (canonical component space). Below is a schematic of CCA (Notations will come later in this blog post).
+CCA is one such example and is a matrix factorization technique that connects two data matrices. CCA finds linear transformation matrices (set of projection vectors) for individual data matrices such that the two data matrices are maximally correlated in the projected subspaces (individual canonical component spaces for respective data matrices). Below is a schematic of CCA (Notations will come later in this blog post).
 
 ![cca_illustration](/assets/images/blog/cca_illustration.png)
 *A schematic of CCA*
