@@ -59,56 +59,56 @@ where $\mathbf{a}$ and $\mathbf{b}$ are basis vectors for $\mathbf{X}$, $\mathbf
 
 Hence,
 
-$$\max\rho = {\Sigma_{\mathbf{z_X}\mathbf{z_Y}}\over {\sqrt{Var(\mathbf{z_X})}\sqrt{Var(\mathbf{z_Y})}}} = {\mathbf{z_X}^T\mathbf{z_Y} \over {\sqrt{\vert\vert\mathbf{z_X}\vert\vert^2}\cdot\sqrt{\vert\vert\mathbf{z_Y}\vert\vert^2}}}$$
+$$\max\rho = {\Sigma_{\mathbf{z_X}\mathbf{z_Y}}\over {\sqrt{Var(\mathbf{z_X})}\sqrt{Var(\mathbf{z_Y})}}} = {\mathbf{z_X}^\top\mathbf{z_Y} \over {\sqrt{\vert\vert\mathbf{z_X}\vert\vert^2}\cdot\sqrt{\vert\vert\mathbf{z_Y}\vert\vert^2}}}$$
 
 
 We also constrain ${\vert\mathbf{z_X}\vert\vert^2=\vert\vert\mathbf{z_Y}\vert\vert^2=1}$ because the correlation between $\mathbf{z_X}$ and $\mathbf{z_Y}$ is invariant to their scaling. Without this constraint, the norms of $\mathbf{a}$ and $\mathbf{b}$ could be arbitrarily large, making the solution non-unique.
 
 We solve:
-$$\max_{\mathbf{a}, \mathbf{b}} \mathbf{a}^T\mathbf{X}^T\mathbf{Y}\mathbf{b}$$
+$$\max_{\mathbf{a}, \mathbf{b}} \mathbf{a}^\top\mathbf{X}^\top\mathbf{Y}\mathbf{b}$$
 with subject to:
 
-$$\mathbf{a}^T\mathbf{X}^T\mathbf{X}\mathbf{a} = \mathbf{b}^T\mathbf{Y}^T\mathbf{Y}\mathbf{b} = 1$$
+$$\mathbf{a}^\top\mathbf{X}^\top\mathbf{X}\mathbf{a} = \mathbf{b}^\top\mathbf{Y}^\top\mathbf{Y}\mathbf{b} = 1$$
 
 ### Solving the objective function
 As a first step, we replace $a$ and $b$ with the following (it may seem arbitrary now, but we'll see why this is useful in subsequent steps):
 
-$$\mathbf{a} = (\mathbf{X}^T\mathbf{X})^{-1/2}\mathbf{\tilde{a}},\space\space\space\space \mathbf{b} = (\mathbf{Y}^T\mathbf{Y})^{-1/2}\mathbf{\tilde{b}}$$
+$$\mathbf{a} = (\mathbf{X}^\top\mathbf{X})^{-1/2}\mathbf{\tilde{a}},\space\space\space\space \mathbf{b} = (\mathbf{Y}^\top\mathbf{Y})^{-1/2}\mathbf{\tilde{b}}$$
 
 The optimization problem becomes:
-$$\max_{\mathbf{\tilde{a}}, \mathbf{\tilde{b}}} \mathbf{\tilde{a}}^T(\mathbf{X}^T\mathbf{X})^{-1/2}\mathbf{X}^T\mathbf{Y}(\mathbf{Y}^T\mathbf{Y})^{-1/2}\mathbf{\tilde{b}}$$
+$$\max_{\mathbf{\tilde{a}}, \mathbf{\tilde{b}}} \mathbf{\tilde{a}}^\top(\mathbf{X}^\top\mathbf{X})^{-1/2}\mathbf{X}^\top\mathbf{Y}(\mathbf{Y}^\top\mathbf{Y})^{-1/2}\mathbf{\tilde{b}}$$
 
 subject to:
 
-$$\mathbf{\tilde{a}}^T\mathbf{\tilde{a}} = \mathbf{\tilde{b}}^T\mathbf{\tilde{b}} = 1$$
+$$\mathbf{\tilde{a}}^\top\mathbf{\tilde{a}} = \mathbf{\tilde{b}}^\top\mathbf{\tilde{b}} = 1$$
 
 Now, notice that the whitened matrices[^1] of $\mathbf{X}$ and $\mathbf{Y}$ are:
 
-$$\mathbf{\tilde{X}}=\mathbf{X}(\mathbf{X}^T\mathbf{X})^{-1/2},\space\space\space\space \mathbf{\tilde{Y}}=\mathbf{Y}(\mathbf{Y}^T\mathbf{Y})^{-1/2}$$
+$$\mathbf{\tilde{X}}=\mathbf{X}(\mathbf{X}^\top\mathbf{X})^{-1/2},\space\space\space\space \mathbf{\tilde{Y}}=\mathbf{Y}(\mathbf{Y}^\top\mathbf{Y})^{-1/2}$$
 
 Therefore we can rewrite the objective as:
 
-$$\max_{\mathbf{\tilde{a}}, \mathbf{\tilde{b}}} \mathbf{\tilde{a}}^T\mathbf{\tilde{X}}^T\mathbf{\tilde{Y}}\mathbf{\tilde{b}}$$
+$$\max_{\mathbf{\tilde{a}}, \mathbf{\tilde{b}}} \mathbf{\tilde{a}}^\top\mathbf{\tilde{X}}^\top\mathbf{\tilde{Y}}\mathbf{\tilde{b}}$$
 
 subject to:
 
-$$\mathbf{\tilde{a}}^T\mathbf{\tilde{a}} = \mathbf{\tilde{b}}^T\mathbf{\tilde{b}} = 1$$
+$$\mathbf{\tilde{a}}^\top\mathbf{\tilde{a}} = \mathbf{\tilde{b}}^\top\mathbf{\tilde{b}} = 1$$
 
 We then perform singular value decomposition (SVD) on the cross-covariance matrix:
 
-$$\mathbf{\tilde{X}}^T\mathbf{\tilde{Y}} = \mathbf{U}\mathbf{\Lambda} \mathbf{V}^T$$
+$$\mathbf{\tilde{X}}^\top\mathbf{\tilde{Y}} = \mathbf{U}\mathbf{\Lambda} \mathbf{V}^\top$$
 
 So the objective becomes:
 
-$$\max_{\mathbf{\tilde{a}}, \mathbf{\tilde{b}}} \mathbf{\tilde{a}}^T\mathbf{U}\mathbf{\Lambda} \mathbf{V}^T\mathbf{\tilde{b}}$$
+$$\max_{\mathbf{\tilde{a}}, \mathbf{\tilde{b}}} \mathbf{\tilde{a}}^\top\mathbf{U}\mathbf{\Lambda} \mathbf{V}^\top\mathbf{\tilde{b}}$$
 
 subject to:
 
-$$\mathbf{\tilde{a}}^T\mathbf{\tilde{a}} = \mathbf{\tilde{b}}^T\mathbf{\tilde{b}} = 1$$
+$$\mathbf{\tilde{a}}^\top\mathbf{\tilde{a}} = \mathbf{\tilde{b}}^\top\mathbf{\tilde{b}} = 1$$
 
 Let's examine the components:
 
-$$\mathbf{\tilde{a}}^T\mathbf{U}\mathbf{\Lambda} \mathbf{V}^T\mathbf{\tilde{b}}=\begin{bmatrix} \mathbf{\tilde{a}}^T\mathbf{u_1} & \mathbf{\tilde{a}}^T\mathbf{u_2} & \cdots & \mathbf{\tilde{a}}^T\mathbf{u_P} \end{bmatrix}
+$$\mathbf{\tilde{a}}^\top\mathbf{U}\mathbf{\Lambda} \mathbf{V}^\top\mathbf{\tilde{b}}=\begin{bmatrix} \mathbf{\tilde{a}}^\top\mathbf{u_1} & \mathbf{\tilde{a}}^\top\mathbf{u_2} & \cdots & \mathbf{\tilde{a}}^\top\mathbf{u_P} \end{bmatrix}
 \left[
 \begin{array}{cccc}
 \sigma_1 & 0 & \cdots & 0 \\
@@ -121,10 +121,10 @@ $$\mathbf{\tilde{a}}^T\mathbf{U}\mathbf{\Lambda} \mathbf{V}^T\mathbf{\tilde{b}}=
 \end{array}
 \right]
 \begin{bmatrix}
-\mathbf{v_1}^T\tilde{b} \\
-\mathbf{v_2}^T\tilde{b} \\
+\mathbf{v_1}^\top\tilde{b} \\
+\mathbf{v_2}^\top\tilde{b} \\
 \vdots \\
-\mathbf{v_Q}^T\tilde{b}
+\mathbf{v_Q}^\top\tilde{b}
 \end{bmatrix}
 $$
 
@@ -180,7 +180,7 @@ $$
 
 So the optimal solution is:
 $$
-\mathbf{a_i} = (\mathbf{X}^T\mathbf{X})^{-1/2}\mathbf{u_i},\space\space\space\space \mathbf{b_i} = (\mathbf{Y}^T\mathbf{Y})^{-1/2}\mathbf{v_1}
+\mathbf{a_i} = (\mathbf{X}^\top\mathbf{X})^{-1/2}\mathbf{u_i},\space\space\space\space \mathbf{b_i} = (\mathbf{Y}^\top\mathbf{Y})^{-1/2}\mathbf{v_1}
 $$
 
 where $\sigma_i$ is the $i$th singular value—the $i$th canonical correlation.
@@ -190,7 +190,7 @@ In conclusion, CCA is equivalent to performing SVD on the cross-covariance matri
 ### Alternative approach - Using Lagrangian multiplier
 *Feel free to skip this section unless you're particularly interested in the topic.*
 
-To solve the objective function while incorporating both the *objective* ($\max_{\mathbf{a}, \mathbf{b}} \mathbf{a}^T\Sigma_{XY}\mathbf{b}$) and the *constraint* ($\mathbf{a}^T\Sigma_{XX}\mathbf{a} = 1, \mathbf{b}^T\Sigma_{YY}\mathbf{b} = 1$), we turn to the method of *Lagrangian multiplier*.
+To solve the objective function while incorporating both the *objective* ($\max_{\mathbf{a}, \mathbf{b}} \mathbf{a}^\top\Sigma_{XY}\mathbf{b}$) and the *constraint* ($\mathbf{a}^\top\Sigma_{XX}\mathbf{a} = 1, \mathbf{b}^\top\Sigma_{YY}\mathbf{b} = 1$), we turn to the method of *Lagrangian multiplier*.
 
 ---
 #### Brief Overview of Lagrange multiplier
@@ -206,21 +206,21 @@ To find maximum (or minimum) of $f(x)$ subject to $g(x)=0$, we find the *station
 
 Back to our problem. Since we have two constraints,
 
-$$\mathbf{a}^T\Sigma_{XX}\mathbf{a}=1, \mathbf{b}^T\Sigma_{YY}\mathbf{b} = 1,$$
+$$\mathbf{a}^\top\Sigma_{XX}\mathbf{a}=1, \mathbf{b}^\top\Sigma_{YY}\mathbf{b} = 1,$$
 
 we introduce two Lagrange multipliers: $\lambda_1$ and $\lambda_2$.
 
-$$L(\mathbf{a}, \mathbf{b}, \lambda_1, \lambda_2) = \mathbf{a}^T\Sigma_{XY}\mathbf{b} - {\lambda_1\over2}(\mathbf{a}^T\Sigma_{XX}\mathbf{a}-1) - {\lambda_2\over2}(\mathbf{b}^T\Sigma_{YY}\mathbf{b}-1)$$
+$$L(\mathbf{a}, \mathbf{b}, \lambda_1, \lambda_2) = \mathbf{a}^\top\Sigma_{XY}\mathbf{b} - {\lambda_1\over2}(\mathbf{a}^\top\Sigma_{XX}\mathbf{a}-1) - {\lambda_2\over2}(\mathbf{b}^\top\Sigma_{YY}\mathbf{b}-1)$$
 
 Take the derivative with respect to $\mathbf{a}$:
 
-$${\delta L\over{\delta{\mathbf{a}}}} = {\delta\over{\delta{\mathbf{a}}}}(\mathbf{a}^T\Sigma_{XY}\mathbf{b}) - {\delta\over{\delta{\mathbf{a}}}}({\lambda_1\over2}(\mathbf{a}^T\Sigma_{XX}\mathbf{a}-1)) - {\delta\over{\delta{\mathbf{a}}}}({\lambda_2\over2}(\mathbf{b}^T\Sigma_{YY}\mathbf{b}-1))$$
+$${\delta L\over{\delta{\mathbf{a}}}} = {\delta\over{\delta{\mathbf{a}}}}(\mathbf{a}^\top\Sigma_{XY}\mathbf{b}) - {\delta\over{\delta{\mathbf{a}}}}({\lambda_1\over2}(\mathbf{a}^\top\Sigma_{XX}\mathbf{a}-1)) - {\delta\over{\delta{\mathbf{a}}}}({\lambda_2\over2}(\mathbf{b}^\top\Sigma_{YY}\mathbf{b}-1))$$
 
 $$= \Sigma_{XY}\mathbf{b} - \lambda_1\Sigma_{XX}\mathbf{a} = 0$$
 
 Use the vector derivative identities:
 
-$${\delta\over \delta \mathbf{x}}\mathbf{x}^TA\mathbf{y} = A\mathbf{y}, {\delta\over \delta \mathbf{x}}\mathbf{x}^TA\mathbf{x} = 2A\mathbf{x}$$
+$${\delta\over \delta \mathbf{x}}\mathbf{x}^\topA\mathbf{y} = A\mathbf{y}, {\delta\over \delta \mathbf{x}}\mathbf{x}^\topA\mathbf{x} = 2A\mathbf{x}$$
 
 The third term vanishes since it contains no $\mathbf{a}$.
 Thus:
@@ -229,7 +229,7 @@ $$\Sigma_{XY}\mathbf{b} = \lambda∂_1\Sigma_{XX}\mathbf{a} \space\space\space(1
 
 Similarity, take the derivative with respect to $\mathbf{b}$:
 
-$${\delta L\over{\delta{\mathbf{b}}}} = {\delta\over{\delta{\mathbf{b}}}}(\mathbf{a}^T\Sigma_{XY}\mathbf{b}) - {\delta\over{\delta{\mathbf{b}}}}({\lambda_1\over2}(\mathbf{a}^T\Sigma_{XX}\mathbf{a}-1)) - {\delta\over{\delta{\mathbf{b}}}}({\lambda_2\over2}(\mathbf{b}^T\Sigma_{YY}\mathbf{b}-1))$$
+$${\delta L\over{\delta{\mathbf{b}}}} = {\delta\over{\delta{\mathbf{b}}}}(\mathbf{a}^\top\Sigma_{XY}\mathbf{b}) - {\delta\over{\delta{\mathbf{b}}}}({\lambda_1\over2}(\mathbf{a}^\top\Sigma_{XX}\mathbf{a}-1)) - {\delta\over{\delta{\mathbf{b}}}}({\lambda_2\over2}(\mathbf{b}^\top\Sigma_{YY}\mathbf{b}-1))$$
 
 $$= \Sigma_{YY}\mathbf{a} - \lambda_2\Sigma_{YY}\mathbf{b} = 0$$
 
@@ -238,15 +238,15 @@ $$\Sigma_{YX}\mathbf{a} = \lambda_2\Sigma_{YY}\mathbf{b} \space\space\space\spac
 
 Take transpose of (1) and multiply on the right by $\mathbf{a}$:
 
-$$\mathbf{b}^T\Sigma_{YX}\mathbf{a}=\lambda_1\mathbf{a}^T\Sigma_{XX}\mathbf{a}$$
+$$\mathbf{b}^\top\Sigma_{YX}\mathbf{a}=\lambda_1\mathbf{a}^\top\Sigma_{XX}\mathbf{a}$$
 
-Take (2) and multiply on the left by $\mathbf{b}^T$:
+Take (2) and multiply on the left by $\mathbf{b}^\top$:
 
-$$\mathbf{b}^T\Sigma_{YX}\mathbf{a} = \lambda_2\mathbf{b}^T\Sigma_{YY}\mathbf{b}$$
+$$\mathbf{b}^\top\Sigma_{YX}\mathbf{a} = \lambda_2\mathbf{b}^\top\Sigma_{YY}\mathbf{b}$$
 
-Since the contraints are $\mathbf{a}^T\Sigma_{XX}\mathbf{a} = 1, \mathbf{b}^T\Sigma_{YY}\mathbf{b} = 1$, it follows that:
+Since the contraints are $\mathbf{a}^\top\Sigma_{XX}\mathbf{a} = 1, \mathbf{b}^\top\Sigma_{YY}\mathbf{b} = 1$, it follows that:
 
-$$\lambda_1 = \mathbf{b}^T\Sigma_{YX}\mathbf{a} = \lambda_2$$
+$$\lambda_1 = \mathbf{b}^\top\Sigma_{YX}\mathbf{a} = \lambda_2$$
 
 Let:
 $$\lambda = \lambda_1 = \lambda_2$$
@@ -288,24 +288,24 @@ $$
 subject to:
 
 
-$$\mathbf{R}^T\mathbf{R} = \mathbf{I}$$
+$$\mathbf{R}^\top\mathbf{R} = \mathbf{I}$$
 
 To solve this, expand the squared Frobenius norm:
 
 $$
-\min\vert\vert\mathbf{RX}-\mathbf{Y}\vert\vert^2_F=\operatorname{Tr}{[(\mathbf{RX}-\mathbf{Y})^T(\mathbf{RX}-\mathbf{Y})]} = \operatorname{Tr}(\mathbf{X}^T\mathbf{X}) + \operatorname{Tr}(\mathbf{Y}^T\mathbf{Y}) - 2\operatorname{Tr}(\mathbf{X}^T\mathbf{R}^T\mathbf{Y})
+\min\vert\vert\mathbf{RX}-\mathbf{Y}\vert\vert^2_F=\operatorname{Tr}{[(\mathbf{RX}-\mathbf{Y})^\top(\mathbf{RX}-\mathbf{Y})]} = \operatorname{Tr}(\mathbf{X}^\top\mathbf{X}) + \operatorname{Tr}(\mathbf{Y}^\top\mathbf{Y}) - 2\operatorname{Tr}(\mathbf{X}^\top\mathbf{R}^\top\mathbf{Y})
 $$
 
 As the first two terms don't depend on \mathbf{R}, this is equivalent to:
 
 $$
-\max_{\mathbf{R}^T\mathbf{R} = \mathbf{I}}\operatorname{Tr}(\mathbf{X}^T\mathbf{R}^T\mathbf{Y})
+\max_{\mathbf{R}^\top\mathbf{R} = \mathbf{I}}\operatorname{Tr}(\mathbf{X}^\top\mathbf{R}^\top\mathbf{Y})
 $$
 
 Using the cyclic property of the trace[^4]:
 
 $$
-\max_{\mathbf{R}^T\mathbf{R} = \mathbf{I}}\operatorname{Tr}(\mathbf{R}^T\mathbf{Y}\mathbf{X}^T)
+\max_{\mathbf{R}^\top\mathbf{R} = \mathbf{I}}\operatorname{Tr}(\mathbf{R}^\top\mathbf{Y}\mathbf{X}^\top)
 $$
 
 This shows that the Procrustes problem reduces to finding the rotation matrix $\mathbf{R}$ that maximmazies the alignment (i.e., the trace) of the cross-covariance matrix between $\mathbf{X}$ and $\mathbf{Y}$.
@@ -316,7 +316,7 @@ $$
 \max_{\mathbf{R}^\top \mathbf{R} = \mathbf{I}} \operatorname{Tr}(\mathbf{R}^\top \mathbf{Y} \mathbf{X}^\top)
 $$
 
-we perform the *singular value decomposition (SVD)* of the cross-covariance matrix (assuming zero-meaned) \( \mathbf{Y} \mathbf{X}^\top \):
+we perform the *singular value decomposition (SVD)* of the cross-covariance matrix (assuming zero-meaned) $ \mathbf{Y} \mathbf{X}^\top $:
 
 $$
 \mathbf{Y} \mathbf{X}^\top = \mathbf{U} \mathbf{\Sigma} \mathbf{V}^\top
@@ -328,7 +328,7 @@ $$
 \mathbf{R}^\star = \mathbf{U} \mathbf{V}^\top
 $$
 
-This solution maximizes the alignment between \( \mathbf{R} \mathbf{X} \) and \( \mathbf{Y} \), and is guaranteed to be an orthogonal matrix (i.e., a pure rotation, possibly including reflection).
+This solution maximizes the alignment between $ \mathbf{R} \mathbf{X} $ and $ \mathbf{Y} $, and is guaranteed to be an orthogonal matrix (i.e., a pure rotation, possibly including reflection).
 
 ---
 
@@ -342,7 +342,7 @@ $$
 = \operatorname{Tr}(\mathbf{\Sigma} \mathbf{V}^\top \mathbf{R}^\top \mathbf{U})
 $$
 
-Let \( \mathbf{Q} = \mathbf{V}^\top \mathbf{R}^\top \mathbf{U} \), which is orthogonal. Then:
+Let $\mathbf{Q} = \mathbf{V}^\top \mathbf{R}^\top \mathbf{U}$, which is orthogonal. Then:
 
 $$
 \operatorname{Tr}(\mathbf{\Sigma} \mathbf{Q}) \le \sum_i \sigma_i
@@ -382,7 +382,7 @@ Also, note the difference: the Procrustes problem involves optimizing a single r
 
 
 ### Footnotes
-[^1]: [Whitening][Whitening_wiki] is a linear transformation that removes correlations between variables and scales them to have unit variance. For a zero-mean matrix \( \mathbf{X} \), the whitened version is \( \tilde{\mathbf{X}} = \mathbf{X} (\mathbf{X}^\top \mathbf{X})^{-1/2} \), which ensures that \( \tilde{\mathbf{X}}^\top \tilde{\mathbf{X}} = \mathbf{I} \). A useful intuition is to think of whitening as a multivariate version of z-scoring. In the context of CCA, whitening ensures that we capture only the relationships *between* the two datasets, without being influenced by the structure *within* each dataset.
+[^1]: [Whitening][Whitening_wiki] is a linear transformation that removes correlations between variables and scales them to have unit variance. For a zero-mean matrix $\mathbf{X} $, the whitened version is $ \tilde{\mathbf{X}} = \mathbf{X} (\mathbf{X}^\top \mathbf{X})^{-1/2} $, which ensures that $ \tilde{\mathbf{X}}^\top \tilde{\mathbf{X}} = \mathbf{I} $. A useful intuition is to think of whitening as a multivariate version of z-scoring. In the context of CCA, whitening ensures that we capture only the relationships *between* the two datasets, without being influenced by the structure *within* each dataset.
 [^2]: asdsa
 [^3]: adadeeaded
 [^4]: [Cyclic property][cyclic_property]: $\operatorname{Tr}(\mathbf{A}\mathbf{B}\mathbf{C}\mathbf{D})=\operatorname{Tr}(\mathbf{B}\mathbf{C}\mathbf{D}\mathbf{A})=\operatorname{Tr}(\mathbf{C}\mathbf{D}\mathbf{A}\mathbf{B})=\operatorname{Tr}(\mathbf{D}\mathbf{A}\mathbf{B}\mathbf{C})$
