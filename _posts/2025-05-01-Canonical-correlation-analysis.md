@@ -220,7 +220,7 @@ $$= \Sigma_{XY}\mathbf{b} - \lambda_1\Sigma_{XX}\mathbf{a} = 0$$
 
 Use the vector derivative identities:
 
-$${\delta\over \delta \mathbf{x}}\mathbf{x^\top} A\mathbf{y} = A\mathbf{y} {\delta\over \delta \mathbf{x}}\mathbf{x^\top}A\mathbf{x} = 2A\mathbf{x}$$
+$${\delta\over \delta \mathbf{x}}\mathbf{x^\top} \mathbf{A}\mathbf{y} = \mathbf{A}\mathbf{y} {\delta\over \delta \mathbf{x}}\mathbf{x^\top}\mathbf{A}\mathbf{x} = 2\mathbf{A}\mathbf{x}$$
 
 The third term vanishes since it contains no $\mathbf{a}$.
 Thus:
