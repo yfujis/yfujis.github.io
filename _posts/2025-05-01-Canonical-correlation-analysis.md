@@ -267,7 +267,7 @@ $$\Sigma_{XY}({1\over{\lambda}}\Sigma_{YY}^{-1}\Sigma_{YX}\mathbf{a}) = \lambda\
 $$(\Sigma_{XY}\Sigma_{YY}^{-1}\Sigma_{YX})\mathbf{a} = \lambda^2\Sigma_{XX}a \space\space\space\space (4)$$
 
 
-Equation (4) is **generalized eigenvalue problem**!!
+Equation (4) is **[generalized eigenvalue problem][gep]**!!
 
 We solve this for eigenvalues $\lambda^2$ and eigenvectors $\mathbf{a}$. Once obtain $\mathbf{a}$ and $\lambda$, we can substitute them to (3) to obtain $\mathbf{b}$.
 
@@ -388,12 +388,12 @@ Also, note the difference: the Procrustes problem involves optimizing a single r
 
 ### Footnotes
 [^1]: [Whitening][Whitening_wiki] is a linear transformation that removes correlations between variables and scales them to have unit variance. For a zero-mean matrix $\mathbf{X} $, the whitened version is $ \tilde{\mathbf{X}} = \mathbf{X} (\mathbf{X}^\top \mathbf{X})^{-1/2} $, which ensures that $ \tilde{\mathbf{X}}^\top \tilde{\mathbf{X}} = \mathbf{I} $. A useful intuition is to think of whitening as a multivariate version of z-scoring. In the context of CCA, whitening ensures that we capture only the relationships *between* the two datasets, without being influenced by the structure *within* each dataset.
-[^2]: asdsa
 [^3]: adadeeaded
 [^4]: [Cyclic property][cyclic_property]: $\operatorname{Tr}(\mathbf{A}\mathbf{B}\mathbf{C}\mathbf{D})=\operatorname{Tr}(\mathbf{B}\mathbf{C}\mathbf{D}\mathbf{A})=\operatorname{Tr}(\mathbf{C}\mathbf{D}\mathbf{A}\mathbf{B})=\operatorname{Tr}(\mathbf{D}\mathbf{A}\mathbf{B}\mathbf{C})$
 
 [shahidi_et_al_2024]: https://doi.org/10.1038/s41593-024-01575-w
 [hira_et_al_2024]: https://www.biorxiv.org/content/10.1101/2023.08.27.555017v2
+[gep]: https://en.wikipedia.org/wiki/Eigendecomposition_of_a_matrix#Generalized_eigenvalue_problem
 [AHW]: https://alexhwilliams.info/
 [PCA]: https://alexhwilliams.info/itsneuronalblog/2016/03/27/pca/
 [Whitening_wiki]: https://en.wikipedia.org/wiki/Whitening_transformation
