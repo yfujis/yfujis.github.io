@@ -370,7 +370,9 @@ Also, note the difference: the Procrustes problem involves optimizing a single r
 
 ## Pros and Cons of CCA
 
+The cool thing about CCA is that it can reveal meaningful relationships between data matrices of completely different modalities (e.g., neural activity and behavior) in an interpretable way. For example, one might find that a particular subgroup of neurons (reflected in the neural canonical weights) exhibits ramping activity along a canonical component that correlates with predicted reward availability (captured by the corresponding behavioral canonical component). One can further impose a sparsity constraints to encourage each canonical components to reflect only a few set of variables. See [Witten et al., 2008.][sparse_CCA].
 
+A key limitation of classical CCA, however, is that it only captures linear relationships between the two datasets. This can be problematic in neuroscience, where the relationship between neural activity and behavior is often highly nonlinear. Similarly, behavioral variables may be encoded in complex, nonlinear subspaces of neural activity that cannot be uncovered through linear projections alone.
 
 ## TL'DR
 
@@ -379,9 +381,6 @@ Also, note the difference: the Procrustes problem involves optimizing a single r
 - CCA has elegant conceptual connections to other factorization and statistical methods:
   - It can be viewed as performing **PCA** on the cross-covariance matrix between two whitened datasets.
   - It can also be seen as a **special case of the Procrustes problem**, where the data matrices are first whitened.
-
-## References
-
 
 ### Footnotes
 [^1]: [Whitening][Whitening_wiki] is a linear transformation that removes correlations between variables and scales them to have unit variance. For a zero-mean matrix $\mathbf{X} $, the whitened version is $ \tilde{\mathbf{X}} = \mathbf{X} (\mathbf{X}^\top \mathbf{X})^{-1/2} $, which ensures that $ \tilde{\mathbf{X}}^\top \tilde{\mathbf{X}} = \mathbf{I} $. A useful intuition is to think of whitening as a multivariate version of z-scoring. In the context of CCA, whitening ensures that we capture only the relationships *between* the two datasets, without being influenced by the structure *within* each dataset.
@@ -396,3 +395,4 @@ Also, note the difference: the Procrustes problem involves optimizing a single r
 [opp]: https://en.wikipedia.org/wiki/Orthogonal_Procrustes_problem
 [degenhart]: https://www.nature.com/articles/s41551-020-0542-9
 [cyclic_property]: https://en.wikipedia.org/wiki/Trace_(linear_algebra)#Cyclic_property
+[sparse_CCA]: https://doi.org/10.1093/biostatistics/kxp008
