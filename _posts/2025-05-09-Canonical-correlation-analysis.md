@@ -380,6 +380,8 @@ A key limitation of classical CCA, however, is that it only captures linear rela
   - It can also be seen as a **special case of the Procrustes problem**, where the data matrices are first whitened.
 - CCA can be a useful tool for uncovering **linear relationships** between two datasets (e.g. neural activities and behavioral features). It does *not* capture any non-linear relationships.
 
+Thank you for reading! This blog post was written as part of [Dr. Alex Williams][AHW]’s course at NYU, which I highly recommend.
+
 ## Footnotes
 
 [^1]: [Whitening][Whitening_wiki] is a linear transformation that removes correlations between variables and scales them to have unit variance. For a zero-mean matrix $\mathbf{X} $, the whitened version is $ \tilde{\mathbf{X}} = \mathbf{X} (\mathbf{X}^\top \mathbf{X})^{-1/2} $, which ensures that $ \tilde{\mathbf{X}}^\top \tilde{\mathbf{X}} = \mathbf{I} $. A useful intuition is to think of whitening as a multivariate version of z-scoring. In the context of CCA, whitening ensures that we capture only the relationships *between* the two datasets, without being influenced by the structure *within* each dataset.
@@ -388,7 +390,7 @@ A key limitation of classical CCA, however, is that it only captures linear rela
 [shahidi_et_al_2024]: https://doi.org/10.1038/s41593-024-01575-w
 [hira_et_al_2024]: https://www.biorxiv.org/content/10.1101/2023.08.27.555017v2
 [gep]: https://en.wikipedia.org/wiki/Eigendecomposition_of_a_matrix#Generalized_eigenvalue_problem
-[AHW]: https://alexhwilliams.info/
+[AHW]: https://neurostatslab.org/
 [alex_pca]: https://alexhwilliams.info/itsneuronalblog/2016/03/27/pca/
 [Whitening_wiki]: https://en.wikipedia.org/wiki/Whitening_transformation
 [opp]: https://en.wikipedia.org/wiki/Orthogonal_Procrustes_problem
