@@ -299,7 +299,7 @@ $$
 \min\vert\vert\mathbf{RX}-\mathbf{Y}\vert\vert^2_F=\operatorname{Tr}{[(\mathbf{RX}-\mathbf{Y})^\top(\mathbf{RX}-\mathbf{Y})]} = \operatorname{Tr}(\mathbf{X}^\top\mathbf{X}) + \operatorname{Tr}(\mathbf{Y}^\top\mathbf{Y}) - 2\operatorname{Tr}(\mathbf{X}^\top\mathbf{R}^\top\mathbf{Y})
 $$
 
-As the first two terms don't depend on \mathbf{R}, this is equivalent to:
+As the first two terms don't depend on $\mathbf{R}$, this is equivalent to:
 
 $$
 \max_{\mathbf{R}^\top\mathbf{R} = \mathbf{I}}\operatorname{Tr}(\mathbf{X}^\top\mathbf{R}^\top\mathbf{Y})
