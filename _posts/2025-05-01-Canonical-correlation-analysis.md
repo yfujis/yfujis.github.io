@@ -260,36 +260,53 @@ where $\sigma_i$ is the $i$th singular value—the $i$th canonical correlation.
 
 In conclusion, CCA is equivalent to performing SVD on the cross-covariance matrix of two whitened matrices.
 
-### Solving the objective function - with Lagrangian multiplier
-To solve the objective function, we want to encode both *the objective* ($\max_{\mathbf{a}, \mathbf{b}} \mathbf{a}^T\Sigma_{XY}\mathbf{b}$) and *the constraint* ($\mathbf{a}^T\Sigma_{XX}\mathbf{a} = 1, \mathbf{b}^T\Sigma_{YY}\mathbf{b} = 1$), we turn to *Lagrangian multiplier*.
+### Alternative approach - Using Lagrangian multiplier
+*Feel free to skip this section unless you're particularly interested in the topic.*
+
+To solve the objective function while incorporating both the *objective* ($\max_{\mathbf{a}, \mathbf{b}} \mathbf{a}^T\Sigma_{XY}\mathbf{b}$) and the *constraint* ($\mathbf{a}^T\Sigma_{XX}\mathbf{a} = 1, \mathbf{b}^T\Sigma_{YY}\mathbf{b} = 1$), we turn to the method of *Lagrangian multiplier*.
 
 ---
-#### Brief description of Lagrangian multiplier
-Lagrangian multiplier is a strategy for finding the maxima and minima of a function subject to equation constraints.
+#### Brief Overview of Lagrange multiplier
+The method of Lagrange multiplier is a strategy for finding the maxima and minima of a function subject to equation constraints.
 
 $$def: L(x, \lambda) \equiv f(x) + \lambda g(x)$$
 
-where $f(x)$ is the objective function, $\lambda$ is the Lagrangian multiplier, and $g(x)$ is the constraint.
-In order to find maximum (or minimum) of $f(x)$, subject to $g(x)=0$, find the *stationary point of $L(x, y)$ considered as a function of $x$, $\lambda$*. => all partial derivatives should be 0.
+where $f(x)$ is the objective function, $g(x)$ is the constraint, and $\lambda$ is the Lagrange multiplier.
 
-
+To find maximum (or minimum) of $f(x)$ subject to $g(x)=0$, we find the *stationary point of $L(x, y)$—that is, where all partial derivatives are zero.
 
 ---
 
-Back to our data. In our case, as we have two constraints ($a^T\Sigma_{XX}a = 1, b^T\Sigma_{YY}b = 1$), we have two Lagrangian multipliers: $\lambda_1$ and $\lambda_2$.
+Back to our problem. Since we have two constraints,
 
-$$L(a, b, \lambda_1, \lambda_2) = a^T\Sigma_{XY}b - {\lambda_1\over2}(a^T\Sigma_{XX}a-1) - {\lambda_2\over2}(b^T\Sigma_{YY}b-1)$$
+$$\mathbf{a}^T\Sigma_{XX}\mathbf{a} = 1, \mathbf{b}^T\Sigma_{YY}\mathbf{b} = 1,$$
 
-Derivative with respect to a:
+we introduce two Lagrange multipliers: $\lambda_1$ and $\lambda_2$.
 
-$${\delta L\over{\delta{a}}} = {\delta\over{\delta{a}}}(a^T\Sigma_{XY}b) - {\delta\over{\delta{a}}}({\lambda_1\over2}(a^T\Sigma_{XX}a-1)) - {\delta\over{\delta{a}}}({\lambda_2\over2}(b^T\Sigma_{YY}b-1))$$
-$$= \Sigma_{XY}b - \lambda_1\Sigma_{XX}a = 0$$
-Use the vector derivative rules: ${\delta\over \delta x}x^TAy = Ay$, ${\delta\over \delta x}x^TAx = 2Ax$ for the first and the second terms, respectively. The third term goes 0 as there is no $a$.
-$$\Sigma_{XY}b = \lambda_1\Sigma_{XX}a \dots (1)$$
+$$L(\mathbf{a}, \mathbf{b}, \lambda_1, \lambda_2) = \mathbf{a}^T\Sigma_{XY}\mathbf{b} - {\lambda_1\over2}(mathbf{a}^T\Sigma_{XX}mathbf{a}-1) - {\lambda_2\over2}(mathbf{b}^T\Sigma_{YY}mathbf{b}-1)$$
 
-Similarity, we compute the derivative w.r.t. b:
-$${\delta L\over{\delta{b}}} = {\delta\over{\delta{b}}}(a^T\Sigma_{XY}b) - {\delta\over{\delta{b}}}({\lambda_1\over2}(a^T\Sigma_{XX}a-1)) - {\delta\over{\delta{b}}}({\lambda_2\over2}(b^T\Sigma_{YY}b-1))$$
-$$= \Sigma_{YY}a - \lambda_2\Sigma_{YY}b = 0$$
+Take the derivative with respect to $\mathbf{a}$:
+
+$${\delta L\over{\delta{\mathbf{a}}}} = {\delta\over{\delta{\mathbf{a}}}}(\mathbf{a}^T\Sigma_{XY}\mathbf{b}) - {\delta\over{\delta{\mathbf{a}}}}({\lambda_1\over2}(\mathbf{a}^T\Sigma_{XX}\mathbf{a}-1)) - {\delta\over{\delta{\mathbf{a}}}}({\lambda_2\over2}(\mathbf{b}^T\Sigma_{YY}\mathbf{b}-1))$$
+
+$$= \Sigma_{XY}\mathbf{b} - \lambda_1\Sigma_{XX}\mathbf{a} = 0$$
+
+Use the vector derivative identities:
+
+$${\delta\over \delta \mathbf{x}}\mathbf{x}^TA\mathbf{y} = A\mathbf{y}, {\delta\over \delta \mathbf{x}}\mathbf{x}^TA\mathbf{x} = 2A\mathbf{x}$$
+
+The third term vanishes since it contains no $\mathbf{a}$.
+Thus:
+
+$$\Sigma_{XY}\mathbf{b} = \lambda∂_1\Sigma_{XX}\mathbf{a} \space\space\space(1)$$
+
+Similarity, take the derivative with respect to $\mathbf{b}$:
+
+$${\delta L\over{\delta{\mathbf{b}}}} = {\delta\over{\delta{\mathbf{b}}}}(\mathbf{a}^T\Sigma_{XY}\mathbf{b}) - {\delta\over{\delta{\mathbf{b}}}}({\lambda_1\over2}(\mathbf{a}^T\Sigma_{XX}\mathbf{a}-1)) - {\delta\over{\delta{\mathbf{b}}}}({\lambda_2\over2}(\mathbf{b}^T\Sigma_{YY}\mathbf{b}-1))$$
+
+$$= \Sigma_{YY}\mathbf{a} - \lambda_2\Sigma_{YY}\mathbf{b} = 0$$
+
+
 Use the vector derivative rules: ${\delta\over \delta x}y^TAx = A^Ty$, ${\delta\over \delta x}x^TAx = 2Ax$ for the first and the third terms, respectively. The second term goes 0 as there is no $a$.
 $$\Sigma_{YX}a = \lambda_2\Sigma_{YY}b \dots (2)$$
 
@@ -326,14 +343,11 @@ Now, we can solve this for eigenvalues $\lambda^2$ and eigenvectors $a$. Once ob
 ## TL'DR
 
 
-## Further readings
-
-
 ## References
 
 
 ### Footnotes
-[^1]: Whitening is a linear transformation that removes correlations between variables and scales them to have unit variance. For a zero-mean matrix \( \mathbf{X} \), the whitened version is \( \tilde{\mathbf{X}} = \mathbf{X} (\mathbf{X}^\top \mathbf{X})^{-1/2} \), which ensures that \( \tilde{\mathbf{X}}^\top \tilde{\mathbf{X}} = \mathbf{I} \). A good intuition to have is to see it as a multivariate version of z scoring. In the context of CCA, whitening makes sure that we're only capturing the relationships *between* the two datasets, rather than being influenced by patterns *within* each dataset. See [Wikipedia][Whitening_wiki].
+[^1]: Whitening is a linear transformation that removes correlations between variables and scales them to have unit variance. For a zero-mean matrix \( \mathbf{X} \), the whitened version is \( \tilde{\mathbf{X}} = \mathbf{X} (\mathbf{X}^\top \mathbf{X})^{-1/2} \), which ensures that \( \tilde{\mathbf{X}}^\top \tilde{\mathbf{X}} = \mathbf{I} \). A useful intuition is to think of whitening as a multivariate version of z-scoring. In the context of CCA, whitening ensures that we capture only the relationships *between* the two datasets, without being influenced by the structure *within* each dataset. See [Wikipedia][Whitening_wiki].
 
 [shahidi_et_al_2024]: https://doi.org/10.1038/s41593-024-01575-w
 [hira_et_al_2024]: https://www.biorxiv.org/content/10.1101/2023.08.27.555017v2
