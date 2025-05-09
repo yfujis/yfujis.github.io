@@ -37,7 +37,7 @@ CCA is one such example and is a matrix factorization technique that connects tw
 The use of CCA has been increasing in recent studies. For example, [Shahidi et al., 2024][shahidi_et_al_2024] uses CCA to find relationships between neural activity in the prefrontal cortex and behavioral variables in freely moving animals. [Hira et al., 2024][hira_et_al_2024] applied CCA between neural activities two different brain areas.
 
 
-## How CCA Works — Math
+## How CCA Works
 
 Now, we look under the hood of CCA.
 
@@ -273,7 +273,8 @@ Although analytically rigorous, I found the alternative method—SVD of the cros
 
 ### PCA
 
-One might notice that both PCA and CCA can be solved using singular value decomposition (SVD). This is because the goal of both methods is to find a set of **orthogonal** basis vectors that best explain the structure in the data. In PCA, the 'data' refers to a single data matrix, and the goal is to capture its variance. In CCA, the 'data' is the cross-covariance matrix between two whitened data matrices—that is, it seeks directions that maximize the correlation between the two datasets.
+One might notice that both PCA and CCA can be solved using singular value decomposition (SVD). This is because both methods aim to find a set of orthogonal basis vectors that best capture structure in a matrix. In PCA, the matrix in question is a single data matrix, and SVD identifies orthogonal directions that explain the variance in the data. In CCA, the relevant matrix is the cross-covariance between two whitened data matrices—SVD then finds orthogonal directions that best explain the correlation between the original datasets.
+
 
 ### Procrustes shape distance
 Procrustes analysis is a form of statistical shape analysis used to compare the geometry of two datasets. Specifically, the [orthogonal Procrustes problem][opp] finds the optimal rotation (an orthogonal linear transformation) that best aligns one matrix to another. In neuroscience, this method has become increasingly popular in brain-machine interface (BMI) research. The idea is to align the geometric shape of neural activity from an ongoing recording session to a template (such as activity recorded on the first day), in a dimensionality-reduced subspace. This alignment allows decoders trained on the template to generalize to new sessions with minimal fine-tuning, significantly reducing training time. Because the alignment occurs in a low-dimensional space, the method is robust to neural drift (e.g., neurons being lost or gained on the electrode array) and can even be applied across sessions or between different subjects. See [Degenhart et al., 2020][degenhart] for a cool example.
@@ -370,9 +371,12 @@ Also, note the difference: the Procrustes problem involves optimizing a single r
 
 
 ## TL'DR
-* CCA finds orthogonal components that maximally correlate two different matrices.
-* CCA can be a useful to find structure connecting completely different data modalities, such as neural data and behavior.
-* CCA can be viewed as a spacial case of the Procrustes problem where the data matrices are first whitened.
+
+- CCA finds orthogonal components that maximally correlate two different matrices.
+- CCA can be a useful tool for uncovering structure that links completely different data modalities, such as neural activity and behavior.
+- CCA has elegant conceptual connections to other factorization and statistical methods:
+  - It can be viewed as performing **PCA** on the cross-covariance matrix between two whitened datasets.
+  - It can also be seen as a **special case of the Procrustes problem**, where the data matrices are first whitened.
 
 ## References
 
