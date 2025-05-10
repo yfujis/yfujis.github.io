@@ -44,3 +44,11 @@ I love playing and listening to music. Please find some of my recordings on [You
     <dd>Kyushu University, Fukuoka, Japan</dd>
     <dd>2018 - 2021</dd>
 </dl>
+
+### Publications
+
+<dl>
+  <dt>
+  Fujishima, Y., & Long, M. A. (2025). Advertisement vocalizations support home-range defense in the singing mouse. Current Biology: CB. https://doi.org/10.1016/j.cub.2025.04.034
+  </dt>
+</dl>
