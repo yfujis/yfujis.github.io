@@ -47,6 +47,6 @@ I love playing and listening to music. Please find some of my recordings on [You
 
 ### Publications
 
-Fujishima, Y., & Long, M. A. (2025). [Advertisement vocalizations support home-range defense in the singing mouse.][CB2025] Current Biology: CB.
+Fujishima Y and Long MA (2025). [**Advertisement vocalizations support home-range defense in the singing mouse.**][CB2025] Current Biology.
 
 [CB2025]: https://doi.org/10.1016/j.cub.2025.04.034
