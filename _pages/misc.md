@@ -14,7 +14,7 @@ classes: narrow
 {% include video id="z84T6n-scEs" provider="youtube" %}
 
 ## Outreach
-* [NeuroRadio #55][nr2]: Appeared as a guest on a neuroscience podcast program. (July 5, 2025) (Japanese).
+* [NeuroRadio #91][nr2]: Appeared as a guest on a neuroscience podcast program. (July 5, 2025) (Japanese).
 * [実験医学別冊 「留学する？」から一歩踏み出す研究留学実践ガイド　人生の選択肢を広げよう][jikkenigaku_ryugaku]: Wrote a column in a book chapter (Column 3-3). ISBN: 978-4-7581-2273-3 (Sep 13, 2024) (Japanese).
 * [実験医学2023年6月号][jikkenigaku]: Wrote a mini-column for an article in a research magazine. DOI: 10.18958/7281-00026-0000501-00 (May 19, 2023) (Japanese).
 * [NeuroRadio #55][nr1]: Appeared as a guest on a neuroscience podcast program. (April 14, 2023) (Japanese).
