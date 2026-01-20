@@ -85,7 +85,7 @@ Now you have your custom Singularity image!
 
 ## Using Singularity image on HPC
 Execute a Python script inside the container:
-`singularity exec --nv --bind original_dir_path:/container --writable-tmpfs /path/to/your_singularity_image.sif python3 your_python_script.py`
+`singularity exec --nv --bind original_dir_path:/container --writable-tmpfs /path/to/your_singularity_image.sif python your_python_script.py`
 
 Start an interactive shell inside the container:
 `singularity shell --nv --bind original_dir_path:/container /path/to/your_singularity_image.sif`
