@@ -78,16 +78,18 @@ This .tar file contains the full image (layers, metadata, configuration) and can
 Use `scp`, `rsync`, or your institution’s file transfer system to upload the `.tar` file to the cluster.
 
 3. Once the `.tar` file is on the cluster, create a Singularity `.sif` image from it:
-`singularity build /path/to/image_name.sif docker-archive:/path/to/image_name.tar`
+   `singularity build /path/to/image_name.sif docker-archive:/path/to/image_name.tar`
 This command unpacks the Docker archive, converts it into a squashfs filesystem, and packages it as a `.sif` file—the standard Singularity container format.
 
 Now you have your custom Singularity image!
 
 ## Using Singularity image on HPC
 Execute a Python script inside the container:
+
 `singularity exec --nv --bind original_dir_path:/container --writable-tmpfs /path/to/your_singularity_image.sif python your_python_script.py`
 
 Start an interactive shell inside the container:
+
 `singularity shell --nv --bind original_dir_path:/container /path/to/your_singularity_image.sif`
 
 Make sure to include `--nv` to enable GPU support and `--bind` to map directories from the host system into the container.
