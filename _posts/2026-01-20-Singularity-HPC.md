@@ -23,24 +23,27 @@ excerpt: I walk through how I create a container image for use on the HPC, mainl
 
 ## Motivations
 
-Many of us neuroscientists perform analyses on large datasets that benefit from parallelization using GPUs. To give a few examples, one might run machine learning based pose-tracking software such as [DeepLabCut] and [SLEAP] to extract positions of animals from hours of video recordings. Or, one might also have extracellular recordings of these animals and would like to extract spike timings of individual cells using spike-sorting softwares such as [Kilosort].
+Many of us neuroscientists work with large datasets that benefit from GPU-based parallelization. For example, one might run machine-learning-based pose-tracking software such as [DeepLabCut] or [SLEAP] to extract animal positions from hours of video recordings. Or one might process extracellular recordings and extract spike times using spike-sorting software such as [Kilosort].
 
-While one can always run these analysis on our local machines, a GPU is not cheap (usually in hundreds of dollars. I still think the ROI is very good though.), and one can also into a memory issue when the process requires accumulation of data (e.g. I had issues running Kilosort on >5hr recordings using 128 channels silicone probes). In these cases, running the processes on a high performing clusters (HPC) would be an attractive option if you have an access to one.
+While these analyses can be run on a local machine, GPUs are expensive (often several hundred dollars, though I still think the ROI is great), and long analyses can easily exceed local memory limits (e.g., I’ve encountered issues running Kilosort on >5-hour recordings with 128-channel silicon probes). In such cases, running analyses on a high-performance computing cluster (HPC) becomes an attractive option—if you have access to one.
 
-However, every institution configures its HPC differently. Some clusters allow you to freely create virtual environments (e.g., conda environments where you can install packages with conda or pip). Others, like the one I use daily, do not provide that flexibility. We were instructed to contact the HPC management team whenever we needed to install something or create a virtual environment. Often there was a delay before they responded or took action (if they responded at all). But as researchers, we would not spend time waiting for someone else to push a button.
+However, every institution configures its HPC differently. Some clusters allow you to freely create virtual environments (e.g., conda environments where you can install packages by yourself). Others—like the one I use daily—do not provide that flexibility. We were instructed to contact the HPC management team whenever we needed to install something or create a virtual environment, and responses were often slow (if they responded at all). As researchers, we can’t afford to wait around for someone else to press a button.
 
 
 ## What is a container
 
-A great workaround in such a scenario is to create a container image. A container image is a self-contained, portable package that includes everything you need to run your workflow: code, libraries, dependencies, system tools, and even parts of the operating system. Once you have a container image for your process (e.g., spike-sorting with Kilosort), you can run the image (i.e. create a sandbox) where you do the computation you want to do and destroy that image once done.
+A powerful workaround is to use a container image. A container image is a self-contained, portable package that includes everything needed to run your workflow: code, libraries, dependencies, system tools, and even parts of the operating system. Once you have a container image (e.g., for spike sorting with Kilosort), you can run it (i.e., create a sandbox), perform your computations, and discard the sandbox when you’re done.
 
 ## Docker vs Singularity
 
-If you’ve heard about containers, you’ve almost certainly heard of Docker. Docker is by far the most widely used container platform in industry and research. It’s easy to install, easy to build images with, and has a huge ecosystem. However, when it comes to HPC clusters, Docker is usually not the tool you can directly use. This is where Singularity becomes important. (Singularity is now often referred to as Apptainer, its successor. However, in this blog post I will continue to use the term Singularity, as this is still what my HPC system supports.)
+If you’ve heard of containers, you’ve almost certainly heard of Docker. Docker is widely used in both industry and research. It’s easy to install, easy to build images with, and has a huge ecosystem. However, most HPC clusters do not allow Docker to run directly. This is where Singularity becomes important. (Singularity is now often referred to as Apptainer, its successor. For simplicity, I’ll use “Singularity,” since that’s what my HPC system supports.)
 
-Docker requires root-level privileges because it relies on the host kernel’s cgroups and namespaces to isolate processes. On a personal computer or lab workstation, this is perfectly fine. On a shared HPC cluster, giving users root privileges would be a security nightmare. For this reason, most HPC systems prohibit running Docker directly.
+Docker requires root-level privileges because it relies on kernel features such as cgroups and namespaces to isolate processes. This is fine on a personal computer but unacceptable on a shared HPC cluster.
 
-Therefore, the typical workflow, and the one we’ll use here, is to build a Docker image locally and then convert it into a Singularity image for use on the HPC.
+Therefore, the typical workflow, and the one we’ll use here, is:
+
+1. Build a Docker image locally, and
+2. Convert it into a Singularity image for use on the HPC.
 
 ## Making a docker image
 
@@ -56,13 +59,14 @@ If the Dockerfile was generated entirely by ChatGPT (or written from scratch), t
 
 ## Test your image locally
 
-Before converting the Docker image to a Singularity/Apptainer image, it’s worth testing the Docker image locally. This helps ensure that your environment contains all required packages and that your scripts run correctly. Because converting Docker images to Singularity images takes some time, it’s more efficient to catch mistakes at this stage.
+Before converting your Docker image to a Singularity image, it’s worth testing it locally. This ensures that your environment includes all required packages and that your scripts run correctly. Since conversion to Singularity takes time, catching problems early is much more efficient.
 
-To start a new container from an image, run:
+To start a container from your image:
+
 `docker run -it --rm -it --gpus all -v C:\Users\Yuki\Documents\Projects\ProjectA:/proj_dir your_container_name bash`
 
 * `-it` starts an interactive session (so you get a shell inside the container).
-* `-rm` is to make sure the container will be desctroyed once you are finished.
+* `-rm` removes the container automatically when you exit.
 * `--gpus all` gives the container access to GPU.
 * `-v` maps a directory from your local machine into the container. This allows the container (a sandboxed environment) to read and write files in your local filesystem.
 
@@ -79,11 +83,11 @@ Use `scp`, `rsync`, or your institution’s file transfer system to upload the `
 
 3. Once the `.tar` file is on the cluster, create a Singularity `.sif` image from it:
    `singularity build /path/to/image_name.sif docker-archive:/path/to/image_name.tar`
-This command unpacks the Docker archive, converts it into a squashfs filesystem, and packages it as a `.sif` file—the standard Singularity container format.
+This command unpacks the Docker archive, converts it into a squashfs filesystem, and packages it as a `.sif` file, the standard Singularity container format.
 
 Now you have your custom Singularity image!
 
-## Using Singularity image on HPC
+## Using a Singularity image on the HPC
 Execute a Python script inside the container:
 
 `singularity exec --nv --bind original_dir_path:/container --writable-tmpfs /path/to/your_singularity_image.sif python your_python_script.py`
@@ -93,7 +97,7 @@ Start an interactive shell inside the container:
 `singularity shell --nv --bind original_dir_path:/container /path/to/your_singularity_image.sif`
 
 Make sure to include `--nv` to enable GPU support and `--bind` to map directories from the host system into the container.
-Also note that, when referencing files in your Python script, you must use the container-side paths (e.g., /container/your_data), since the script is executed inside the container rather than on the host filesystem.
+Also note that, when referencing files in your Python script, you must use the container-side paths (e.g., /container/your_data), because the script runs inside the container environment.
 
 Good luck!
 
