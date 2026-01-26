@@ -75,7 +75,7 @@ To start a container from your image:
 There seems to exist a way to directly conver a docker image to a singularity image (especially with Apptainer??), but the way I learned is to first convert the docker image to a `.tar` file and then build a singularity image from the `.tar` file.
 1. Export your Docker image as a `.tar` file
 You can save a local Docker image into a portable archive with:
-`docker save image_name:tag_name -o C:\User\Yuki\Downloads\image_name.tar`.
+`docker save image_name:tag_name -o C:\Users\Yuki\Downloads\image_name.tar`.
 This .tar file contains the full image (layers, metadata, configuration) and can be transferred to the HPC cluster.
 
 2. Upload the .tar file to the HPC
