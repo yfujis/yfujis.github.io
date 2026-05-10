@@ -8,10 +8,22 @@ classes: narrow
 
 ---
 ## Music
-
+### Covers
 {% include video id="QCdJ5nha3jk" provider="youtube" %}
 {% include video id="dsD41oG-7Cw" provider="youtube" %}
 {% include video id="z84T6n-scEs" provider="youtube" %}
+
+### Collaboration
+I had a chance to contribute recordings of singing mouse songs to Kathryn Mishell, who collaged them into her beautiful four-movement piece, called The Secret Lives of Rodent Divas. It was performed live as part of the January Concert 2025 at Salon Concerts in Austin, TX.
+
+
+![test](/assets/images/blog/e7f97e39-7498-4dc1-b3e2-b18c16bad832.JPG)
+*test2*
+
+
+{% include video id="IHn0b7kgo34" provider="youtube" %}
+
+
 
 ## Outreach
 * [NeuroRadio #91][nr2]: Appeared as a guest on a neuroscience podcast program. (July 5, 2025) (Japanese).
