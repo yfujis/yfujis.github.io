@@ -16,11 +16,11 @@ classes: narrow
 ### Collaboration
 I had a chance to contribute recordings of singing mouse songs to [Kathryn Mishell][kathryn_mishell], who collaged them into her beautiful four-movement piece, called The Secret Lives of Rodent Divas. It was performed live as part of the [January Concert 2025 at Salon Concerts][january_concert] in Austin, TX.
 
-![january_concert_2025](/assets/images/misc/e7f97e39-7498-4dc1-b3e2-b18c16bad832.JPG)
+![january_concert_2025](/assets/images/misc/e7f97e39-7498-4dc1-b3e2-b18c16bad832.jpg)
 
 {% include video id="IHn0b7kgo34" provider="youtube" %}
 
-[kathryn_mishell]: https://intothelightradio.org/
+[kathryn_mishell]: https://www.salonconcerts.org/leadership
 [january_concert]: https://www.salonconcerts.org/january-concert-2025
 
 ## Outreach
