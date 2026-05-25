@@ -1,6 +1,7 @@
 ---
 layout: archive
 ---
+{%- assign locale = page.locale | default: layout.locale | default: site.locale %}
 
 {{ content }}
 
@@ -22,20 +23,9 @@ layout: archive
     <h2 class="archive__subtitle">{{ year.name }}</h2>
     <div class="entries-{{ entries_layout }}">
       {% for post in year.items %}
-        {% include archive-single.html type=entries_layout %}
+        {% include archive-single.html locale=locale type=entries_layout %}
       {% endfor %}
     </div>
-    <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+    <a href="#page-title" class="back-to-top">{{ site.data.ui-text[locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
   </section>
 {% endfor %}
-
-<form
-  action="https://formspree.io/f/xdobepbk"
-  method="POST">
-  <label>
-    testSubscribe to this blog and receive notifications of new posts!
-    <input type="email" name="_replyto" placeholder="youremail@email.com">
-  </label>
-  <button type="submit">Send</button>
-</form>
-
