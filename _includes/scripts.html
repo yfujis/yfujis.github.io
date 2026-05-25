@@ -28,6 +28,15 @@
   {% endfor %}
 {% endif %}
 
+<script>
+  document.querySelectorAll('a[href^="http://"], a[href^="https://"]').forEach(function(link) {
+    if (link.hostname !== window.location.hostname) {
+      link.target = "_blank";
+      link.rel = Array.from(new Set((link.rel + " noopener noreferrer").trim().split(/\s+/))).join(" ");
+    }
+  });
+</script>
+
 {% if page.mathjax or page.mathjax == nil %}
   <script>
     window.MathJax = {
