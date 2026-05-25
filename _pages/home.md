@@ -48,6 +48,8 @@ I love playing and listening to music. Please find some of my recordings on [You
 
 ### Publications
 
+For the full list of publications, please see my [Google Scholar profile](https://scholar.google.com/citations?user=SqFIRJQAAAAJ&hl=en).
+
 Fujishima Y and Long MA (2025). [**Advertisement vocalizations support home-range defense in the singing mouse.**][CB2025] Current Biology.
 
 [CB2025]: https://www.cell.com/current-biology/fulltext/S0960-9822(25)00498-1
