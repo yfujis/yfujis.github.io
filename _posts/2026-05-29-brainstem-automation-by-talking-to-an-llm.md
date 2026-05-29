@@ -23,7 +23,7 @@ excerpt: I built a Python workflow that lets me update BrainSTEM records by talk
 
 ## Motivation
 
-It is essential for experimental researchers to keep accurate and up-to-date records of their work. [BrainSTEM] is a very useful system because it is specifically designed for neuroscience research. The team led by [Peter Petersen](https://petersenlab.org/) keeps improving it based on user feedback. When you want a batch update, it can be a bit of a pain to click through the browser and edit each record one at a time. Since they have a nice Python API, I thought it would be fun to build a workflow that lets me talk to an LLM and express the intent directly, and then the automation code handles the structured BrainSTEM request for me. This way, I can make batch updates much faster and with less cognitive load.
+It is essential for experimental researchers to keep accurate and up-to-date records of their work. [BrainSTEM] is a very useful system because it is specifically designed for neuroscience research (especially in-vivo physiology). The team led by [Peter Petersen](https://petersenlab.org/) keeps improving it based on user feedback. When you want a batch update, it can be a bit of a pain to click through the browser and edit each record one at a time. Since they have a nice Python API, I thought it would be fun to build a workflow that lets me talk to an LLM and express the intent directly, and then the automation code handles the structured BrainSTEM request for me. This way, I can make batch updates much faster and with less cognitive load.
 
 ## What I built
 
