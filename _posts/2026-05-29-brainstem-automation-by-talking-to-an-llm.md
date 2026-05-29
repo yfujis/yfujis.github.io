@@ -1,5 +1,5 @@
 ---
-title: 'Keeping a Lab Notebook by Talking to an LLM'
+title: "Keeping a Lab Notebook by Talking to an LLM"
 tags: [Computer]
 status: publish
 type: post
@@ -23,7 +23,9 @@ excerpt: I built a Python workflow that lets me update BrainSTEM records by talk
 
 ## Motivation
 
-It is essential for experimental researchers to keep accurate and up-to-date records of their work. [BrainSTEM] is a very useful system because it is specifically designed for neuroscience research (especially in-vivo physiology). The team led by [Peter Petersen](https://petersenlab.org/) keeps improving it based on user feedback. When you want a batch update, it can be a bit of a pain to click through the browser and edit each record one at a time. Since they have a nice Python API, I thought it would be fun to build a workflow that lets me talk to an LLM and express the intent directly, and then the automation code handles the structured BrainSTEM request for me. This way, I can make batch updates much faster and with less cognitive load.
+It is essential for experimental researchers to maintain accurate and up-to-date records of their work. [BrainSTEM] is a particularly useful system because it is designed specifically for neuroscience research, especially in vivo physiology. The team led by [Peter Petersen](https://petersenlab.org/) continues to improve the platform based on feedback from the neuroscience community.
+
+One aspect that can become cumbersome, however, is performing batch updates. While the web interface works well for individual edits, updating many records often requires clicking through multiple pages and modifying entries one at a time. Since BrainSTEM provides a well-designed Python API, I thought it would be interesting to build a workflow that allows me to express update requests in natural language through an LLM, while the underlying automation translates those requests into structured BrainSTEM API calls. This approach makes batch updates faster, reduces repetitive manual work, and lowers the cognitive overhead of maintaining records.
 
 ## What I built
 
@@ -31,11 +33,10 @@ I made a small standalone Python [repository](https://github.com/yfujis/brainste
 
 The repository contains:
 
-1. a lightweight client wrapper
+1. A lightweight client wrapper
 2. CLI commands for listing, creating, and updating records
-3. setup instructions for authentication and usage
-4. packaging metadata so it can be reused cleanly
-
+3. Setup instructions for authentication and usage
+4. Packaging metadata so it can be reused cleanly
 
 ## New workflow
 
@@ -52,9 +53,9 @@ That means the workflow changed from:
 
 into something closer to:
 
-1. describe the change in plain language
-2. let the tool map that request to BrainSTEM fields
-3. check the result and accept or make further adjustments
+1. Describe the change in plain language
+2. Let the tool map that request to BrainSTEM fields
+3. Check the result and accept or make further adjustments
 
 An example of a batch update I tried looks something like this:
 
@@ -82,18 +83,17 @@ Actually, Animal E and Animal G had both the virus and fiber on the right hemisp
 
 The LLM handled this very nicely.
 
-
 ## Try it yourself
 
-If you want to see the workflow or adapt it for your own setup, you can start [here](https://github.com/yfujis/brainstem-automation). You do not have to use this repo, since you could probably write something similar yourself.
+If you want to see the workflow or adapt it for your own setup, you can start [here](https://github.com/yfujis/brainstem-automation). You do not have to use this repo specifically, since you could probably write (vibe-code) something similar yourself.
 
-The basic steps to get started are:
+The basic steps are:
 
-1. clone the repo
-2. install the dependencies
-3. authenticate with BrainSTEM
-4. start with a small test update
-5. expand to larger edits once the flow is confirmed
+1. Clone the repo
+2. Install the dependencies
+3. Authenticate with BrainSTEM
+4. Start with a small test update
+5. Expand to larger edits once the flow is confirmed
 
 I hope this can be a useful tool for other BrainSTEM users, and also a fun example of how LLMs can be used to automate scientific workflows in a more natural way.
 
