@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-05-29 22:29:38 UTC
+last_updated: 2026-05-29 22:32:51 UTC
 articles:
   Cell: []
   Cell Reports: []
@@ -9,6 +9,301 @@ articles:
   Nature Human Behaviour: []
   Nature Neuroscience: []
   Neuron: []
-  Science: []
-  Science Advances: []
+  Science:
+  - :title: The hidden consequences of elephant extinction | Science
+    :link: https://www.science.org/doi/10.1126/science.aei2362
+    :published_date: '2026-05-28'
+    :authors: []
+    :description: The absence of African elephants impairs the ecological role of
+      dung beetles
+  - :title: Getting home in the dark | Science
+    :link: https://www.science.org/doi/10.1126/science.aeh9507
+    :published_date: '2026-05-28'
+    :authors: []
+    :description: Two mechanisms, independent of daylight, may enable pigeons to navigate
+      using Earth’s magnetic field
+  - :title: Closing the loop on lithium refining | Science
+    :link: https://www.science.org/doi/10.1126/science.aei1181
+    :published_date: '2026-05-28'
+    :authors: []
+    :description: An aqueous process for lithium hardrock refining is economically
+      and environmentally attractive
+  - :title: Silent interference | Science
+    :link: https://www.science.org/doi/10.1126/science.aei2381
+    :published_date: '2026-05-28'
+    :authors: []
+    :description: Human-generated electromagnetic noise has long-lasting effects on
+      flight orientation in bats
+  - :title: An Arctic community on the climate front lines | Science
+    :link: https://www.science.org/doi/10.1126/science.aeh0733
+    :published_date: '2026-05-28'
+    :authors: []
+    :description: The harsh realities of global warming are becoming difficult to
+      ignore in Norway’s Longyearbyen
+  - :title: An uncommon introduction to chemistry | Science
+    :link: https://www.science.org/doi/10.1126/science.aeg5513
+    :published_date: '2026-05-28'
+    :authors: []
+    :description: Infectious enthusiasm for the chemicals of everyday life pervades
+      a nanoscientist’s moving narrative
+  - :title: 'Galileo''s Fame: Science, Credibility, and Memory in the Seventeenth
+      Century | Science'
+    :link: https://www.science.org/doi/10.1126/science.aei4055
+    :published_date: '2026-05-28'
+    :authors: []
+    :description: 'HomeScienceVol. 392, No. 6801Galileo''s Fame: Science, Credibility,
+      and Memory in the Seventeenth CenturyBack To Vol. 392, No. 6801 Full accessBooks
+      et al.Podcast Share on Galileo''s Fame: Science, Credibility, and Memory in
+      the Seventeenth CenturyScience28 May 2026Vol 392, Issue 6801p. 925DOI: 10.1126/science.aei4055
+      PREVIOUS ARTICLEAn uncommon introduction to chemistryPreviousNEXT ARTICLERethinki…'
+  - :title: Rethinking invertebrate welfare in science | Science
+    :link: https://www.science.org/doi/10.1126/science.aeh3585
+    :published_date: '2026-05-28'
+    :authors: []
+    :description: HomeScienceVol. 392, No. 6801Rethinking invertebrate welfare in
+      scienceBack To Vol. 392, No. 6801 Full accessLetter Share on Rethinking invertebrate
+      welfare in scienceYuling Liang, Yunbo Song, [...] , Meng Chen, Xinying Zhang,
+      [...] , Yizhou Wang, Jinle Lin, Weiqian Zhou, Jinhang Zhang, Wenzhi Wang, [...]
+      , Lam Theresia Sri Andriani, Mingrong Liang, Shamshad Ahmed Khan, and Claudio
+      Carere+10 auth…
+  - :title: Volatile food trade policy threatens biodiversity | Science
+    :link: https://www.science.org/doi/10.1126/science.aeh4080
+    :published_date: '2026-05-28'
+    :authors: []
+    :description: International trade has benefited food security and biodiversity
+      by leveraging the comparative advantages of countries (1), but the role of international
+      trade stability in safeguarding ecosystems is often overlooked. Volatile food
+      trade policies such as trade bans in response to the COVID-19 pandemic (2),
+      export restrictions related to the Russia’s invasion of Ukraine (3), and import
+      tariffs imposed by the Trump administration (4) have reshaped the food supply
+      chain, leading to cascading effects on biodiversity loss through agricultural
+      production (5), land use change (6), and natural resource use (7). Prioritizing
+      trade policy stability and clarifying its connection to biodiversity conservation
+      can offer a pathway toward improving both food security and ecological resilience.
+  - :title: Old scientific art inspires generations | Science
+    :link: https://www.science.org/doi/10.1126/science.aeh5443
+    :published_date: '2026-05-28'
+    :authors: []
+    :description: 'HomeScienceVol. 392, No. 6801Old scientific art inspires generationsBack
+      To Vol. 392, No. 6801 Full accessLetterPast as Prologue Share on Old scientific
+      art inspires generationsRagupathy KannanAuthors Info & AffiliationsScience28
+      May 2026Vol 392, Issue 6801p. 927DOI: 10.1126/science.aeh5443 PREVIOUS ARTICLEVolatile
+      food trade policy threatens biodiversityPreviousNEXT ARTICLEMaternal work and
+      chil…'
+  - :title: 'Maternal work and children’s development: A review | Science'
+    :link: https://www.science.org/doi/10.1126/science.adt7494
+    :published_date: '2026-05-28'
+    :authors: []
+    :description: Causal inference studies suggest minimal impacts of mothers’ work
+      on development from early childhood to adolescence
+  - :title: In Science Journals | Science
+    :link: https://www.science.org/doi/10.1126/science.aei9224
+    :published_date: '2026-05-28'
+    :authors: []
+    :description: Highlights from the Science family of journals
+  - :title: In Other Journals | Science
+    :link: https://www.science.org/doi/10.1126/science.aei9225
+    :published_date: '2026-05-28'
+    :authors: []
+    :description: Editors’ selections from the current scientific literature
+  - :title: Upper-mantle earthquakes beneath East Antarctica | Science
+    :link: https://www.science.org/doi/10.1126/science.aea9895
+    :published_date: '2026-05-28'
+    :authors: []
+    :description: Intraplate intermediate-depth earthquakes (IDEs) occur at depths
+      >70 kilometers, which is well below the brittle‒ductile transition in Earth’s
+      crust, and their origins are difficult to reconcile with traditional plate tectonics.
+      We applied a deep-...
+  - :title: Stabilizing in-transition phases of superlattices through shape control
+      of silver nanocrystals | Science
+    :link: https://www.science.org/doi/10.1126/science.ady6472
+    :published_date: '2026-05-28'
+    :authors: []
+    :description: In nanoscale assemblies, observations of structures in the transition
+      pathways between high-symmetry lattices are rare because of the inherent instability
+      of the intermediate phases. We report that silver nanocrystals with shapes similar
+      to truncated ...
+  - :title: Selective autophagy fine-tunes plant immunity to promote cell survival
+      during viral infection | Science
+    :link: https://www.science.org/doi/10.1126/science.adu9554
+    :published_date: '2026-05-28'
+    :authors: []
+    :description: RNA viruses co-opt host endomembranes to form replication complexes,
+      often triggering cellular stress and immune responses. Here, we show that Arabidopsis
+      thaliana activates selective autophagy to respond to viruses targeting mitochondria,
+      chloroplasts, ...
+  - :title: Visualizing a lung neutrophil-platelet immunothrombosis cascade during
+      sepsis in mice | Science
+    :link: https://www.science.org/doi/10.1126/science.adv0377
+    :published_date: '2026-05-28'
+    :authors: []
+    :description: Sepsis is an immune paradox in which host defense is necessary for
+      survival but also contributes to organ damage and death. We defined an immunothrombosis
+      cascade of neutrophil and platelets in the lung microcirculation of Escherichia
+      coli–septic mice. ...
+  - :title: Pan-cancer spatial atlas of tertiary lymphoid structures | Science
+    :link: https://www.science.org/doi/10.1126/science.adz2742
+    :published_date: '2026-05-28'
+    :authors: []
+    :description: Tertiary lymphoid structures (TLSs) are critical regulators of antitumor
+      immunity, yet their spatial organization, maturation, and clinical relevance
+      remain incompletely defined across cancers. We analyzed spatial transcriptomics
+      spanning 12 cancer types ...
+  - :title: Importance of elephants for dung beetle biodiversity and ecosystem functions
+      | Science
+    :link: https://www.science.org/doi/10.1126/science.aeb7062
+    :published_date: '2026-05-28'
+    :authors: []
+    :description: Ecologists theorize that removing highly connected species from
+      ecological networks will trigger waves of coextinction, but empirical evidence
+      is scant. We show that elephants are central to a generalized network of interactions
+      between dung beetles and ...
+  - :title: Strain-resilient intrinsically stretchable electrochemical biointerfaces
+      | Science
+    :link: https://www.science.org/doi/10.1126/science.aed1630
+    :published_date: '2026-05-28'
+    :authors: []
+    :description: Stretchable bioelectronics promise seamless integration with dynamic
+      tissues, yet their electrochemical performance often collapses under strain
+      owing to cracking, interlayer delamination, and signal distortion. We introduce
+      an intrinsically stretchable ...
+  Science Advances:
+  - :title: 'CEMs-SELEX: DNAzyme-powered de novo biomarker discovery and noninvasive
+      cancer diagnosis | Science Advances'
+    :link: https://www.science.org/doi/10.1126/sciadv.aee7184
+    :published_date: '2026-05-29'
+    :authors: []
+    :description: CEMs-SELEX finds DNAzymes from tumor secretome, yielding ANXA2-activated
+      C502 for noninvasive TSCC detection.
+  - :title: Gel-confined strain amplifies FRET efficiency toward red emission enhancement
+      beyond pressure quenching | Science Advances
+    :link: https://www.science.org/doi/10.1126/sciadv.aec0830
+    :published_date: '2026-05-29'
+    :authors: []
+    :description: A pressure-triggered energy transfer network is constructed in Mn-based
+      metal halide gels via a distance-sensitive FRET mechanism.
+  - :title: De novo promoters emerge more readily from random DNA than from genomic
+      DNA | Science Advances
+    :link: https://www.science.org/doi/10.1126/sciadv.aec2554
+    :published_date: '2026-05-29'
+    :authors: []
+    :description: Promoters emerge three times more readily from random DNA than from
+      genomic DNA.
+  - :title: Platelet-derived vesicles restore fertility in endometrial injury by modulating
+      the endometrial immune niche in mice | Science Advances
+    :link: https://www.science.org/doi/10.1126/sciadv.aed6707
+    :published_date: '2026-05-29'
+    :authors: []
+    :description: Platelet-derived EVs restore immune balance through mitophagy to
+      unlock endometrial repair and restore fertility.
+  - :title: 'UBA1-CDK16: A female-specific chimeric RNA emerging through evolution
+      and involved in immune regulation | Science Advances'
+    :link: https://www.science.org/doi/10.1126/sciadv.adz9784
+    :published_date: '2026-05-29'
+    :authors: []
+    :description: A female-specific chimeric RNA driven through chromatin looping
+      may influence immunity and blood cell development.
+  - :title: Holographic lasing with dielectric metasurfaces | Science Advances
+    :link: https://www.science.org/doi/10.1126/sciadv.aea7345
+    :published_date: '2026-05-29'
+    :authors: []
+    :description: Dielectric metasurfaces enable lasing emission and pixel-level beam
+      shaping in a single device.
+  - :title: Metabolic rewiring driven by phosphoglycolate phosphatase deletion inhibits
+      ferroptosis | Science Advances
+    :link: https://www.science.org/doi/10.1126/sciadv.aeb2368
+    :published_date: '2026-05-29'
+    :authors: []
+    :description: Phosphoglycolate phosphatase loss rewires cellular metabolism and
+      triggers an antioxidant response that mitigates ferroptosis.
+  - :title: Structural insights into a conserved mechanism of choline translocation
+      through CHT | Science Advances
+    :link: https://www.science.org/doi/10.1126/sciadv.aec1241
+    :published_date: '2026-05-29'
+    :authors: []
+    :description: Structural, computational, and functional analyses reveal a conserved
+      choline intracellular transition in bacterial and human CHT.
+  - :title: Certified quantum randomness within purity constraints | Science Advances
+    :link: https://www.science.org/doi/10.1126/sciadv.aec2555
+    :published_date: '2026-05-29'
+    :authors: []
+    :description: Purity-based quantum constraints certify truly random numbers from
+      simple, real-world devices.
+  - :title: Ion-shielding ultrathin encapsulation with hot-press bonded interface
+      enables chronic stretchable bioelectronics | Science Advances
+    :link: https://www.science.org/doi/10.1126/sciadv.aed7125
+    :published_date: '2026-05-29'
+    :authors: []
+    :description: Hot-press bonded polymer interfaces show good ion-shielding property,
+      enabling stable encapsulation for stretchable electrodes.
+  - :title: Bioinspired milliscale near-boundary undulatory motion for fluid transport
+      and adhesive locomotion | Science Advances
+    :link: https://www.science.org/doi/10.1126/sciadv.aea2598
+    :published_date: '2026-05-29'
+    :authors: []
+    :description: Magnetically actuated, prebuckled undulatory sheets facilitate surface
+      pumping and snail-like adhesive locomotion.
+  - :title: Dimensionality junctional Janus nanocrystals with heterogeneous stacking
+      fault–lined interface achieve tandem electroreduction of nitrate | Science Advances
+    :link: https://www.science.org/doi/10.1126/sciadv.aeb6469
+    :published_date: '2026-05-29'
+    :authors: []
+    :description: Engineered Ag-Cu nanocrystals achieve tandem catalysis for sustainable
+      ammonia production from nitrate.
+  - :title: Silicon carbonate, Si[CO3]2, is a potential carbon host in the deep Earth
+      | Science Advances
+    :link: https://www.science.org/doi/10.1126/sciadv.aee5766
+    :published_date: '2026-05-29'
+    :authors: []
+    :description: Synthesizing a carbonate of silicon at the p,T conditions of Earth’s
+      lower mantle.
+  - :title: Understanding the density maximum of water with machine-learned potentials
+      | Science Advances
+    :link: https://www.science.org/doi/10.1126/sciadv.aec6748
+    :published_date: '2026-05-27'
+    :authors: []
+    :description: Molecular simulations reveal the microscopic origin of water’s anomalous
+      density behavior.
+  - :title: Femtosecond modulation of electron correlations in a Luttinger liquid
+      | Science Advances
+    :link: https://www.science.org/doi/10.1126/sciadv.aec7494
+    :published_date: '2026-05-27'
+    :authors: []
+    :description: Electrons in a 1D quantum metal can cool 10 times faster than in
+      simple metals by exciting a plasmon rather than phonons.
+  - :title: Bioelectric calcium transport and activation in mammalian cells using
+      field-focused DNA-carbon nanotube meshes | Science Advances
+    :link: https://www.science.org/doi/10.1126/sciadv.aed4736
+    :published_date: '2026-05-27'
+    :authors: []
+    :description: DNA-FOCUS concentrates subvolt bias into membrane hotspots, safely
+      amplifying Ca2+ signaling for precise modulation.
+  - :title: A strengthened and southward-shifted westerly jet mitigates warming-induced
+      drying across Asian drylands | Science Advances
+    :link: https://www.science.org/doi/10.1126/sciadv.aed7890
+    :published_date: '2026-05-27'
+    :authors: []
+    :description: A strengthened and southward-shifted subtropical westerly jet challenges
+      the projected “dry-get-drier” paradigm in Asian drylands.
+  - :title: A plant immune receptor mediates tritrophic interactions by linking caterpillar
+      detection to predator recruitment | Science Advances
+    :link: https://www.science.org/doi/10.1126/sciadv.aec3229
+    :published_date: '2026-05-27'
+    :authors: []
+    :description: A plant receptor detects caterpillar attack and triggers emission
+      of chemical cues to attract predatory wasps.
+  - :title: Structural properties, polymorphism, and multiscale disorder unravel energy
+      transport limitations in perylene diimide semiconductors | Science Advances
+    :link: https://www.science.org/doi/10.1126/sciadv.aed0037
+    :published_date: '2026-05-27'
+    :authors: []
+    :description: Polymorph intergrowths in organic semiconductors are detrimental
+      to exciton diffusion.
+  - :title: Limited transmission of cervid prions to nonhuman primates provides insights
+      into the zoonotic potential of chronic wasting disease | Science Advances
+    :link: https://www.science.org/doi/10.1126/sciadv.aeb7613
+    :published_date: '2026-05-27'
+    :authors: []
+    :description: Transmission of chronic wasting disease prions to macaques provides
+      insights into the potential of CWD to infect humans.
   eLife: []
