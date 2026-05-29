@@ -1,6 +1,6 @@
 ---
-title: 'Editing BrainSTEM by Talking to an LLM'
-tags: [Computer, Lab]
+title: 'Keeping a Lab Notebook by Talking to an LLM'
+tags: [Computer]
 status: publish
 type: post
 published: true
@@ -24,7 +24,7 @@ excerpt: I built a Python workflow that lets me update BrainSTEM records by talk
 The main thing I wanted out of this project was not just automation.
 I wanted a different workflow.
 
-Instead of opening [BrainSTEM] in the browser and editing records one by one, I can now describe what I want in natural language and let the automation layer turn that request into actual BrainSTEM edits.
+Instead of opening [BrainSTEM] in the browser and editing records one by one, I can now describe what I want in natural language and let the automation layer turn that request into BrainSTEM edits.
 
 That is the central idea of this post.
 
