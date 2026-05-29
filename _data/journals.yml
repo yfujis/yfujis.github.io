@@ -1,0 +1,55 @@
+journals:
+  - name: "Nature"
+    url: "https://www.nature.com"
+    feed: "https://www.nature.com/nature.rss"
+    color: "#003366"
+
+  - name: "Science"
+    url: "https://www.science.org"
+    feed: "https://www.sciencemag.org/rss/current.xml"
+    color: "#1F4E7C"
+
+  - name: "Cell"
+    url: "https://www.cell.com"
+    feed: "https://www.cell.com/cell/current.rss"
+    color: "#0066CC"
+
+  - name: "Neuron"
+    url: "https://www.cell.com/neuron"
+    feed: "https://www.cell.com/neuron/current.rss"
+    color: "#FF6B6B"
+
+  - name: "Nature Neuroscience"
+    url: "https://www.nature.com/neuro"
+    feed: "https://www.nature.com/neuro.rss"
+    color: "#8B00FF"
+
+  - name: "Current Biology"
+    url: "https://www.cell.com/current-biology"
+    feed: "https://www.cell.com/current-biology/current.rss"
+    color: "#00A86B"
+
+  - name: "Cell Reports"
+    url: "https://www.cell.com/cell-reports"
+    feed: "https://www.cell.com/cell-reports/current.rss"
+    color: "#FF8C00"
+
+  - name: "eLife"
+    url: "https://elifesciences.org"
+    feed: "https://elifesciences.org/rss/research.rss"
+    color: "#00A651"
+
+  - name: "Nature Communications"
+    url: "https://www.nature.com/ncomms"
+    feed: "https://www.nature.com/ncomms.rss"
+    color: "#E63946"
+
+  - name: "Nature Human Behaviour"
+    url: "https://www.nature.com/nathumbehav"
+    feed: "https://www.nature.com/nathumbehav.rss"
+    color: "#F77F00"
+
+  - name: "Science Advances"
+    url: "https://www.science.org/journal/sciadv"
+    feed: "https://advances.sciencemag.org/rss/current.xml"
+    color: "#06A77D"
