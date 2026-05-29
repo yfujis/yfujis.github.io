@@ -114,7 +114,7 @@ The main benefits have been:
 3. lower cognitive load
 
 It also makes batch updates much more practical.
-If I need to normalize notes or correct metadata across many subjects, I can do that with a script instead of a long browser session.
+If I need to normalize notes or add metadata across many subjects, I can do that with a script instead of a long browser session.
 
 ## Try it yourself
 
