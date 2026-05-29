@@ -21,29 +21,23 @@ permalink: /blog/:year/:month/:day/:title
 excerpt: I built a Python workflow that lets me update BrainSTEM records by talking to an LLM instead of clicking through the browser one record at a time.
 ---
 
-The main thing I wanted out of this project was not just automation.
-I wanted a different workflow.
+## Motivation
 
-Instead of opening [BrainSTEM] in the browser and editing records one by one, I can now describe what I want in natural language and let the automation layer turn that request into BrainSTEM edits.
+It is essential for experimental researchers to keep accurate and up-to-date records of their work. [BrainSTEM] is a very useful system because it is specifically designed for neuroscience research. The team led by [Peter Petersen](https://petersenlab.org/) keeps improving it based on user feedback. When you want a batch update, it can be a bit of a pain to click through the browser and edit each record one at a time. Since they have a nice Python API, I thought it would be fun to build a workflow that lets me talk to an LLM and express the intent directly, and then the automation code handles the structured BrainSTEM request for me. This way, I can make batch updates much faster and with less cognitive load.
 
-That is the central idea of this post.
+## What I built
 
-The code is here: [brainstem-automation](https://github.com/yfujis/brainstem-automation)
+I made a small standalone Python [repository](https://github.com/yfujis/brainstem-automation) around the official BrainSTEM API tooling.
 
-## Why I wanted this
+The repository contains:
 
-[BrainSTEM] is a very useful system for logging experimental data. It is specifically designed for neuroscience research and keeps improving based on feedback from users. But repetitive edits in the browser are still slow. At one point I needed to update a group of animals by hand, and that made the friction obvious.
+1. a lightweight client wrapper
+2. CLI commands for listing, creating, and updating records
+3. setup instructions for authentication and usage
+4. packaging metadata so it can be reused cleanly
 
-I wanted to be able to say things like:
 
-1. create a procedure log
-2. update notes across multiple subjects
-3. normalize fields so they are consistent
-4. verify the result after writing
-
-without manually repeating the same browser actions every time.
-
-## What changed
+## New workflow
 
 The biggest change is that I can now talk to an LLM and express the intent directly.
 The automation code then handles the structured BrainSTEM request for me.
@@ -60,11 +54,9 @@ into something closer to:
 
 1. describe the change in plain language
 2. let the tool map that request to BrainSTEM fields
-3. check the result programmatically
+3. check the result and accept or make further adjustments
 
-That sounds small, but in practice it is a major shift in how the work feels.
-
-I have already used this workflow with an LLM on a real batch update. For example, my prompt looked like this:
+An example of a batch update I tried looks something like this:
 
 ```text
 Please make sure that all subjects below have viral injection logs with two depths and optic-fiber implant logs. Remove details like body weight, since each animal had a different value.
@@ -88,39 +80,12 @@ After that, I made a few corrections by prompting:
 Actually, Animal E and Animal G had both the virus and fiber on the right hemisphere. Please update those records accordingly.
 ```
 
-The LLM handled both updates cleanly.
+The LLM handled this very nicely.
 
-
-## What I built
-
-I made a small standalone Python repository around the official BrainSTEM API tooling.
-
-The repository contains:
-
-1. a lightweight client wrapper
-2. CLI commands for listing, creating, and updating records
-3. setup instructions for authentication and usage
-4. packaging metadata so it can be reused cleanly
-
-The repo is intentionally simple.
-I wanted something I could understand, inspect, and rerun later without a lot of friction.
-
-## Why this matters to me
-
-The main benefits have been:
-
-1. speed
-2. consistency
-3. lower cognitive load
-
-It also makes batch updates much more practical.
-If I need to normalize notes or add metadata across many subjects, I can do that with a script instead of a long browser session.
 
 ## Try it yourself
 
-If you want to see the workflow or adapt it for your own setup, you can start here:
-
-[https://github.com/yfujis/brainstem-automation](https://github.com/yfujis/brainstem-automation)
+If you want to see the workflow or adapt it for your own setup, you can start [here](https://github.com/yfujis/brainstem-automation). You do not have to use this repo, since you could probably write something similar yourself.
 
 The basic idea is:
 
@@ -130,14 +95,6 @@ The basic idea is:
 4. start with a small test update
 5. expand to larger edits once the flow is confirmed
 
-## A note on safety
-
-When using this repository for your own work, it's good to keep in mind that you should not include:
-
-1. hardcoded tokens
-2. personal local file paths
-3. identifying examples that should stay private
-
-The token is handled through an environment variable, and sensitive values should stay out of git.
+I hope this can be a useful tool for other BrainSTEM users, and also a fun example of how LLMs can be used to automate scientific workflows in a more natural way.
 
 [BrainStem]: https://www.brainstem.org/
