@@ -87,7 +87,7 @@ The LLM handled this very nicely.
 
 If you want to see the workflow or adapt it for your own setup, you can start [here](https://github.com/yfujis/brainstem-automation). You do not have to use this repo, since you could probably write something similar yourself.
 
-The basic idea is:
+The basic steps to get started are:
 
 1. clone the repo
 2. install the dependencies
