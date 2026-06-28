@@ -1,0 +1,21 @@
+{% assign photos = site.data.photo_feed %}
+{% if photos %}
+  <section class="photo-feed" aria-labelledby="photo-feed-title">
+    <div class="photo-feed__header">
+      <h3 id="photo-feed-title">Photos</h3>
+      <a href="https://www.instagram.com/iosonoyuki/" rel="nofollow noopener noreferrer me">Instagram @iosonoyuki</a>
+    </div>
+    <div class="photo-feed__grid">
+      {% for photo in photos %}
+        <figure class="photo-feed__item">
+          {% if photo.url %}<a href="{{ photo.url }}">{% endif %}
+            <img src="{{ photo.image | relative_url }}" alt="{{ photo.alt | default: photo.caption | default: 'Photo' }}">
+          {% if photo.url %}</a>{% endif %}
+          {% if photo.caption %}
+            <figcaption>{{ photo.caption }}</figcaption>
+          {% endif %}
+        </figure>
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}
